@@ -6,10 +6,16 @@ import Image from '@/components/image'
 import SEO from '@/components/seo'
 
 import styled from 'styled-components'
+import tw from 'tailwind.macro'
 
-const Paragraph = styled('div')({
-  fontSize: '20px',
-})
+// const Paragraph = styled.div`
+//   ${tw`bg-blue hover:bg-blue-dark text-white p-2 rounded`};
+// `
+
+const Paragraph = styled('div')`
+  font-size: 20px;
+  ${tw`bg-blue hover:bg-blue-dark text-white p-2 rounded`};
+`
 
 const IndexPage = () => (
   <Layout>

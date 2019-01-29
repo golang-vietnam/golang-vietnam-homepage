@@ -38,5 +38,6 @@ module.exports = {
         '@': path.join(__dirname, 'src'),
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 }

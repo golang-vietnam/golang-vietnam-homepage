@@ -1,20 +1,36 @@
 import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
+import { FaEnvelope } from 'react-icons/fa'
 
 const Container = styled.footer`
   background-color: ${props => props.theme.grey};
   padding: 30px 0;
+
+  a {
+    color: ${props => props.theme.black};
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `
 
 const Footer = () => {
   return (
     <Container>
-      <div className="container mx-auto">
-        <div className="flex items-center justify-between">
-          <div>© {new Date().getFullYear()} GolangVietnam</div>
-          <div>
-            <a href="mailto:gophers@golang.org.vn">gophers@golang.org.vn</a>
+      <div className="container mx-auto text-sm px-gutter">
+        <div className="flex items-center justify-between -mx-gutter">
+          <div className="font-medium opacity-40 px-gutter">
+            © {new Date().getFullYear()} GolangVietnam
+          </div>
+          <div className="px-gutter">
+            <a
+              className="opacity-80 flex items-center"
+              href="mailto:gophers@golang.org.vn"
+            >
+              <FaEnvelope className="mr-2" /> <span>gophers@golang.org.vn</span>
+            </a>
           </div>
         </div>
       </div>

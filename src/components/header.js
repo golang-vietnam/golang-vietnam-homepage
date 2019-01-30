@@ -28,14 +28,14 @@ const LogoWrapper = styled.div`
 
 const Header = ({ siteTitle, absolute, dark }) => (
   <Container absolute={absolute} dark={dark}>
-    <div className="container mx-auto">
-      <div className="flex items-center justify-between">
-        <LogoWrapper dark={dark}>
+    <div className="container mx-auto px-gutter">
+      <div className="flex items-center justify-between -mx-gutter">
+        <LogoWrapper dark={dark} className="px-gutter">
           <Link to="/">
             <Logo />
           </Link>
         </LogoWrapper>
-        <div className="col">Menu</div>
+        <div className="px-gutter">Menu</div>
       </div>
     </div>
   </Container>

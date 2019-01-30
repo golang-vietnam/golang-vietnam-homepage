@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "golang-vietnam-website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Official website for Golang Vietnam",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "zlatan.pham <https://github.com/zlatanpham>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "faker": "^4.1.0",
@@ -44,9 +44,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/.../golang-vietnam-website"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/.../golang-vietnam-website/issues"
   }
 }

@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import DefaultLayout from '@/components/DefaultLayout'
 import SEO from '@/components/seo'
 import Heading from '@/components/Heading'
-import data from './sampleData'
+import data from '@/data/events'
 import EventCard from '@/components/EventCard'
 import { SubHeading } from '@/shared/styled'
 

@@ -9,19 +9,32 @@ import { Wrapper } from '@/shared/styled'
 const Container = styled.header`
   padding: 5px 0;
   ${props => `
-    position: ${props.absolute ? 'absolute' : 'relative'}
-    background-color: ${props.dark ? `rgba(0, 0, 0, 0.3)` : props.theme.white}
+    ${props.absolute &&
+      `
+      position: absolute;
+      left: 0;
+      right: 0;
+    `}    
+    background-color: ${props.dark ? `rgba(0, 0, 0, 0.3)` : props.theme.white};
     box-shadow: ${props.dark ? `none` : `0 1px 2px rgba(0, 0, 0, 0.1)`}
   `}
+`
+
+const LogoWrapper = styled.div`
+  a {
+    color: ${props => (props.dark ? props.theme.white : props.theme.black)};
+  }
 `
 
 const Header = ({ siteTitle, absolute, dark }) => (
   <Container absolute={absolute} dark={dark}>
     <div className="container mx-auto">
       <div className="flex items-center justify-between">
-        <Link to="/">
-          <Logo />
-        </Link>
+        <LogoWrapper dark={dark}>
+          <Link to="/">
+            <Logo />
+          </Link>
+        </LogoWrapper>
         <div className="col">Menu</div>
       </div>
     </div>

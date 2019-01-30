@@ -39,5 +39,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-postcss`,
+    {
+      resolve: 'gatsby-plugin-purgecss',
+      options: {
+        tailwind: true,
+        purgeOnly: ['src/css/style.css'], // Purge only tailwind
+      },
+    },
   ],
 }

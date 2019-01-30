@@ -5,25 +5,41 @@ import { ThemeProvider } from 'styled-components'
 import Header from './header'
 import Root from '@/components/root'
 import Footer from '@/components/Footer'
+import styled from 'styled-components'
+import Heading from '@/components/Heading'
+import jx from 'tailwind.macro'
 
-const DefaultLayout = ({ children }) => {
+const Container = styled.div`
+  padding: 80px 0 200px 0;
+`
+
+const Head = styled.div`
+  ${jx`flex items-end justify-between mb-16`};
+`
+
+const DefaultLayout = ({ children, title, RightSideComponent }) => {
   return (
     <Root>
       <Header />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        {children}
-      </div>
+      <Container>
+        <div className="container px-gutter mx-auto">
+          <Head>
+            <Heading>{title}</Heading>
+            {RightSideComponent && <RightSideComponent />}
+          </Head>
+          {children}
+        </div>
+      </Container>
 
       <Footer />
     </Root>
   )
+}
+
+DefaultLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  RightSideComponent: PropTypes.element,
 }
 
 export default DefaultLayout

@@ -6,9 +6,8 @@ import SEO from '@/components/seo'
 import Heading from '@/components/Heading'
 
 const SecondPage = () => (
-  <DefaultLayout>
+  <DefaultLayout title="News">
     <SEO title="News" />
-    <Heading>News</Heading>
     <p>Welcome to page 2</p>
     <Link to="/">Go back to the homepage</Link>
   </DefaultLayout>

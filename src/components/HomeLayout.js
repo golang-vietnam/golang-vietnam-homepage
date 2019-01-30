@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components'
 import Root from '@/components/root'
 import Header from './header'
 
-const Layout = ({ children }) => (
+const HomeLayout = ({ children }) => (
   <Root>
     <Header absolute dark />
     <div
@@ -26,8 +26,8 @@ const Layout = ({ children }) => (
   </Root>
 )
 
-Layout.propTypes = {
+HomeLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default HomeLayout

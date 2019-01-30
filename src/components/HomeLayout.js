@@ -4,9 +4,18 @@ import { StaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
 import Root from '@/components/root'
 import Header from './header'
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  html, body {
+    color: ${props => props.theme.main.foreground};
+    background-color: ${props => props.theme.main.body};
+  }
+`
 
 const HomeLayout = ({ children }) => (
   <Root>
+    <GlobalStyle />
     <Header absolute dark />
     <div
       style={{

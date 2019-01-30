@@ -15,6 +15,7 @@ export default {
   main: {
     primary,
     background: white,
+    body: greyLigher,
     foreground: black,
     border: grey,
   },
@@ -23,7 +24,7 @@ export default {
     secondary: greyDarker,
   },
   footer: {
-    background: greyLigher,
+    background: grey,
     foreground: black,
   },
   card: {

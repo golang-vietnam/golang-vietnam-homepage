@@ -62,6 +62,7 @@
   */
 
 @import 'fonts.css';
+@import 'normalize.css';
 
 html,
 body {

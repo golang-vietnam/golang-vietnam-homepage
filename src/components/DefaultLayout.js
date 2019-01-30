@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
 import Header from './header'
 import Root from '@/components/root'
+import Footer from '@/components/Footer'
 
 const DefaultLayout = ({ children }) => {
   return (
@@ -18,12 +19,9 @@ const DefaultLayout = ({ children }) => {
         }}
       >
         {children}
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
+
+      <Footer />
     </Root>
   )
 }

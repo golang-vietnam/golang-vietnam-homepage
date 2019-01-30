@@ -60,3 +60,9 @@ export const Dot = styled.span`
   margin: 0 10px;
   background-color: ${props => props.theme.card.foreground};
 `
+
+export const SubHeading = styled.h3`
+  ${tw`text-3xl`};
+  font-weight: 500;
+  line-height: 1.53em;
+`

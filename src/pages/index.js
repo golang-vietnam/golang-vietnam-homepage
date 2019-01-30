@@ -15,6 +15,7 @@ import tw from 'tailwind.macro'
 const Paragraph = styled('div')`
   font-size: 20px;
   ${tw`bg-blue hover:bg-blue-dark text-white p-2 rounded`};
+  color: ${props => props.theme.black};
 `
 
 const IndexPage = () => (

@@ -35,6 +35,23 @@ export default {
   header: {
     background: white,
     foreground: black,
+    nav: {
+      link: {
+        foreground: black,
+        activeForeground: primary,
+      },
+      submenu: {
+        background: white,
+        foreground: black,
+        boxShadow: '0 0px 4px rgba(0,0,0,0.15)',
+        link: {
+          background: white,
+          foreground: black,
+          activeBackground: primary,
+          activeForeground: white,
+        },
+      },
+    },
   },
   badge: {
     activeBackground: primary,

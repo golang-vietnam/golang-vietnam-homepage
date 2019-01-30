@@ -4,7 +4,7 @@ export default [
     href: '/news',
   },
   {
-    name: 'jobs',
+    name: 'Jobs',
     href: '/jobs',
   },
   {
@@ -17,15 +17,15 @@ export default [
     children: [
       {
         name: 'Videos',
-        href: '/videos',
+        href: '/resources/videos',
       },
       {
         name: 'Articles',
-        href: '/articles',
+        href: '/resources/articles',
       },
       {
         name: 'Books',
-        href: '/books',
+        href: '/resources/books',
       },
     ],
   },

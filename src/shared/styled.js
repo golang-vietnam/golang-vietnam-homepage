@@ -29,3 +29,25 @@ export const CardExcerpt = styled.p`
   ${tw`opacity-80 text-sm`};
   line-height: 1.71em;
 `
+
+export const Badge = styled.span`
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 6px 8px;
+  border-radius: 2px;
+  display: inline-block;
+  line-height: 1em;
+  ${tw`text-xs`}
+  ${props => `  
+  background-color: ${
+    props.isActive
+      ? props.theme.badge.activeBackground
+      : props.theme.badge.inactiveBackground
+  };
+  color: ${
+    props.isActive
+      ? props.theme.badge.activeForeground
+      : props.theme.badge.inactiveForeground
+  };
+  `}
+`

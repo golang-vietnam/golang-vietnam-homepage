@@ -4,17 +4,17 @@ import { Link } from 'gatsby'
 import DefaultLayout from '@/components/DefaultLayout'
 import SEO from '@/components/seo'
 import Heading from '@/components/Heading'
-import data from '@/data/news'
-import NewsCard from '@/components/NewsCard'
+import data from '@/data/jobs'
+import JobCard from '@/components/JobCard'
 
-const SecondPage = () => (
-  <DefaultLayout title="News">
-    <SEO title="News" />
+const JobPage = () => (
+  <DefaultLayout title="Jobs">
+    <SEO title="Jobs" />
 
     {data.map(news => (
-      <NewsCard {...news} key={news.id} />
+      <JobCard {...news} key={news.id} />
     ))}
   </DefaultLayout>
 )
 
-export default SecondPage
+export default JobPage

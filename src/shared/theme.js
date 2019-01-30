@@ -36,4 +36,10 @@ export default {
     background: white,
     foreground: black,
   },
+  badge: {
+    activeBackground: primary,
+    activeForeground: white,
+    inactiveBackground: greyDarker,
+    inactiveForeground: white,
+  },
 }

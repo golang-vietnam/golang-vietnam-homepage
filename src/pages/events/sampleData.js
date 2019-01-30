@@ -2,11 +2,9 @@ import faker from 'faker'
 
 export default Array.from({ length: 10 }, () => ({
   title: faker.lorem.words(faker.random.number(3) + 3),
-  desc: faker.lorem.paragraph(faker.random.number(1) + 1),
-  from: faker.random.number(20) + 1,
+  date: '9/12/2018',
   id: faker.random.uuid(),
   location: faker.address.city(),
   company: faker.company.companyName(),
-  type: ['Full-time', 'Part-time', 'Remote'][faker.random.number(2)],
-  isOpened: faker.random.boolean(),
+  count: faker.random.number(300) + 50,
 }))

@@ -2,9 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Card, CardExcerpt, CardHeading } from '@/shared/styled'
 import styled from 'styled-components'
-const Heading = styled.h4``
-
-const Paragraph = styled.p``
 
 const NewsCard = ({ title, excerpt, author, date }) => {
   return (

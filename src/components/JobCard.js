@@ -1,16 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Card, CardExcerpt, CardHeading, Badge } from '@/shared/styled'
+import { Card, CardExcerpt, CardHeading, Badge, Dot } from '@/shared/styled'
 import styled from 'styled-components'
-
-const Dot = styled.span`
-  display: block;
-  width: 2px;
-  height: 2px;
-  border-radius: 100px;
-  margin: 0 10px;
-  background-color: ${props => props.theme.card.foreground};
-`
 
 const JobCard = ({
   title,

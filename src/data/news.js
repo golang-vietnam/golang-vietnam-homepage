@@ -1,5 +1,4 @@
 import faker from 'faker'
-import { FaRegKeyboard } from 'react-icons/fa'
 
 export default Array.from({ length: 10 }, () => ({
   title: faker.lorem.words(faker.random.number(3) + 3),

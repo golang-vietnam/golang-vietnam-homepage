@@ -51,3 +51,12 @@ export const Badge = styled.span`
   };
   `}
 `
+
+export const Dot = styled.span`
+  display: block;
+  width: 2px;
+  height: 2px;
+  border-radius: 100px;
+  margin: 0 10px;
+  background-color: ${props => props.theme.card.foreground};
+`

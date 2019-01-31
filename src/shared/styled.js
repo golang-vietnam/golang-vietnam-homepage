@@ -52,6 +52,13 @@ export const Badge = styled.span`
   `}
 `
 
+export const PrimaryButton = styled.button`
+  ${props => `
+    background-color: ${props.theme.button.primary.background};
+    color: ${props.theme.button.primary.foreground};
+  `}
+`
+
 export const Dot = styled.span`
   display: block;
   width: 2px;

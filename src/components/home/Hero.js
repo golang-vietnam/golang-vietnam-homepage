@@ -93,9 +93,8 @@ class Hero extends Component {
             <BackgroundImage
               Tag="section"
               id="hero"
-              className={
-                'relative pt-32 pb-20 flex items-center min-h-screen z-0'
-              }
+              className={'relative pt-32 pb-20 flex items-center z-0'}
+              style={{ minHeight: '900px' }}
               fluid={imageData}
               backgroundColor={`#040e18`}
             >

@@ -37,6 +37,16 @@ export default {
   header: {
     background: white,
     foreground: black,
+    dark: {
+      background: 'rgba(0,0,0,0.5)',
+      foreground: white,
+      nav: {
+        link: {
+          foreground: white,
+          activeForeground: primary,
+        },
+      },
+    },
     nav: {
       link: {
         foreground: black,

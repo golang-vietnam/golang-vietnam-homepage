@@ -22,7 +22,9 @@ const Container = styled.header`
         : ``
     };    
     background-color: ${
-      props.dark ? `rgba(0, 0, 0, 0.3)` : props.theme.header.background
+      props.dark
+        ? props.theme.header.dark.background
+        : props.theme.header.background
     };
     box-shadow: ${props.dark ? `none` : `0 1px 2px rgba(0, 0, 0, 0.1)`};
   `}
@@ -30,7 +32,10 @@ const Container = styled.header`
 
 const LogoWrapper = styled.div`
   a {
-    color: ${props => (props.dark ? props.theme.white : props.theme.black)};
+    color: ${props =>
+      props.dark
+        ? props.theme.header.dark.foreground
+        : props.theme.header.foreground};
   }
 `
 
@@ -58,9 +63,15 @@ const Menu = styled.nav`
     svg {
       margin-left: 2px;
     }
-    color: ${props => props.theme.header.nav.link.foreground};
+    color: ${props =>
+      props.dark
+        ? props.theme.header.dark.nav.link.foreground
+        : props.theme.header.nav.link.foreground};
     &:hover {
-      color: ${props => props.theme.header.nav.link.activeForeground};
+      color: ${props =>
+        props.dark
+          ? props.theme.header.dark.nav.link.activeForeground
+          : props.theme.header.nav.link.activeForeground};
     }
   }
   ul {
@@ -100,7 +111,7 @@ const Header = ({ siteTitle, absolute, dark }) => (
         </LogoWrapper>
         <div className="px-gutter">
           <nav>
-            <Menu>
+            <Menu dark={dark}>
               {menu.map(({ children, name, href }) => (
                 <li key={href}>
                   <Link to={href}>

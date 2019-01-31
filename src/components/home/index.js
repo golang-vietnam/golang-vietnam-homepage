@@ -4,6 +4,7 @@ import Jobs from './Jobs'
 import News from './News'
 import Events from './Events'
 import Sponsors from './Sponsors'
+import Subscription from './Subscription'
 
 const HomePageBody = () => {
   return (
@@ -13,6 +14,7 @@ const HomePageBody = () => {
       <News />
       <Events />
       <Sponsors />
+      <Subscription />
     </>
   )
 }

@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   siteMetadata: {
     title: `Golang Vietnam`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Golang Community in Vietnam.`,
     author: `@gatsbyjs`,
   },
   pathPrefix: `/img`,

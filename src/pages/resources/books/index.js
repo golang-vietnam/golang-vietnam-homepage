@@ -10,7 +10,6 @@ import { SubHeading, Card, CardHeading, CardExcerpt } from '@/shared/styled'
 const BooksPage = () => (
   <DefaultLayout title="Resources">
     <SEO title="Books" />
-
     <SubHeading className="mb-8">Books</SubHeading>
 
     {Array.from({ length: 10 }, (v, i) => (

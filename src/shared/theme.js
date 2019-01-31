@@ -20,8 +20,10 @@ export default {
     border: grey,
   },
   button: {
-    primary,
-    secondary: greyDarker,
+    primary: {
+      background: primary,
+      foreground: white,
+    },
   },
   footer: {
     background: grey,

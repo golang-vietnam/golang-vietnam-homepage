@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import tw from 'tailwind.macro'
 import PropTypes from 'prop-types'
 import { withPrefix } from 'gatsby'
+import { FaPlayCircle } from 'react-icons/fa'
 
 const Container = styled.div`
   ${props => `
@@ -22,12 +23,27 @@ const Date = styled.h6`
   ${tw`text-sm opacity-50`};
 `
 
+const Preview = styled.div`
+  position: relative;
+`
+
+const PlayIcon = styled.div`
+  ${tw`absolute pin flex items-center justify-center opacity-50`};
+  color: ${props => props.theme.white};
+  font-size: 48px;
+`
+
 class VideoCard extends Component {
   render() {
     const { previewImage, title, date, iframeLink } = this.props
     return (
       <Container>
-        <img src={withPrefix(previewImage)} alt={title} />
+        <Preview>
+          <img src={withPrefix(previewImage)} alt={title} />
+          <PlayIcon role="button">
+            <FaPlayCircle />
+          </PlayIcon>
+        </Preview>
         <div className="p-6">
           <Heading>{title}</Heading>
           <Date>{date}</Date>

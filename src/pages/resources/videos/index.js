@@ -3,8 +3,7 @@ import { Link } from 'gatsby'
 
 import DefaultLayout from '@/components/DefaultLayout'
 import SEO from '@/components/seo'
-import Heading from '@/components/Heading'
-import VideoCard from './VideoCard'
+import VideoCard from '@/components/VideoCard'
 import { SubHeading } from '@/shared/styled'
 
 const data = Array.from({ length: 6 }, () => ({

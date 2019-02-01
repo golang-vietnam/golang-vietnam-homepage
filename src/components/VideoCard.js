@@ -7,10 +7,10 @@ import { FaPlayCircle } from 'react-icons/fa'
 
 const Container = styled.div`
   ${props => `
-        background-color: ${props.theme.card.background};
-        box-shadow: ${props.theme.card.boxShadow};
-        color: ${props.theme.card.foreground};    
-    `};
+    color: ${props.theme.card.foreground};    
+    background-color: ${props.theme.card.background};
+    box-shadow: ${props.theme.card.boxShadow};
+  `}
 `
 
 const Heading = styled.h4`

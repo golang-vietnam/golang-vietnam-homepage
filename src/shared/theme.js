@@ -1,9 +1,9 @@
 const white = '#ffffff'
-const primary = `#3BA2BC`
-const black = `#080808`
-const grey = `#E7E7E7`
-const greyLigher = `#F8F8F8`
-const greyDarker = `#9B9B9B`
+const primary = '#3BA2BC'
+const black = '#080808'
+const grey = '#E7E7E7'
+const greyLigher = '#F8F8F8'
+const greyDarker = '#9B9B9B'
 
 export default {
   white,

@@ -7,9 +7,10 @@ import Root from '@/components/root'
 import Footer from '@/components/Footer'
 import styled from 'styled-components'
 import Heading from '@/components/Heading'
-import jx from 'tailwind.macro'
+import tw from 'tailwind.macro'
 
 const Container = styled.div`
+  min-height: calc(100vh - 76px - 75px);
   padding: 80px 0 200px 0;
 `
 
@@ -21,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Head = styled.div`
-  ${jx`flex items-end justify-between mb-16`};
+  ${tw`flex items-end justify-between mb-16`};
 `
 
 const DefaultLayout = ({ children, title, RightSideComponent }) => {

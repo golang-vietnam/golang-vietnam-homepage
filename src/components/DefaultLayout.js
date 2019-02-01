@@ -11,7 +11,7 @@ import tw from 'tailwind.macro'
 
 const Container = styled.div`
   min-height: calc(100vh - 76px - 75px);
-  padding: 80px 0 200px 0;
+  padding: 90px 0 200px 0;
 `
 
 const GlobalStyle = createGlobalStyle`

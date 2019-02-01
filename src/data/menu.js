@@ -13,7 +13,7 @@ export default [
   },
   {
     name: 'Resources',
-    href: '/resources',
+    href: '/resources/videos',
     children: [
       {
         name: 'Videos',

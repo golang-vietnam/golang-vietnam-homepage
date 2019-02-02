@@ -109,7 +109,7 @@ const Header = ({ siteTitle, absolute, dark }) => (
             <Logo />
           </Link>
         </LogoWrapper>
-        <div className="px-gutter">
+        <div className="px-gutter hidden sm:block">
           <nav>
             <Menu dark={dark}>
               {menu.map(({ children, name, href }) => (

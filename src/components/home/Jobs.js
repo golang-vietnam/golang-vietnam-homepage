@@ -6,6 +6,10 @@ import data from '@/data/jobs'
 import { Card, CardExcerpt, Dot, PrimaryButton } from '@/shared/styled'
 import { IoIosArrowRoundForward } from 'react-icons/io'
 import { lg } from '@/shared/responsive'
+import ReactResizeDetector from 'react-resize-detector'
+
+const itemPadding = 24
+const itemWidth = 295
 
 const Container = styled.section`
   ${tw`py-20`};
@@ -40,7 +44,10 @@ const Navigator = styled(PrimaryButton)`
   border: none;
   border-radius: 99999px;
   font-size: 30px;
-  ${tw`flex items-center justify-center`};
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  ${tw`flex items-center justify-center absolute shadow`};
 `
 
 const Carousel = styled.div`
@@ -66,9 +73,7 @@ const CarouselWrapper = styled.div`
 class Jobs extends Component {
   state = {
     display: 2,
-    itemPadding: 24,
     items: data,
-    itemWidth: 295,
     current: 0,
     translate: 0,
   }
@@ -79,18 +84,24 @@ class Jobs extends Component {
         (this.state.items.length + prevState.current + this.state.display) %
         this.state.items.length
       return {
-        translate: -(
-          current * this.state.itemWidth +
-          this.state.itemPadding * current
-        ),
+        translate: -(current * itemWidth + itemPadding * current),
         current,
       }
     })
   }
 
+  onResize = width => {
+    if (width <= 567 && this.state.display === 2) {
+      this.setState({ display: 1, translate: 0, current: 0 })
+    } else if (this.state.display === 1) {
+      this.setState({ display: 2, translate: 0, current: 0 })
+    }
+  }
+
   render() {
     return (
       <Container id="jobs">
+        <ReactResizeDetector handleWidth onResize={this.onResize} />
         <div className="container px-gutter mx-auto">
           <div className="flex flex-wrap">
             <div className="lg:w-1/4 w-full mb-16">
@@ -99,14 +110,14 @@ class Jobs extends Component {
             <JobCardContainer className="lg:w-3/4 w-full flex justify-between lg:mx-0 -mx-gutter">
               <Carousel
                 display={this.state.display}
-                itemPadding={this.state.itemPadding}
-                itemWidth={this.state.itemWidth}
+                itemPadding={itemPadding}
+                itemWidth={itemWidth}
               >
                 <CarouselWrapper
                   numOfItems={this.state.items.length}
-                  itemWidth={this.state.itemWidth}
+                  itemWidth={itemWidth}
                   translate={this.state.translate}
-                  itemPadding={this.state.itemPadding}
+                  itemPadding={itemPadding}
                 >
                   {this.state.items.map(
                     ({
@@ -137,11 +148,9 @@ class Jobs extends Component {
                 </CarouselWrapper>
               </Carousel>
 
-              <div className="flex items-center justify-end">
-                <Navigator onClick={this.next}>
-                  <IoIosArrowRoundForward />
-                </Navigator>
-              </div>
+              <Navigator onClick={this.next}>
+                <IoIosArrowRoundForward />
+              </Navigator>
             </JobCardContainer>
           </div>
         </div>

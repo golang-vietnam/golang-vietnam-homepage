@@ -5,10 +5,12 @@ import tw from 'tailwind.macro'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { withPrefix } from 'gatsby'
+import { sm } from '@/shared/responsive'
 
 const Container = styled.section`
   ${tw`pt-20`};
-  padding-bottom: 200px;
+  ${sm`padding-bottom: 200px;`};
+  padding-bottom: 120px;
 `
 
 const Wrapper = styled.div`

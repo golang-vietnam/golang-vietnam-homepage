@@ -1,11 +1,23 @@
-export const lg = str => {
-  return `@media (min-width: 992px){${str}}`
+import { css } from 'styled-components'
+
+export const lg = (...args) => {
+  return css`
+    @media (min-width: 992px) {
+      ${css(...args)}
+    }
+  `
 }
 
-export const md = str => {
-  return `@media (min-width: 768px){${str}}`
+export const md = (...args) => {
+  return css`
+    @media (min-width: 768px) {
+      ${css(...args)}
+    }
+  `
 }
 
-export const sm = str => {
-  return `@media (min-width: 576px){${str}}`
-}
+export const sm = (...args) => css`
+  @media (min-width: 576px) {
+    ${css(...args)}
+  }
+`

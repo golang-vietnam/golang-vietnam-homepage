@@ -5,13 +5,14 @@ import tw from 'tailwind.macro'
 import data from '@/data/jobs'
 import { Card, CardExcerpt, Dot, PrimaryButton } from '@/shared/styled'
 import { IoIosArrowRoundForward } from 'react-icons/io'
+import { lg } from '@/shared/responsive'
 
 const Container = styled.section`
   ${tw`py-20`};
 `
 
 const JobCardContainer = styled.div`
-  margin-top: -180px;
+  ${lg`margin-top: -185px;`}
   position: relative;
   z-index: 9;
 `
@@ -48,6 +49,7 @@ const Carousel = styled.div`
     props.display * props.itemPadding}px;
   overflow: hidden;
   padding-bottom:5px;  
+  padding-top:5px;  
 `}
 `
 
@@ -90,11 +92,11 @@ class Jobs extends Component {
     return (
       <Container id="jobs">
         <div className="container px-gutter mx-auto">
-          <div className="flex">
-            <div className="w-1/4">
+          <div className="flex flex-wrap">
+            <div className="lg:w-1/4 w-full mb-16">
               <Heading>Jobs</Heading>
             </div>
-            <JobCardContainer className="w-3/4 flex">
+            <JobCardContainer className="lg:w-3/4 w-full flex justify-between lg:mx-0 -mx-gutter">
               <Carousel
                 display={this.state.display}
                 itemPadding={this.state.itemPadding}

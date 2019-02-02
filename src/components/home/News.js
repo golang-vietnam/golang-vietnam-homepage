@@ -7,7 +7,7 @@ import NewsCard from '@/components/NewsCard'
 import Head from './shared/Head'
 
 const Container = styled.section`
-  ${tw`py-20`};
+  ${tw`sm:py-20 py-5`};
 `
 class News extends Component {
   render() {

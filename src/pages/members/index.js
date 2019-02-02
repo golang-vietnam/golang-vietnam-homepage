@@ -13,11 +13,11 @@ const Members = () => (
   <DefaultLayout title="Members">
     <SEO title="Members" />
 
-    <div className="flex pt-10">
-      <div className="w-1/3">
+    <div className="flex flex-wrap pt-10">
+      <div className="lg:w-1/3 w-full lg:mb-0 mb-16">
         <SubHeading>2013 - 2016</SubHeading>
       </div>
-      <div className="w-1/3">
+      <div className="lg:w-1/3 w-1/2">
         <Member
           name="Han Ngo"
           avatar="/img/members/hanngo.png"
@@ -27,7 +27,7 @@ const Members = () => (
           small
         />
       </div>
-      <div className="w-1/3">
+      <div className="lg:w-1/3 w-1/2">
         <Member
           name="Vu Nguyen"
           avatar="/img/members/vunguyen.png"
@@ -39,11 +39,11 @@ const Members = () => (
       </div>
     </div>
 
-    <div className="flex pt-20 mt-4">
-      <div className="w-1/3">
+    <div className="flex flex-wrap pt-20 mt-4">
+      <div className="lg:w-1/3 w-full lg:mb-0 mb-16">
         <SubHeading>2016 - 2017</SubHeading>
       </div>
-      <div className="w-1/3">
+      <div className="lg:w-1/3 w-1/2">
         <Member
           name="Thach Le"
           avatar="/img/members/thachle.png"
@@ -60,7 +60,7 @@ const Members = () => (
           email="#"
         />
       </div>
-      <div className="w-1/3">
+      <div className="lg:w-1/3 w-1/2">
         <Member
           name="Triet Pham"
           avatar="/img/members/trietpham.png"

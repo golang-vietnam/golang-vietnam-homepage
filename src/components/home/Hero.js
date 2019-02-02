@@ -40,10 +40,6 @@ const Button = styled.a`
   }
 `
 
-const ButtonSpace = styled.div`
-  ${tw`w-4`}
-`
-
 const ShareEdge = styled.div`
   ${tw`flex-col items-center flex`};
   div {
@@ -93,14 +89,15 @@ class Hero extends Component {
             <BackgroundImage
               Tag="section"
               id="hero"
-              className={'relative pt-32 pb-20 flex items-center z-0'}
-              style={{ minHeight: '900px' }}
+              className={
+                'relative pt-32 pb-20 flex items-center z-0 sm:min-h-hero'
+              }
               fluid={imageData}
               backgroundColor={`#040e18`}
             >
               <Overlay />
               <div className="container px-gutter mx-auto relative flex items-center">
-                <div className="w-1/2">
+                <div className="sm:w-1/2 w-4/5">
                   <Heading>The community of Golang Vietnam</Heading>
                   <Paragraph>
                     We are a group of members working in different places. We
@@ -108,17 +105,16 @@ class Hero extends Component {
                     <br /> Let’s join us!
                   </Paragraph>
 
-                  <div className="flex items-center">
-                    <Button href="#">
+                  <div className="flex items-center sm:flex-row flex-wrap flex-column">
+                    <Button href="#" className="sm:mb-0 mb-2 sm:mr-4">
                       <FaGithubAlt /> Visit our Github
                     </Button>
-                    <ButtonSpace />
                     <Button href="#">
                       <FaSlack /> Visit our Slack
                     </Button>
                   </div>
                 </div>
-                <div className="w-1/2 flex justify-end">
+                <div className="sm:w-1/2  w-1/5 flex justify-end">
                   <ShareEdge>
                     <div>Like our page</div>
                     <ShareButton href="#">

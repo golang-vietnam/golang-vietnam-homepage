@@ -4,9 +4,10 @@ import styled from 'styled-components'
 import { FaGithub, FaLinkedin, FaMedium, FaEnvelope } from 'react-icons/fa'
 import { withPrefix } from 'gatsby'
 import tw from 'tailwind.macro'
+import { sm } from '@/shared/responsive'
 
 const Container = styled.div`
-  ${tw`flex items-center`}
+  ${tw`flex sm:items-center sm:flex-row flex-col items-start`}
 `
 
 const Icon = styled.a`
@@ -22,10 +23,12 @@ const Icon = styled.a`
 `
 
 const Avatar = styled.div`
-  ${tw`rounded-full overflow-hidden`};
+  ${tw`rounded-full overflow-hidden flex-none sm:mb-0 mb-5`};
+  width: 50px;
+  height: 50px;
   ${props => `
-        width: ${props.small ? '48' : '70'}px;
-        height: ${props.small ? '48' : '70'}px;    
+      width: ${props.small ? '48' : '70'}px;
+      height: ${props.small ? '48' : '70'}px;    
     `}
 `
 
@@ -46,7 +49,7 @@ const Member = ({
       <Avatar small={small}>
         <img src={withPrefix(avatar)} {...size} alt={name} />
       </Avatar>
-      <div className="ml-4">
+      <div className="sm:ml-4 ml-0">
         <h4 className="text-lg">{name}</h4>
         <div className="flex items-center mt-2">
           {github && (

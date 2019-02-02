@@ -20,8 +20,8 @@ export const Card = styled.div`
 
 export const CardHeading = styled.h4`
   ${tw`text-lg`};
-  margin-bottom: 3px;
-  line-height: 1.78em;
+  margin-bottom: 6px;
+  line-height: 1.6em;
   text-transform: capitalize;
 `
 

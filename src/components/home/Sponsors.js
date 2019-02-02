@@ -88,7 +88,10 @@ class Sponsors extends Component {
 
           <div className="flex flex-wrap -mx-gutter">
             {data.map(({ href, image }) => (
-              <div className="w-1/3 px-gutter mb-gutter mt-gutter" key={image}>
+              <div
+                className="sm:w-1/3 w-1/2 px-gutter mb-gutter mt-gutter"
+                key={image}
+              >
                 <ImageLink href={href} target="__blank">
                   <Image
                     alt={image}

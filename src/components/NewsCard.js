@@ -6,12 +6,12 @@ import styled from 'styled-components'
 const NewsCard = ({ title, excerpt, author, date }) => {
   return (
     <Card>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between sm:items-center item-start">
         <div className="w-2/3">
           <CardHeading>{title}</CardHeading>
           <CardExcerpt>{excerpt}</CardExcerpt>
         </div>
-        <div className="w1/3 text-sm text-right whitespace-no-wrap">
+        <div className="w-1/3 text-sm text-right whitespace-no-wrap sm:mt-0 mt-5">
           <div className="opacity-75">Author</div>
           <div className="uppercase my-2">{author}</div>
           <div className="opacity-50">{date}</div>

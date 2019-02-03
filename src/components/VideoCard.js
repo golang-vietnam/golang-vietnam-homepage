@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
 import PropTypes from 'prop-types'
@@ -33,12 +34,41 @@ const PlayIcon = styled.div`
   font-size: 48px;
 `
 
+const PopupContainer = styled.div`
+  ${tw`fixed pin bg-black`};
+  z-index: 9999999;
+  color: white;
+`
+
+class VidePopup extends Component {
+  componentDidMount() {
+    this.ref.onload = () => {
+      console.log('loaded')
+    }
+  }
+
+  render() {
+    return (
+      <PopupContainer>
+        <iframe ref={node => (this.ref = node)} src={this.props.link} />
+        <iframe />
+      </PopupContainer>
+    )
+  }
+}
+
 class VideoCard extends Component {
+  openVideo = () => {
+    this.holder = document.createElement('div')
+    document.body.appendChild(this.holder)
+
+    ReactDOM.render(<VidePopup link={this.props.iframeLink} />, this.holder)
+  }
   render() {
     const { previewImage, title, date, iframeLink } = this.props
     return (
       <Container>
-        <Preview>
+        <Preview onClick={this.openVideo}>
           <img src={withPrefix(previewImage)} alt={title} />
           <PlayIcon role="button">
             <FaPlayCircle />

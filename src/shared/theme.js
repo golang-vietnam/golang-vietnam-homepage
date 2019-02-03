@@ -64,6 +64,16 @@ export default {
         },
       },
     },
+    mobileNav: {
+      background: black,
+      foreground: white,
+      link: {
+        foreground: white,
+        active: {
+          foreground: primary,
+        },
+      },
+    },
   },
   badge: {
     activeBackground: primary,

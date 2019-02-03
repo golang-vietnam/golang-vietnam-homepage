@@ -136,32 +136,36 @@ const MobileMenu = styled.ul`
     svg {
       margin-left: 5px;
     }
-    color: ${props =>
-      props.dark
-        ? props.theme.header.dark.nav.link.foreground
-        : props.theme.header.nav.link.foreground};
-    &:hover {
-      color: ${props =>
-        props.dark
-          ? props.theme.header.dark.nav.link.activeForeground
-          : props.theme.header.nav.link.activeForeground};
-    }
   }
   ul {
     ${tw`list-reset`};
-    padding-top: 20px;
+    padding-top: 10px;
     a {
-      padding: 0 27px;
+      padding: 0 16px;
       min-width: 150px;
-      height: 50px;
+      margin-top: 25px;
       ${tw`flex items-center`};
-      color: ${props => props.theme.header.dark.nav.link.foreground};
-
-      &:hover {
+      &:before {
+        content: '';
+        display: block;
+        width: 27px;
+        height: 2px;
+        margin-right: 10px;
         background-color: ${props =>
-          props.theme.header.nav.submenu.link.activeBackground};
-        color: ${props => props.theme.header.nav.submenu.link.activeForeground};
+          props.theme.header.mobileNav.link.foreground};
       }
+      &:hover:before {
+        background-color: ${props =>
+          props.theme.header.mobileNav.link.active.foreground};
+      }
+    }
+  }
+
+  a {
+    color: ${props => props.theme.header.mobileNav.link.foreground};
+
+    &:hover {
+      color: ${props => props.theme.header.mobileNav.link.active.foreground};
     }
   }
 `
@@ -182,7 +186,12 @@ const BurgerButton = styled.div`
     position: absolute;
     transform-origin: 50% 50%;
     transition: all 0.3s ease;
-    background-color: ${props => props.theme.header.dark.nav.link.foreground};
+    background-color: ${props =>
+      props.open
+        ? props.theme.header.mobileNav.foreground
+        : props.dark
+        ? props.theme.header.dark.nav.link.foreground
+        : props.theme.header.nav.link.foreground};
 
     &:nth-child(1) {
       top: 0;
@@ -238,7 +247,7 @@ class Header extends Component {
       <Container absolute={absolute} dark={dark}>
         <div className="container mx-auto px-gutter">
           <div className="flex items-center justify-between -mx-gutter">
-            <LogoWrapper dark={dark} className="px-gutter">
+            <LogoWrapper dark={dark || this.state.open} className="px-gutter">
               <Link to="/">
                 <Logo />
               </Link>
@@ -248,6 +257,7 @@ class Header extends Component {
               <BurgerButton
                 open={this.state.open}
                 onClick={this.toggleOpen}
+                dark={dark}
                 role="button"
                 tabIndex={0}
                 onKeyDown={e =>
@@ -259,25 +269,25 @@ class Header extends Component {
                 <span />
               </BurgerButton>
 
-              <MobileMenu dark={dark}>
-                {menu.map(({ children, name, href }) => (
-                  <li key={href}>
-                    <Link to={href}>
-                      {name} {Array.isArray(children) && <FaCaretDown />}
-                    </Link>
+              {this.state.open && (
+                <MobileMenu dark={dark} open={this.state.open}>
+                  {menu.map(({ children, name, href }) => (
+                    <li key={href}>
+                      <Link to={href}>{name}</Link>
 
-                    {Array.isArray(children) && (
-                      <ul>
-                        {children.map(({ name, href }) => (
-                          <li key={href}>
-                            <Link to={href}>{name}</Link>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                ))}
-              </MobileMenu>
+                      {Array.isArray(children) && (
+                        <ul>
+                          {children.map(({ name, href }) => (
+                            <li key={href}>
+                              <Link to={href}>{name}</Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </MobileMenu>
+              )}
 
               <nav className="hidden lg:block">
                 <Menu dark={dark}>

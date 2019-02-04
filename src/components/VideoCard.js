@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import tw from 'tailwind.macro'
 import PropTypes from 'prop-types'
 import { withPrefix } from 'gatsby'
-import { FaPlayCircle } from 'react-icons/fa'
+import { FaPlayCircle, FaCircleNotch } from 'react-icons/fa'
+import { MdClose } from 'react-icons/md'
 
 const Container = styled.div`
   ${props => `
@@ -35,23 +36,131 @@ const PlayIcon = styled.div`
 `
 
 const PopupContainer = styled.div`
-  ${tw`fixed pin bg-black`};
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   z-index: 9999999;
   color: white;
+  background-color: #000000;
+`
+
+const IframeWrapper = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80vw;
+  transform: translate(-50%, -50%);
+
+  > div {
+    position: relative;
+    padding-bottom: 56.25%; /*16:9*/
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+
+    ${props =>
+      props.loading
+        ? `
+    opacity: 0;
+    transform: scale(0.8);      
+    `
+        : `
+    opacity: 1;
+    transform: scale(1);      
+    `}
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+`
+
+const Spin = keyframes`
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(359deg);
+  }
+`
+
+const LoadingIcon = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50%;
+  animation: ${Spin} 2s infinite linear;
+  width: 24px;
+  height: 24px;
+  border: 3px solid white;
+  border-left-color: transparent;
+  border-radius: 9999px;
+  ${tw`flex items-center justify-center`}
+  display: ${props => (props.loading ? 'block' : 'none')}
+`
+
+const CloseButton = styled.button`
+  border: none;
+  background-color: transparent;
+  font-size: 32px;
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  color: white;
+  padding: 0;
 `
 
 class VidePopup extends Component {
+  state = {
+    loading: true,
+  }
+
   componentDidMount() {
     this.ref.onload = () => {
-      console.log('loaded')
+      this.setState({ loading: false })
     }
+    // TODO: should be an UI for error
+    this.ref.onerror = () => {
+      this.setState({ loading: false })
+    }
+
+    document.addEventListener('keydown', this.closeByEsc)
+  }
+
+  closeByEsc = e => {
+    if (e.key === 'Escape') {
+      this.close()
+      document.removeEventListener('keydown', this.closeByEsc)
+    }
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.closeByEsc)
+  }
+
+  close = () => {
+    this.props.onClose()
   }
 
   render() {
     return (
       <PopupContainer>
-        <iframe ref={node => (this.ref = node)} src={this.props.link} />
-        <iframe />
+        <IframeWrapper loading={this.state.loading}>
+          <div>
+            <iframe ref={node => (this.ref = node)} src={this.props.link} />
+          </div>
+        </IframeWrapper>
+        <LoadingIcon loading={this.state.loading} />
+        <CloseButton onClick={this.close}>
+          <MdClose />
+        </CloseButton>
       </PopupContainer>
     )
   }
@@ -61,9 +170,16 @@ class VideoCard extends Component {
   openVideo = () => {
     this.holder = document.createElement('div')
     document.body.appendChild(this.holder)
-
-    ReactDOM.render(<VidePopup link={this.props.iframeLink} />, this.holder)
+    ReactDOM.render(
+      <VidePopup link={this.props.iframeLink} onClose={this.closeVideo} />,
+      this.holder
+    )
   }
+
+  closeVideo = () => {
+    document.body.removeChild(this.holder)
+  }
+
   render() {
     const { previewImage, title, date, iframeLink } = this.props
     return (

@@ -158,7 +158,7 @@ class VidePopup extends Component {
           </div>
         </IframeWrapper>
         <LoadingIcon loading={this.state.loading} />
-        <CloseButton onClick={this.close}>
+        <CloseButton onClick={this.close} aria-label="close video popup">
           <MdClose />
         </CloseButton>
       </PopupContainer>
@@ -186,7 +186,11 @@ class VideoCard extends Component {
       <Container>
         <Preview onClick={this.openVideo}>
           <img src={withPrefix(previewImage)} alt={title} />
-          <PlayIcon role="button">
+          <PlayIcon
+            role="button"
+            aria-label="open video popup"
+            aria-haspopup="true"
+          >
             <FaPlayCircle />
           </PlayIcon>
         </Preview>

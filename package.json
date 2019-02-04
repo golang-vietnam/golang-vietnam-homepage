@@ -26,7 +26,8 @@
     "react-icons": "^3.3.0",
     "react-resize-detector": "^3.4.0",
     "styled-components": "^4.1.3",
-    "tailwind.macro": "^0.5.10"
+    "tailwind.macro": "^0.5.10",
+    "validator": "^10.11.0"
   },
   "keywords": [
     "gatsby"

@@ -6,6 +6,8 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { withPrefix } from 'gatsby'
 import { sm } from '@/shared/responsive'
+import isEmail from 'validator/lib/isEmail'
+import isURL from 'validator/lib/isURL'
 
 const Container = styled.section`
   ${tw`pt-20`};
@@ -22,6 +24,7 @@ const Wrapper = styled.div`
 const Button = styled.button`
   padding: 12px 40px;
   display: inline-block;
+  ${tw`mt-10`};
   ${props => `
     background-color: ${props.theme.button.primary.background};
     color: ${props.theme.button.primary.foreground};
@@ -42,21 +45,68 @@ const Input = styled.input`
     border-color: ${props.theme.main.primary};    
   }
   `}
-  &:last-of-type {
-    ${tw`mb-10`}
-  }
+`
+
+const ErrorMessage = styled.p`
+  ${tw`text-sm`};
+  text-align: left;
+  margin-bottom: 18px;
+  margin-top: -10px;
+  color: ${props => props.theme.error.foreground};
 `
 
 class Subscription extends Component {
   state = {
     email: '',
     github: '',
+    errors: {
+      email: '',
+      github: '',
+    },
+  }
+
+  validate(state) {
+    let errors = {}
+
+    if (!state.email) {
+      errors.email = 'Required'
+    } else if (!isEmail(state.email)) {
+      errors.email = 'Invalid email format'
+    }
+
+    if (state.github && !isURL(state.github)) {
+      errors.github = 'Invalid link'
+    }
+    return errors
+  }
+
+  hasError = errors => {
+    const keys = Object.keys(errors)
+
+    for (let k of keys) {
+      if (errors[k] !== '') {
+        return true
+      }
+    }
+
+    return false
   }
 
   handleSubmit = e => {
     e.preventDefault()
-    console.log(this.state)
+    this.setState({ errors: {} })
+    const errors = this.validate(this.state)
+    if (this.hasError(errors)) {
+      this.setState({ errors })
+      return
+    }
   }
+
+  handleChange = e => {
+    const name = e.target.getAttribute('name')
+    this.setState({ [name]: e.target.value })
+  }
+
   render() {
     return (
       <Container id="subscription">
@@ -69,12 +119,24 @@ class Subscription extends Component {
             </div>
 
             <form onSubmit={this.handleSubmit}>
-              <Input name="name" type="email" placeholder="Enter your email" />
               <Input
+                name="email"
+                type="email"
+                placeholder="Enter your email"
+                onChange={this.handleChange}
+              />
+              {this.state.errors.email && (
+                <ErrorMessage>{this.state.errors.email}</ErrorMessage>
+              )}
+              <Input
+                onChange={this.handleChange}
                 name="github"
                 type="text"
                 placeholder="Enter your Github URL"
               />
+              {this.state.errors.github && (
+                <ErrorMessage>{this.state.errors.github}</ErrorMessage>
+              )}
               <Button type="submit">Submit</Button>
             </form>
           </Wrapper>

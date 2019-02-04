@@ -12,6 +12,11 @@ export default {
   grey,
   greyLigher,
   greyDarker,
+  error: {
+    foreground: '#EC4C47',
+    border: '#BF0E08',
+    background: '#FEF6F6',
+  },
   main: {
     primary,
     background: white,

@@ -21,8 +21,8 @@ const VideosPage = () => (
 
     <div className="flex flex-wrap -mx-gutter">
       {data.map((d, i) => (
-        <div className="lg:w-1/3 sm:w-1/2 px-gutter mb-6">
-          <VideoCard {...d} key={i} />
+        <div className="lg:w-1/3 sm:w-1/2 px-gutter mb-6" key={i}>
+          <VideoCard {...d} />
         </div>
       ))}
     </div>

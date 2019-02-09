@@ -48,5 +48,6 @@ module.exports = {
         purgeOnly: ['src/css/style.css'], // Purge only tailwind
       },
     },
+    `gatsby-plugin-netlify-cms`
   ],
 }

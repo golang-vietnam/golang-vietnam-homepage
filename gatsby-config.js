@@ -21,8 +21,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `golang-community-in-vietname`,
+        short_name: `golang-vietnam`,
         start_url: `/`,
         background_color: `#3BA2BC`,
         theme_color: `#3BA2BC`,

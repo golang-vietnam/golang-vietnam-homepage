@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import { withPrefix } from 'gatsby'
 
 function SEO({ description, lang, meta, keywords, title }) {
   return (
@@ -31,8 +32,20 @@ function SEO({ description, lang, meta, keywords, title }) {
                 content: metaDescription,
               },
               {
-                property: `og:type`,
-                content: `website`,
+                property: `og:image`,
+                content: withPrefix(`/img/og/golang-vietname.png`),
+              },
+              {
+                property: `og:image:type`,
+                content: `image/png`,
+              },
+              {
+                property: `og:image:width`,
+                content: `1200`,
+              },
+              {
+                property: `og:image:height`,
+                content: `680`,
               },
               {
                 name: `twitter:card`,

@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: `Golang Vietnam`,
     description: `Golang Community in Vietnam.`,
-    author: `@gatsbyjs`,
+    author: `@golang-vietnam`,
   },
   pathPrefix: `/img`,
   plugins: [

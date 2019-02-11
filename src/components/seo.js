@@ -33,7 +33,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:image`,
-                content: withPrefix(`/img/og/golang-vietname.png`),
+                content: withPrefix(`/img/og/golang-vietnam.png`),
               },
               {
                 property: `og:image:type`,

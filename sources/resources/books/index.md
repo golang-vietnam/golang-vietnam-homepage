@@ -1,4 +1,5 @@
 ---
+key: books
 list:
   - desc: This is a book description
     linkURL: 'https://www.google.com'
@@ -9,4 +10,3 @@ list:
     linkURL: 'http://www.google.com'
     title: GO is GO
 ---
-

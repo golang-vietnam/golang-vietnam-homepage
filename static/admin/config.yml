@@ -17,6 +17,12 @@ collections:
         fields:
           [
             {
+              label: 'Key',
+              name: 'key',
+              widget: 'hidden',
+              default: 'articles',
+            },
+            {
               required: true,
               widget: list,
               label: 'Resource Articles',
@@ -44,6 +50,7 @@ collections:
         name: books
         fields:
           [
+            { label: 'Key', name: 'key', widget: 'hidden', default: 'books' },
             {
               label: 'Resource Books',
               name: 'list',
@@ -72,6 +79,7 @@ collections:
         name: videos
         fields:
           [
+            { label: 'Key', name: 'key', widget: 'hidden', default: 'videos' },
             {
               label: 'Resource Videos',
               name: 'list',

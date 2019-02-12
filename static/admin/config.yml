@@ -8,6 +8,93 @@ public_folder: /img
 display_url: https://golang-vietnam.netlify.com/
 
 collections:
+  - name: 'eventsAndJobs'
+    label: 'Events & Jobs'
+    files:
+      - file: 'sources/events/index.md'
+        label: 'Events'
+        name: 'events'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'events',
+            }
+          - {
+              label: 'Event List',
+              name: 'list',
+              widget: 'list',
+              fields:
+                [
+                  { label: Name, name: name, required: true, widget: string },
+                  {
+                    label: Location,
+                    name: location,
+                    required: true,
+                    widget: string,
+                  },
+                  {
+                    label: Guests,
+                    name: guests,
+                    required: true,
+                    widget: number,
+                  },
+                  { label: 'Date', name: date, widget: date },
+                ],
+            }
+      - file: 'sources/jobs/index.md'
+        label: 'Jobs'
+        name: 'jobs'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'jobs',
+            }
+          - {
+              label: 'Job List',
+              name: 'list',
+              widget: 'list',
+              fields:
+                [
+                  { label: Title, name: title, required: true, widget: string },
+                  {
+                    label: Company,
+                    name: company,
+                    required: true,
+                    widget: string,
+                  },
+                  {
+                    label: Location,
+                    name: location,
+                    required: true,
+                    widget: string,
+                  },
+                  {
+                    label: Type,
+                    name: type,
+                    required: true,
+                    widget: select,
+                    opttions: ['Full-time', 'Part-time', 'Remote'],
+                  },
+                  {
+                    label: Description,
+                    name: desc,
+                    required: true,
+                    widget: string,
+                  },
+                  { label: 'Link URL', name: linkURL, widget: string },
+                  { label: 'Date', name: date, widget: date },
+                  {
+                    label: 'Is Open',
+                    name: isOpened,
+                    widget: boolean,
+                    default: true,
+                  },
+                ],
+            }
   - name: 'resources'
     label: 'Resources'
     files:
@@ -89,22 +176,22 @@ collections:
                 [
                   { label: Title, name: title, required: true, widget: string },
                   {
-                    label: 'Link URL',
-                    name: linkURL,
+                    label: 'Iframe Link',
+                    name: iframeLink,
                     required: true,
                     widget: string,
                   },
-                  { label: 'Image', name: 'image', widget: 'image' },
                   {
-                    label: 'Preview Image Alt',
-                    name: 'imageAlt',
-                    widget: 'string',
+                    label: 'Image',
+                    name: 'image',
+                    widget: 'image',
+                    required: true,
                   },
                   {
                     label: 'Date',
                     name: 'date',
-                    widget: 'date',
-                    format: 'dd MM, YYYY',
+                    widget: 'string',
+                    required: true,
                   },
                 ],
             },

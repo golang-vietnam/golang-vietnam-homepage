@@ -1,5 +1,6 @@
 backend:
-  name: golang-vietnam-cms
+  name: git-gateway
+  branch: netlify-cms-integration
 
 media_folder: static/img
 public_folder: /img
@@ -7,50 +8,47 @@ public_folder: /img
 display_url: https://golang-vietnam.netlify.com/
 
 collections:
-  - name: 'pages'
-    label: 'Pages'
+  - name: 'navbarAndFooter'
+    label: 'Navbar & Footer'
     files:
-      - name: 'navbarAndFooter'
-        label: 'Navbar & Footer'
-        files:
-          - file: 'src/sources/footer/index.md'
-            label: 'Footer'
-            name: 'footer'
-            fields:
-              - {
-                  label: 'Template Key',
-                  name: 'templateKey',
-                  widget: 'hidden',
-                  default: 'footer',
-                }
-              - {
-                  label: 'Logo Image & Tagline',
-                  name: 'logoImage',
-                  widget: 'object',
-                  fields:
-                    [
-                      { label: 'Image', name: 'image', widget: 'image' },
-                      {
-                        label: 'Image Description',
-                        name: 'imageAlt',
-                        widget: 'string',
-                      },
-                      { label: 'Tagline', name: 'tagline', widget: 'string' },
-                    ],
-                }
-              - {
-                  label: 'Social Links',
-                  name: 'socialLinks',
-                  widget: 'list',
-                  fields:
-                    [
-                      { label: 'Image', name: 'image', widget: 'image' },
-                      {
-                        label: 'Image Description',
-                        name: 'imageAlt',
-                        widget: 'string',
-                      },
-                      { label: 'Label', name: 'label', widget: 'string' },
-                      { label: 'Link URL', name: 'linkURL', widget: 'string' },
-                    ],
-                }
+      - file: 'src/sources/footer/index.md'
+        label: 'Footer'
+        name: 'footer'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'footer',
+            }
+          - {
+              label: 'Logo Image & Tagline',
+              name: 'logoImage',
+              widget: 'object',
+              fields:
+                [
+                  { label: 'Image', name: 'image', widget: 'image' },
+                  {
+                    label: 'Image Description',
+                    name: 'imageAlt',
+                    widget: 'string',
+                  },
+                  { label: 'Tagline', name: 'tagline', widget: 'string' },
+                ],
+            }
+          - {
+              label: 'Social Links',
+              name: 'socialLinks',
+              widget: 'list',
+              fields:
+                [
+                  { label: 'Image', name: 'image', widget: 'image' },
+                  {
+                    label: 'Image Description',
+                    name: 'imageAlt',
+                    widget: 'string',
+                  },
+                  { label: 'Label', name: 'label', widget: 'string' },
+                  { label: 'Link URL', name: 'linkURL', widget: 'string' },
+                ],
+            }

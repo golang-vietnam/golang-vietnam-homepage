@@ -11,4 +11,3 @@ list:
     linkURL: 'http://www.google.com'
     title: GO GO GO
 ---
-

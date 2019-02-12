@@ -12,58 +12,93 @@ collections:
     label: 'Resources'
     files:
       - file: 'src/sources/resources/articles/index.md'
-        label: Articles,
-        name: articles,
-        required: true,
-        widget: list,
+        label: Articles
+        name: articles
         fields:
           [
-            { label: Title, name: title, required: true, widget: string },
-            { label: Description, name: desc, required: true, widget: string },
             {
-              label: 'Link URL',
-              name: linkURL,
               required: true,
-              widget: string,
+              widget: list,
+              label: 'Resource Articles',
+              name: 'list',
+              fields:
+                [
+                  { label: Title, name: title, required: true, widget: string },
+                  {
+                    label: Description,
+                    name: desc,
+                    required: true,
+                    widget: string,
+                  },
+                  {
+                    label: 'Link URL',
+                    name: linkURL,
+                    required: true,
+                    widget: string,
+                  },
+                ],
             },
           ]
       - file: 'src/sources/resources/books/index.md'
-        label: Books,
-        name: books,
-        required: true,
-        widget: list,
+        label: Books
+        name: books
         fields:
           [
-            { label: Title, name: title, required: true, widget: string },
-            { label: Description, name: desc, required: true, widget: string },
             {
-              label: 'Link URL',
-              name: linkURL,
+              label: 'Resource Books',
+              name: 'list',
               required: true,
-              widget: string,
+              widget: list,
+              fields:
+                [
+                  { label: Title, name: title, required: true, widget: string },
+                  {
+                    label: Description,
+                    name: desc,
+                    required: true,
+                    widget: string,
+                  },
+                  {
+                    label: 'Link URL',
+                    name: linkURL,
+                    required: true,
+                    widget: string,
+                  },
+                ],
             },
           ]
       - file: 'src/sources/resources/videos/index.md'
-        label: Videos,
-        name: videos,
-        required: true,
-        widget: list,
+        label: Videos
+        name: videos
         fields:
           [
-            { label: Title, name: title, required: true, widget: string },
             {
-              label: 'Link URL',
-              name: linkURL,
+              label: 'Resource Videos',
+              name: 'list',
               required: true,
-              widget: string,
-            },
-            { label: 'Image', name: 'image', widget: 'image' },
-            { label: 'Preview Image Alt', name: 'imageAlt', widget: 'string' },
-            {
-              label: 'Date',
-              name: 'date',
-              widget: 'date',
-              format: 'dd MM, YYYY',
+              widget: list,
+              fields:
+                [
+                  { label: Title, name: title, required: true, widget: string },
+                  {
+                    label: 'Link URL',
+                    name: linkURL,
+                    required: true,
+                    widget: string,
+                  },
+                  { label: 'Image', name: 'image', widget: 'image' },
+                  {
+                    label: 'Preview Image Alt',
+                    name: 'imageAlt',
+                    widget: 'string',
+                  },
+                  {
+                    label: 'Date',
+                    name: 'date',
+                    widget: 'date',
+                    format: 'dd MM, YYYY',
+                  },
+                ],
             },
           ]
   - name: 'navbarAndFooter'

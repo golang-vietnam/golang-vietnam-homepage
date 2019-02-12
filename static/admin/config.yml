@@ -5,12 +5,50 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
-    create: true
-    fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - name: 'navbarAndFooter'
+        label: 'Navbar & Footer'
+        files:
+          - file: 'src/sources/footer/index.md'
+            label: 'Footer'
+            name: 'footer'
+            fields:
+              - {
+                  label: 'Template Key',
+                  name: 'templateKey',
+                  widget: 'hidden',
+                  default: 'footer',
+                }
+              - {
+                  label: 'Logo Image & Tagline',
+                  name: 'logoImage',
+                  widget: 'object',
+                  fields:
+                    [
+                      { label: 'Image', name: 'image', widget: 'image' },
+                      {
+                        label: 'Image Description',
+                        name: 'imageAlt',
+                        widget: 'string',
+                      },
+                      { label: 'Tagline', name: 'tagline', widget: 'string' },
+                    ],
+                }
+              - {
+                  label: 'Social Links',
+                  name: 'socialLinks',
+                  widget: 'list',
+                  fields:
+                    [
+                      { label: 'Image', name: 'image', widget: 'image' },
+                      {
+                        label: 'Image Description',
+                        name: 'imageAlt',
+                        widget: 'string',
+                      },
+                      { label: 'Label', name: 'label', widget: 'string' },
+                      { label: 'Link URL', name: 'linkURL', widget: 'string' },
+                    ],
+                }

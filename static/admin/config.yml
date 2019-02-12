@@ -8,6 +8,34 @@ public_folder: /img
 display_url: https://golang-vietnam.netlify.com/
 
 collections:
+  - name: 'resources'
+    label: 'Resources'
+    description: 'Resources'
+    folder: 'src/sources/resources'
+    create: true
+    fields:
+      - {
+          label: Articles,
+          name: articles,
+          required: true,
+          widget: list,
+          fields:
+            [
+              { label: Name, name: name, required: true, widget: string },
+              {
+                label: Description,
+                name: description,
+                required: true,
+                widget: string,
+              },
+              {
+                label: 'Link URL',
+                name: linkURL,
+                required: true,
+                widget: string,
+              },
+            ],
+        }
   - name: 'navbarAndFooter'
     label: 'Navbar & Footer'
     files:

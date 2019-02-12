@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
 import { FaEnvelope } from 'react-icons/fa'
+import { graphql, StaticQuery } from 'gatsby'
 
 const Container = styled.footer`
   background-color: ${props => props.theme.grey};
@@ -16,25 +17,55 @@ const Container = styled.footer`
   }
 `
 
-const Footer = () => {
+const query = graphql`
+  {
+    data: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "footer" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            logoImage {
+              image
+              imageAlt
+              tagline
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+const Footer = props => {
   return (
-    <Container>
-      <div className="container mx-auto text-sm px-gutter">
-        <div className="flex items-center justify-between -mx-gutter sm:flex-row flex-col-reverse">
-          <div className="font-medium opacity-40 px-gutter">
-            © {new Date().getFullYear()} GolangVietnam
-          </div>
-          <div className="px-gutter sm:mb-0 mb-5">
-            <a
-              className="opacity-80 flex items-center"
-              href="mailto:gophers@golang.org.vn"
-            >
-              <FaEnvelope className="mr-2" /> <span>gophers@golang.org.vn</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </Container>
+    <StaticQuery
+      query={query}
+      render={data => {
+        console.log(data)
+        return (
+          <Container>
+            <div className="container mx-auto text-sm px-gutter">
+              <div className="flex items-center justify-between -mx-gutter sm:flex-row flex-col-reverse">
+                <div className="font-medium opacity-40 px-gutter">
+                  © {new Date().getFullYear()} GolangVietnam
+                </div>
+                <div className="px-gutter sm:mb-0 mb-5">
+                  <a
+                    className="opacity-80 flex items-center"
+                    href="mailto:gophers@golang.org.vn"
+                  >
+                    <FaEnvelope className="mr-2" />{' '}
+                    <span>gophers@golang.org.vn</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </Container>
+        )
+      }}
+    />
   )
 }
 

@@ -1,4 +1,5 @@
 ---
+key: events
 list:
   - date: 2019-02-22T14:32:17.019Z
     guests: '340'
@@ -9,4 +10,3 @@ list:
     location: 5th Avenue - NYC
     name: GO conference 2018
 ---
-

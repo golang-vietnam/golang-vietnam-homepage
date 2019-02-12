@@ -15,14 +15,9 @@ collections:
         label: 'Events'
         name: 'events'
         fields:
+          - { label: 'Key', name: 'key', widget: 'hidden', default: 'events' }
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'events',
-            }
-          - {
-              label: 'Event List',
+              label: 'Event',
               name: 'list',
               widget: 'list',
               fields:
@@ -47,14 +42,9 @@ collections:
         label: 'Jobs'
         name: 'jobs'
         fields:
+          - { label: 'Key', name: 'key', widget: 'hidden', default: 'jobs' }
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'jobs',
-            }
-          - {
-              label: 'Job List',
+              label: 'Job',
               name: 'list',
               widget: 'list',
               fields:
@@ -77,7 +67,8 @@ collections:
                     name: type,
                     required: true,
                     widget: select,
-                    opttions: ['Full-time', 'Part-time', 'Remote'],
+                    options: ['Full-time', 'Part-time', 'Remote'],
+                    default: Full-time,
                   },
                   {
                     label: Description,
@@ -112,7 +103,7 @@ collections:
             {
               required: true,
               widget: list,
-              label: 'Resource Articles',
+              label: 'Article',
               name: 'list',
               fields:
                 [
@@ -139,7 +130,7 @@ collections:
           [
             { label: 'Key', name: 'key', widget: 'hidden', default: 'books' },
             {
-              label: 'Resource Books',
+              label: 'Book',
               name: 'list',
               required: true,
               widget: list,
@@ -168,7 +159,7 @@ collections:
           [
             { label: 'Key', name: 'key', widget: 'hidden', default: 'videos' },
             {
-              label: 'Resource Videos',
+              label: 'Video',
               name: 'list',
               required: true,
               widget: list,

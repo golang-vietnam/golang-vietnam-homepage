@@ -43,7 +43,7 @@ const Footer = props => {
     <StaticQuery
       query={query}
       render={data => {
-        console.log(data)
+        //console.log(data)
         return (
           <Container>
             <div className="container mx-auto text-sm px-gutter">

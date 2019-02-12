@@ -1,8 +1,10 @@
 backend:
   name: golang-vietnam-cms
 
-media_folder: static/assets
-public_folder: assets
+media_folder: static/img
+public_folder: /img
+
+display_url: https://golang-vietnam.netlify.com/
 
 collections:
   - name: 'pages'

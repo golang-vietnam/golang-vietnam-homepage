@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import { withPrefix } from 'gatsby'
 import { FaPlayCircle, FaCircleNotch } from 'react-icons/fa'
 import { MdClose } from 'react-icons/md'
+import dayjs from 'dayjs'
 
 const Container = styled.div`
   ${props => `
@@ -205,7 +206,7 @@ class VideoCard extends Component {
         </Preview>
         <div className="p-6">
           <Heading>{title}</Heading>
-          <Date>{date}</Date>
+          <Date>{dayjs(date).format('DD MMM, YYYY')}</Date>
         </div>
       </Container>
     )

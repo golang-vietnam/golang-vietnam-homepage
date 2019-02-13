@@ -6,7 +6,13 @@ import DefaultLayout from '@/components/DefaultLayout'
 import SEO from '@/components/seo'
 import Heading from '@/components/Heading'
 import EventCard from '@/components/EventCard'
-import { SubHeading, Card, CardHeading, CardExcerpt } from '@/shared/styled'
+import {
+  SubHeading,
+  Card,
+  CardHeading,
+  CardExcerpt,
+  Hyperlink,
+} from '@/shared/styled'
 
 const query = graphql`
   {
@@ -45,7 +51,15 @@ const ArticlesPage = () => (
 
         return list.map(({ title, desc, linkURL }, i) => (
           <Card key={i}>
-            <CardHeading>{title}</CardHeading>
+            <CardHeading>
+              <Hyperlink
+                href={linkURL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {title}
+              </Hyperlink>
+            </CardHeading>
             <CardExcerpt>{desc}</CardExcerpt>
           </Card>
         ))

@@ -23,13 +23,14 @@ export const CardHeading = styled.h4`
   margin-bottom: 6px;
   line-height: 1.6em;
   text-transform: capitalize;
-  a {
-    text-decoration: none;
-    color: ${props => props.theme.card.foreground};
-    transition: color 0.2s ease-in-out;
-    &:hover {
-      color: ${props => props.theme.card.link};
-    }
+`
+
+export const Hyperlink = styled.a`
+  text-decoration: none;
+  color: ${props => props.theme.card.foreground};
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: ${props => props.theme.card.link};
   }
 `
 

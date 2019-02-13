@@ -1,6 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Card, CardExcerpt, CardHeading, Badge, Dot } from '@/shared/styled'
+import {
+  Card,
+  CardExcerpt,
+  CardHeading,
+  Badge,
+  Dot,
+  Hyperlink,
+} from '@/shared/styled'
 import styled from 'styled-components'
 import TimeAgo from 'javascript-time-ago'
 import en from 'javascript-time-ago/locale/en'
@@ -17,12 +24,17 @@ const JobCard = ({
   company,
   type,
   isOpened,
+  linkURL,
 }) => {
   return (
     <Card>
       <div className="flex justify-between items-start">
         <div className="w-2/3">
-          <CardHeading>{title}</CardHeading>
+          <CardHeading>
+            <Hyperlink href={linkURL} target="_blank" rel="noopener noreferrer">
+              {title}
+            </Hyperlink>
+          </CardHeading>
           <div className="flex items-center text-sm opacity-75 mb-1">
             <b className="capitalize">{company}</b> <Dot />
             <span>{location}</span> <Dot /> <span>{type}</span>
@@ -48,6 +60,7 @@ JobCard.propTypes = {
   location: PropTypes.string,
   company: PropTypes.string,
   type: PropTypes.string,
+  linkURL: PropTypes.string,
   isOpened: PropTypes.bool,
 }
 

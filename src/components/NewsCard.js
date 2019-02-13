@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Card, CardExcerpt, CardHeading } from '@/shared/styled'
+import { Card, CardExcerpt, CardHeading, Hyperlink } from '@/shared/styled'
 import styled from 'styled-components'
 import dayjs from 'dayjs'
 
@@ -10,9 +10,9 @@ const NewsCard = ({ title, desc, author, date, link }) => {
       <div className="flex justify-between sm:items-center item-start">
         <div className="w-2/3">
           <CardHeading>
-            <a href={link} target="_blank" rel="noopener noreferrer">
+            <Hyperlink href={link} target="_blank" rel="noopener noreferrer">
               {title}
-            </a>
+            </Hyperlink>
           </CardHeading>
           <CardExcerpt>{desc}</CardExcerpt>
         </div>

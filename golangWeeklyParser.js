@@ -8,7 +8,7 @@ const fsExtra = require('fs-extra')
 ;(async () => {
   let feed = await parser.parseURL('https://golangweekly.com/rss/1c31a5j2')
   //   console.log(feed.title)
-  const date = dayjs(feed.items[0].pubDate)['$d']
+  const postedOn = dayjs(feed.items[0].pubDate)['$d']
 
   const { document } = new JSDOM(`${feed.items[0].content}`).window
   const extractData = Array.prototype.slice
@@ -42,7 +42,7 @@ const fsExtra = require('fs-extra')
         link,
         desc,
         author,
-        date,
+        postedOn,
       }
     })
 
@@ -51,8 +51,8 @@ const fsExtra = require('fs-extra')
   content[count++] = '---'
   content[count++] = 'key: news'
   content[count++] = 'list:'
-  extractData.forEach(({ title, link, desc, author, date }) => {
-    content[count++] = `  - date: "${date}"`
+  extractData.forEach(({ title, link, desc, author, postedOn }) => {
+    content[count++] = `  - postedOn: "${postedOn}"`
     content[count++] = `    link: "${link}"`
     content[count++] = `    desc: "${desc}"`
     content[count++] = `    author: "${author}"`

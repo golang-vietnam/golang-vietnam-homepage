@@ -18,7 +18,7 @@ const query = graphql`
             list {
               title
               desc
-              date
+              postedOn
               author
               link
             }

@@ -5,17 +5,72 @@ import News from './News'
 import Events from './Events'
 import Sponsors from './Sponsors'
 import Subscription from './Subscription'
+import { graphql, StaticQuery } from 'gatsby'
+
+const query = graphql`
+  {
+    jobs: allMarkdownRemark(filter: { frontmatter: { key: { eq: "jobs" } } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            list {
+              company
+              date
+              desc
+              isOpened
+              linkURL
+              location
+              title
+              type
+            }
+          }
+        }
+      }
+    }
+    events: allMarkdownRemark(
+      filter: { frontmatter: { key: { eq: "events" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            list {
+              location
+              date
+              guests
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 const HomePageBody = () => {
   return (
-    <>
-      <Hero />
-      <Jobs />
-      <News />
-      <Events />
-      <Sponsors />
-      <Subscription />
-    </>
+    <StaticQuery
+      query={query}
+      render={({ jobs, events }) => {
+        if (!jobs || !events) {
+          return null
+        }
+        const { list: jobList } = jobs.edges[0].node.frontmatter
+        const { list: eventList } = events.edges[0].node.frontmatter
+
+        return (
+          <>
+            <Hero />
+            <Jobs data={jobList} />
+            <News />
+            <Events data={eventList} />
+            <Sponsors />
+            <Subscription />
+          </>
+        )
+      }}
+    />
   )
 }
 

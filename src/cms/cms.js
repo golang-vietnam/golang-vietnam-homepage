@@ -1,7 +1,6 @@
 import CMS from 'netlify-cms'
 
-import FooterPreview from './preview-templates/FooterPreview'
-import VideosResourcePreview from './preview-templates/VideosResourcePreview'
+// Register preview template here
 
-CMS.registerPreviewTemplate('footer', FooterPreview)
-CMS.registerPreviewTemplate('resource', VideosResourcePreview)
+// import FooterPreview from './preview-templates/FooterPreview'
+// CMS.registerPreviewTemplate('footer', FooterPreview)

@@ -166,6 +166,15 @@ class VidePopup extends Component {
   }
 }
 
+const Image = styled.div`
+  padding-bottom: 62.83%;
+  height: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(${props => props.url});
+`
+
 class VideoCard extends Component {
   openVideo = () => {
     this.holder = document.createElement('div')
@@ -181,11 +190,11 @@ class VideoCard extends Component {
   }
 
   render() {
-    const { previewImage, title, date, iframeLink } = this.props
+    const { image, title, date, iframeLink } = this.props
     return (
       <Container>
         <Preview onClick={this.openVideo}>
-          <img src={withPrefix(previewImage)} alt={title} />
+          <Image url={withPrefix(image)} />
           <PlayIcon
             role="button"
             aria-label="open video popup"
@@ -204,7 +213,7 @@ class VideoCard extends Component {
 }
 
 VideoCard.propTypes = {
-  previewImage: PropTypes.string,
+  image: PropTypes.string,
   title: PropTypes.string,
   date: PropTypes.string,
   iframeLink: PropTypes.string,

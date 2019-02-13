@@ -18,4 +18,3 @@ list:
     title: Junior GO develop
     type: Part-time
 ---
-

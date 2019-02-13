@@ -6,6 +6,11 @@ import { Card, CardExcerpt, Dot, PrimaryButton } from '@/shared/styled'
 import { IoIosArrowRoundForward } from 'react-icons/io'
 import { lg } from '@/shared/responsive'
 import ReactResizeDetector from 'react-resize-detector'
+import TimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en'
+
+TimeAgo.addLocale(en)
+const timeAgo = new TimeAgo()
 
 const itemPadding = 24
 const itemWidth = 295
@@ -123,7 +128,7 @@ class Jobs extends Component {
                 >
                   {this.state.items.map(
                     (
-                      { title, desc, from, location, company, toString, type },
+                      { title, desc, date, location, company, toString, type },
                       index
                     ) => (
                       <JobCard key={index}>
@@ -135,7 +140,9 @@ class Jobs extends Component {
                             <Dot />
                             <span>{type}</span>
                           </div>
-                          <div className="opacity-75 mb-4">{from} days ago</div>
+                          <div className="opacity-75 mb-4">
+                            {timeAgo.format(new Date(date).getTime())}
+                          </div>
                         </JobCardInfo>
                         <CardExcerpt>{desc}</CardExcerpt>
                       </JobCard>

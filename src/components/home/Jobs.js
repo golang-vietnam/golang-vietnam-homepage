@@ -122,17 +122,11 @@ class Jobs extends Component {
                   itemPadding={itemPadding}
                 >
                   {this.state.items.map(
-                    ({
-                      title,
-                      desc,
-                      from,
-                      id,
-                      location,
-                      company,
-                      toString,
-                      type,
-                    }) => (
-                      <JobCard key={id}>
+                    (
+                      { title, desc, from, location, company, toString, type },
+                      index
+                    ) => (
+                      <JobCard key={index}>
                         <h3>{title}</h3>
                         <JobCardInfo>
                           <div className="font-bold mb-3 mt-5">{company}</div>

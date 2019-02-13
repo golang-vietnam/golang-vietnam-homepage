@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { graphql, StaticQuery } from 'gatsby'
 
 import DefaultLayout from '@/components/DefaultLayout'

@@ -16,8 +16,8 @@ class News extends Component {
         <div className="container px-gutter mx-auto">
           <Head title="News" link="/news" />
 
-          {data.slice(0, 3).map(d => (
-            <NewsCard {...d} key={d.id} />
+          {this.props.data.slice(0, 3).map((news, i) => (
+            <NewsCard {...news} key={i} />
           ))}
         </div>
       </Container>

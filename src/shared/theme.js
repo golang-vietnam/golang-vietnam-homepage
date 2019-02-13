@@ -37,6 +37,7 @@ export default {
   card: {
     background: white,
     foreground: black,
+    link: primary,
     boxShadow: '0 0px 4px rgba(0,0,0,0.15)',
   },
   header: {

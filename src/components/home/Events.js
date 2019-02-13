@@ -16,8 +16,8 @@ class Events extends Component {
         <div className="container px-gutter mx-auto">
           <Head title="Events" link="/events" />
 
-          {this.props.data.slice(0, 3).map(d => (
-            <EventsCard {...d} key={d.id} />
+          {this.props.data.slice(0, 3).map((event, index) => (
+            <EventsCard {...event} key={index} />
           ))}
         </div>
       </Container>

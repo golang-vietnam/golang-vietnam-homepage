@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Card, CardExcerpt, CardHeading, Dot } from '@/shared/styled'
 import dayjs from 'dayjs'
 
-const EventsCard = ({ name, date, id, location, company, guests }) => {
+const EventsCard = ({ name, date, location, guests }) => {
   return (
     <Card>
       <div className="flex justify-between items-center">
@@ -25,10 +25,8 @@ const EventsCard = ({ name, date, id, location, company, guests }) => {
 EventsCard.propTypes = {
   name: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  company: PropTypes.string.isRequired,
-  guests: PropTypes.number.isRequired,
+  guests: PropTypes.string.isRequired,
 }
 
 export default EventsCard

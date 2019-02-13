@@ -45,6 +45,22 @@ const query = graphql`
         }
       }
     }
+    news: allMarkdownRemark(filter: { frontmatter: { key: { eq: "news" } } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            list {
+              title
+              desc
+              date
+              author
+              link
+            }
+          }
+        }
+      }
+    }
   }
 `
 
@@ -52,18 +68,19 @@ const HomePageBody = () => {
   return (
     <StaticQuery
       query={query}
-      render={({ jobs, events }) => {
-        if (!jobs || !events) {
+      render={({ jobs, events, news }) => {
+        if (!jobs || !events || !news) {
           return null
         }
         const { list: jobList } = jobs.edges[0].node.frontmatter
         const { list: eventList } = events.edges[0].node.frontmatter
+        const { list: newsList } = news.edges[0].node.frontmatter
 
         return (
           <>
             <Hero />
             <Jobs data={jobList} />
-            <News />
+            <News data={newsList} />
             <Events data={eventList} />
             <Sponsors />
             <Subscription />

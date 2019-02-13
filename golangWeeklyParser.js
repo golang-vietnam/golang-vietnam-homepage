@@ -52,11 +52,11 @@ const fsExtra = require('fs-extra')
   content[count++] = 'key: news'
   content[count++] = 'list:'
   extractData.forEach(({ title, link, desc, author, date }) => {
-    content[count++] = `  - date: ${date}`
-    content[count++] = `    link: ${link}`
-    content[count++] = `    desc: ${desc}`
-    content[count++] = `    author: ${author}`
-    content[count++] = `    title: ${title}`
+    content[count++] = `  - date: "${date}"`
+    content[count++] = `    link: "${link}"`
+    content[count++] = `    desc: "${desc}"`
+    content[count++] = `    author: "${author}"`
+    content[count++] = `    title: "${title}"`
   })
   content[count++] = '---'
 

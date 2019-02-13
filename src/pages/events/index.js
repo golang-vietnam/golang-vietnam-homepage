@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 
 import DefaultLayout from '@/components/DefaultLayout'
 import SEO from '@/components/seo'
@@ -7,22 +8,81 @@ import Heading from '@/components/Heading'
 import data from '@/data/events'
 import EventCard from '@/components/EventCard'
 import { SubHeading } from '@/shared/styled'
+import dayjs from 'dayjs'
+import { PassThrough } from 'stream'
+
+const query = graphql`
+  {
+    data: allMarkdownRemark(
+      filter: { frontmatter: { key: { eq: "events" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            list {
+              location
+              date
+              guests
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 const EventsPage = () => (
   <DefaultLayout title="Events">
     <SEO title="Events" />
 
-    <SubHeading className="mb-8">Forthcoming Events</SubHeading>
+    <StaticQuery
+      query={query}
+      render={({ data }) => {
+        if (!data) {
+          return null
+        }
+        const { list } = data.edges[0].node.frontmatter
+        const fortcoming = []
+        const past = []
+        const now = Date.now()
 
-    <div className="mb-16">
-      <p>No fortcoming events</p>
-    </div>
+        list.forEach(event => {
+          if (dayjs(event.date).isBefore(dayjs(now))) {
+            past.unshift(event)
+          } else {
+            fortcoming.unshift(event)
+          }
+        })
 
-    <SubHeading className="mb-10">Past Events</SubHeading>
+        return (
+          <>
+            <SubHeading className="mb-8">Forthcoming Events</SubHeading>
 
-    {data.map(news => (
-      <EventCard {...news} key={news.id} />
-    ))}
+            <div className="mb-16">
+              {fortcoming.length === 0 ? (
+                <p>No fortcoming events</p>
+              ) : (
+                fortcoming.map((event, index) => (
+                  <EventCard {...event} key={index} />
+                ))
+              )}
+            </div>
+
+            <SubHeading className="mb-10">Past Events</SubHeading>
+
+            {past.length === 0 ? (
+              <div className="mb-16">
+                <p>No fortcoming events</p>
+              </div>
+            ) : (
+              past.map((event, index) => <EventCard {...event} key={index} />)
+            )}
+          </>
+        )
+      }}
+    />
   </DefaultLayout>
 )
 

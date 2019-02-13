@@ -46,8 +46,11 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
+    "fs-extra": "^7.0.1",
     "gatsby-plugin-root-import": "^2.0.5",
+    "jsdom": "^13.2.0",
     "prettier": "^1.15.2",
+    "rss-parser": "^3.6.2",
     "tailwindcss": "^0.7.4"
   },
   "repository": {

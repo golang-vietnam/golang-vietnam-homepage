@@ -67,15 +67,17 @@ collections:
                     name: type,
                     required: true,
                     widget: select,
-                    options: ['Full-time', 'Part-time', 'Remote'],
-                    default: Full-time,
+                    options:
+                      [
+                        'Full-time',
+                        'Part-time',
+                        'Remote',
+                        'Remote full-time',
+                        'Remote part-time',
+                      ],
+                    default: 'Full-time',
                   },
-                  {
-                    label: Description,
-                    name: desc,
-                    required: true,
-                    widget: string,
-                  },
+                  { label: Description, name: desc, widget: string },
                   { label: 'Link URL', name: linkURL, widget: string },
                   { label: 'Date', name: date, widget: date },
                   {
@@ -181,7 +183,7 @@ collections:
                   {
                     label: 'Date',
                     name: 'date',
-                    widget: 'string',
+                    widget: 'date',
                     required: true,
                   },
                 ],

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
-import data from '@/data/news'
 import NewsCard from '@/components/NewsCard'
 import Head from './shared/Head'
 

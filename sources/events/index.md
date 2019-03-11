@@ -1,12 +1,29 @@
----
+--- 
 key: events
 list:
-  - date: 2019-02-22T14:32:17.019Z
-    guests: '340'
-    location: Dreamplex - HCMC
-    name: GO home
-  - date: 2019-02-05T14:33:16.765Z
-    guests: '324'
-    location: 5th Avenue - NYC
-    name: GO conference 2018
+ - date: "2018-12-08T08:00:00+0700"
+   guests: "347"
+   location: "Dreamplex Coworking Space, Vietnam, Ho Chi Minh City, 195 Điện Biên Phủ , Quận Bình Thạnh"
+   name: "GopherCon Vietnam 2018"
+   link: "https://facebook.com/events/1859869227438912"
+ - date: "2018-08-07T18:30:00+0700"
+   guests: "400"
+   location: "NFQ Asia, Vietnam, Ho Chi Minh City, 72 Le Thanh Ton, Ward Ben Nghe,  District 1, Ho Chi Minh City, Vietnam"
+   name: "Golang Vietnam Meetup #15"
+   link: "https://facebook.com/events/1040543619443588"
+ - date: "2018-05-11T18:30:00+0700"
+   guests: "309"
+   location: ""
+   name: "Golang Vietnam Meetup #14 (Ha Noi)"
+   link: "https://facebook.com/events/1701571639935879"
+ - date: "2018-01-02T18:30:00+0700"
+   guests: "161"
+   location: "NFQ Asia, Vietnam, Ho Chi Minh City, 72 Le Thanh Ton, Ward Ben Nghe,  District 1, Ho Chi Minh City, Vietnam"
+   name: "Golang New Year Meetup 2018 #13"
+   link: "https://facebook.com/events/561603874191479"
+ - date: "2017-09-06T18:30:00+0700"
+   guests: "217"
+   location: "Tinypulse, Vietnam, Ho Chi Minh City, Lvl 18, 72 Le Thanh Ton, Phuong Ben Nghe, Q1"
+   name: "Golang Vietnam Meetup #12"
+   link: "https://facebook.com/events/146312662623943"
 ---

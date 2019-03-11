@@ -11,7 +11,7 @@ import tw from 'tailwind.macro'
 
 const Container = styled.div`
   min-height: calc(100vh - 76px - 75px);
-  padding: 90px 0 200px 0;
+  padding: 170px 0 200px 0;
 `
 
 const GlobalStyle = createGlobalStyle`
@@ -48,7 +48,7 @@ const DefaultLayout = ({ children, title, RightSideComponent }) => {
 DefaultLayout.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
-  RightSideComponent: PropTypes.element,
+  RightSideComponent: PropTypes.oneOf(PropTypes.element, PropTypes.func),
 }
 
 export default DefaultLayout

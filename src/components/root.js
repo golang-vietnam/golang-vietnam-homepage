@@ -4,6 +4,9 @@ import { StaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
 import theme from '@/shared/theme'
 import '@/css/style.css'
+import smoothscroll from 'smoothscroll-polyfill'
+// kick off the polyfill!
+smoothscroll.polyfill()
 
 const Root = ({ children }) => (
   <StaticQuery

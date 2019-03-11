@@ -72,3 +72,7 @@ body {
 p {
   line-height: 1.5em;
 }
+
+html {
+  scroll-behavior: smooth;
+}

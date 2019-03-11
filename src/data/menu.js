@@ -1,15 +1,15 @@
 export default [
   {
-    name: 'News',
-    href: '/news',
+    name: 'Jobs',
+    href: '/#jobs',
   },
   {
-    name: 'Jobs',
-    href: '/jobs',
+    name: 'News',
+    href: '/#news',
   },
   {
     name: 'Events',
-    href: '/events',
+    href: '#events',
   },
   {
     name: 'Resources',

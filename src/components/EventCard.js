@@ -1,14 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Card, CardExcerpt, CardHeading, Dot } from '@/shared/styled'
+import { Card, CardExcerpt, CardHeading, Dot, Hyperlink } from '@/shared/styled'
 import dayjs from 'dayjs'
+import decode from 'unescape'
 
-const EventsCard = ({ name, date, location, guests, linkURL }) => {
+const EventsCard = ({ name, date, location, guests, link }) => {
   return (
     <Card>
       <div className="flex justify-between items-center">
         <div className="w-2/3">
-          <CardHeading>{name}</CardHeading>
+          <CardHeading>
+            <Hyperlink
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              dangerouslySetInnerHTML={{ __html: decode(name) }}
+            />
+          </CardHeading>
           <div className="flex items-center text-sm opacity-75">
             <span className="capitalize font-medium">{location}</span>
           </div>

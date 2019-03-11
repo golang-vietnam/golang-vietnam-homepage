@@ -40,6 +40,7 @@ const query = graphql`
               date
               guests
               name
+              link
             }
           }
         }

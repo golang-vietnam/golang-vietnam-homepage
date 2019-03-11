@@ -10,19 +10,14 @@ import { FaCaretDown } from 'react-icons/fa'
 
 const Container = styled.header`
   padding: 5px 0;
+  transition: all 0.25s ease;
   ${props => `
-    ${
-      props.absolute
-        ? `
-      position: absolute;
-      left: 0;
-      right: 0;
-      z-index: 99;
-    `
-        : ``
-    };    
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 99;
     background-color: ${
-      props.dark
+      props.dark && !props.fixed
         ? props.theme.header.dark.background
         : props.theme.header.background
     };
@@ -35,9 +30,12 @@ const LogoWrapper = styled.div`
   z-index: 2;
   a {
     color: ${props =>
-      props.dark
+      (props.dark && !props.fixed) || props.open
         ? props.theme.header.dark.foreground
         : props.theme.header.foreground};
+  }
+  svg {
+    transition: all 0.25s ease;
   }
 `
 
@@ -61,17 +59,18 @@ const Menu = styled.nav`
     }
   }
   > li > a {
+    transition: all 0.25s ease;
     ${tw`flex items-center`};
     svg {
       margin-left: 2px;
     }
     color: ${props =>
-      props.dark
+      props.dark && !props.fixed
         ? props.theme.header.dark.nav.link.foreground
         : props.theme.header.nav.link.foreground};
     &:hover {
       color: ${props =>
-        props.dark
+        props.dark && !props.fixed
           ? props.theme.header.dark.nav.link.activeForeground
           : props.theme.header.nav.link.activeForeground};
     }
@@ -185,11 +184,11 @@ const BurgerButton = styled.div`
     display: block;
     position: absolute;
     transform-origin: 50% 50%;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     background-color: ${props =>
       props.open
         ? props.theme.header.mobileNav.foreground
-        : props.dark
+        : props.dark && !props.fixed
         ? props.theme.header.dark.nav.link.foreground
         : props.theme.header.nav.link.foreground};
 
@@ -230,9 +229,40 @@ const BurgerButton = styled.div`
       : ``}
 `
 
+const debounce = (fn, ms = 0) => {
+  let timeoutId
+  return function(...args) {
+    clearTimeout(timeoutId)
+    timeoutId = setTimeout(() => fn.apply(this, args), ms)
+  }
+}
+
 class Header extends Component {
   state = {
     open: false,
+    fixed: false,
+  }
+
+  onScroll = () => {
+    // if (this.freezeScrollEvent) return
+    const top =
+      (document.documentElement && document.documentElement.scrollTop) ||
+      document.body.scrollTop
+    if (top > 0 && !this.state.fixed) {
+      this.setState({ fixed: true })
+    } else if (top === 0) {
+      this.setState({ fixed: false })
+    }
+  }
+
+  componentDidMount() {
+    document.addEventListener('scroll', this.onScroll)
+    this.sections = [...document.querySelectorAll('body', '#news', '#events')]
+    console.log(this.sections)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.onScroll)
   }
 
   toggleOpen = () => {
@@ -244,10 +274,15 @@ class Header extends Component {
   render() {
     const { siteTitle, absolute, dark } = this.props
     return (
-      <Container absolute={absolute} dark={dark}>
+      <Container absolute={absolute} dark={dark} fixed={this.state.fixed}>
         <div className="container mx-auto px-gutter">
           <div className="flex items-center justify-between -mx-gutter">
-            <LogoWrapper dark={dark || this.state.open} className="px-gutter">
+            <LogoWrapper
+              dark={dark || this.state.open}
+              open={this.state.open}
+              fixed={this.state.fixed}
+              className="px-gutter"
+            >
               <Link to="/">
                 <Logo />
               </Link>
@@ -257,6 +292,7 @@ class Header extends Component {
               <BurgerButton
                 open={this.state.open}
                 onClick={this.toggleOpen}
+                fixed={this.state.fixed}
                 dark={dark}
                 role="button"
                 tabIndex={0}
@@ -270,7 +306,11 @@ class Header extends Component {
               </BurgerButton>
 
               {this.state.open && (
-                <MobileMenu dark={dark} open={this.state.open}>
+                <MobileMenu
+                  dark={dark}
+                  open={this.state.open}
+                  fixed={this.state.fixed}
+                >
                   {menu.map(({ children, name, href }) => (
                     <li key={href}>
                       <Link to={href}>{name}</Link>
@@ -290,7 +330,7 @@ class Header extends Component {
               )}
 
               <nav className="hidden lg:block">
-                <Menu dark={dark}>
+                <Menu dark={dark} fixed={this.state.fixed}>
                   {menu.map(({ children, name, href }) => (
                     <li key={href}>
                       <Link to={href}>

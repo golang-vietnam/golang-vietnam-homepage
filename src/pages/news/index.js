@@ -5,7 +5,6 @@ import { graphql, StaticQuery } from 'gatsby'
 import DefaultLayout from '@/components/DefaultLayout'
 import SEO from '@/components/seo'
 import Heading from '@/components/Heading'
-import data from '@/data/news'
 import NewsCard from '@/components/NewsCard'
 
 const query = graphql`

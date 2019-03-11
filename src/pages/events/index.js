@@ -5,7 +5,6 @@ import { graphql, StaticQuery } from 'gatsby'
 import DefaultLayout from '@/components/DefaultLayout'
 import SEO from '@/components/seo'
 import Heading from '@/components/Heading'
-import data from '@/data/events'
 import EventCard from '@/components/EventCard'
 import { SubHeading } from '@/shared/styled'
 import dayjs from 'dayjs'
@@ -25,6 +24,7 @@ const query = graphql`
               date
               guests
               name
+              link
             }
           }
         }

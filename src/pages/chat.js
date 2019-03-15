@@ -16,7 +16,7 @@ const Container = styled.div`
     width: 100%;
     min-height: 670px;
     height: calc(100vh - 76px - 79px);
-    margin-top: -45px;
+    margin-top: -20px;
     overflow: hidden;
   }
 
@@ -26,8 +26,8 @@ const Container = styled.div`
     top: 50%;
     transform: translate(-50%, -50%);
     margin-top: -30px;
-    width: 460px;
-    height: 489px;
+    width: 420px;
+    height: 420px;
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.075);
@@ -42,7 +42,7 @@ const Container = styled.div`
     }
 
     .chat__section {
-      min-height: 540px;
+      min-height: 400px;
       background-color: ${props => props.theme.main.body};
     }
   }
@@ -64,7 +64,7 @@ const ChatPage = () => (
             title="slackin"
             className="chat__iframe"
             scrolling="no"
-            src="https://chat.webuild.community/"
+            src="https://golang.org.vn/"
             // src="http://slack.golang.org.vn/"
           />
         </div>

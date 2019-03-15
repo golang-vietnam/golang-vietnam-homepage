@@ -1,14 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { graphql, StaticQuery } from 'gatsby'
-
 import DefaultLayout from '@/components/DefaultLayout'
 import SEO from '@/components/seo'
-import Heading from '@/components/Heading'
 import EventCard from '@/components/EventCard'
 import { SubHeading } from '@/shared/styled'
 import dayjs from 'dayjs'
-import { PassThrough } from 'stream'
 
 const query = graphql`
   {

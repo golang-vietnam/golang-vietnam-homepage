@@ -5,11 +5,6 @@ import { FaGithubAlt, FaSlack, FaFacebookF, FaEnvelope } from 'react-icons/fa'
 import BackgroundImage from 'gatsby-background-image'
 import { StaticQuery, graphql } from 'gatsby'
 
-const Container = styled.div`
-  ${tw`bg-cover bg-center pt-32 pb-20 flex items-center`};
-  min-height: 100vh;
-`
-
 const Overlay = styled.div`
   ${tw`pin absolute`};
   background-color: rgba(0, 0, 0, 0.5);
@@ -106,10 +101,13 @@ class Hero extends Component {
                   </Paragraph>
 
                   <div className="flex items-center sm:flex-row flex-wrap flex-column">
-                    <Button href="#" className="sm:mb-0 mb-2 sm:mr-4">
+                    <Button
+                      href="https://github.com/golang-vietnam"
+                      className="sm:mb-0 mb-2 sm:mr-4"
+                    >
                       <FaGithubAlt /> Visit our Github
                     </Button>
-                    <Button href="#">
+                    <Button href="https://golang.org.vn/">
                       <FaSlack /> Visit our Slack
                     </Button>
                   </div>
@@ -117,10 +115,10 @@ class Hero extends Component {
                 <div className="sm:w-1/2  w-1/5 flex justify-end">
                   <ShareEdge>
                     <div>Like our page</div>
-                    <ShareButton href="#">
+                    <ShareButton href="http://facebook.com/groups/golang.org.vn">
                       <FaFacebookF />
                     </ShareButton>
-                    <ShareButton href="#">
+                    <ShareButton href="mailto:gophers@golang.org.vn">
                       <FaEnvelope />
                     </ShareButton>
                   </ShareEdge>

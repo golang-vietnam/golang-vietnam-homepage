@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import Logo from '@/components/svg/Logo'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
-import { Wrapper } from '@/shared/styled'
 import menu from '@/data/menu'
 import { FaCaretDown } from 'react-icons/fa'
 
@@ -284,7 +283,7 @@ class Header extends Component {
   componentDidMount() {
     if (this.props.onePage) {
       document.addEventListener('scroll', this.onScroll)
-      this.sections = ['#jobs', '#news', '#events', '#sponsors'].map(
+      this.sections = ['#jobs', '#news', '#events', '#supporters'].map(
         selector => ({
           node: document.querySelector(selector),
           href: `/${selector}`,
@@ -306,7 +305,7 @@ class Header extends Component {
   }
 
   render() {
-    const { siteTitle, absolute, dark } = this.props
+    const { absolute, dark } = this.props
     return (
       <Container absolute={absolute} dark={dark} fixed={this.state.fixed}>
         <div className="container mx-auto px-gutter">
@@ -396,14 +395,12 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
   absolute: PropTypes.bool,
   dark: PropTypes.bool,
   onePage: PropTypes.bool,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
   absolute: false,
   dark: false,
   onePage: false,

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
 import Root from '@/components/root'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'

@@ -1,10 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { graphql, StaticQuery } from 'gatsby'
-
 import DefaultLayout from '@/components/DefaultLayout'
 import SEO from '@/components/seo'
-import Heading from '@/components/Heading'
 import JobCard from '@/components/JobCard'
 import tw from 'tailwind.macro'
 import styled from 'styled-components'

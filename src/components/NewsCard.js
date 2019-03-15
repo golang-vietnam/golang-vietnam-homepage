@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Card, CardExcerpt, CardHeading, Hyperlink } from '@/shared/styled'
-import styled from 'styled-components'
 import dayjs from 'dayjs'
 import decode from 'unescape'
 

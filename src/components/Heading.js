@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import tw from 'tailwind.macro'
 
 const Styled = styled.h2`
   font-size: 40px;
@@ -17,8 +16,6 @@ const Styled = styled.h2`
   }
 `
 
-const Heading = ({ children }) => {
-  return <Styled>{children}</Styled>
-}
+const Heading = ({ children }) => <Styled>{children}</Styled>
 
 export default Heading

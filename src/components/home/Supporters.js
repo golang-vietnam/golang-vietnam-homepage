@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Heading from '@/components/Heading'
 import tw from 'tailwind.macro'
-import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import { withPrefix } from 'gatsby'
 
 const data = [
@@ -11,26 +9,26 @@ const data = [
     href: 'https://www.chotot.com/',
     image: 'chotot',
   },
-  {
-    href: 'https://www.sendo.vn',
-    image: 'sendo',
-  },
-  {
-    href: 'https://trustingsocial.com/',
-    image: 'trustingsocial',
-  },
-  {
-    href: 'http://tiki.vn',
-    image: 'tiki',
-  },
-  {
-    href: 'https://www.designveloper.com/',
-    image: 'designveloper',
-  },
-  {
-    href: 'https://www.axonactive.com/',
-    image: 'axon',
-  },
+  // {
+  //   href: 'https://www.sendo.vn',
+  //   image: 'sendo',
+  // },
+  // {
+  //   href: 'https://trustingsocial.com/',
+  //   image: 'trustingsocial',
+  // },
+  // {
+  //   href: 'http://tiki.vn',
+  //   image: 'tiki',
+  // },
+  // {
+  //   href: 'https://www.designveloper.com/',
+  //   image: 'designveloper',
+  // },
+  // {
+  //   href: 'https://www.axonactive.com/',
+  //   image: 'axon',
+  // },
   {
     href: 'https://dwarves.foundation',
     image: 'dwarves',
@@ -39,10 +37,10 @@ const data = [
     href: 'https://missmp.eu/',
     image: 'missmoney',
   },
-  {
-    href: 'https://lozi.vn',
-    image: 'lozi',
-  },
+  // {
+  //   href: 'https://lozi.vn',
+  //   image: 'lozi',
+  // },
   {
     href: 'https://webuild.community',
     image: 'webuild',
@@ -77,13 +75,13 @@ const ImageLink = styled.a`
   box-shadow: ${props => props.theme.card.boxShadow};
 `
 
-class Sponsors extends Component {
+class Supporter extends Component {
   render() {
     return (
-      <Container id="sponsors">
+      <Container id="supporters">
         <div className="container px-gutter mx-auto">
           <div className="mb-16">
-            <Heading>Sponsors</Heading>
+            <Heading>Supporter</Heading>
           </div>
 
           <div className="flex flex-wrap -mx-gutter">
@@ -95,9 +93,9 @@ class Sponsors extends Component {
                 <ImageLink href={href} target="__blank">
                   <Image
                     alt={image}
-                    src={withPrefix(`/img/sponsors/${image}_shrink.png`)}
+                    src={withPrefix(`/img/supporters/${image}_shrink.png`)}
                     srcSet={withPrefix(
-                      `/img/sponsors/${image}@2x_shrink.png 2x`
+                      `/img/supporters/${image}@2x_shrink.png 2x`
                     )}
                   />
                 </ImageLink>
@@ -110,4 +108,4 @@ class Sponsors extends Component {
   }
 }
 
-export default Sponsors
+export default Supporter

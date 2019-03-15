@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { FaGithub, FaLinkedin, FaMedium, FaEnvelope } from 'react-icons/fa'
 import { withPrefix } from 'gatsby'
 import tw from 'tailwind.macro'
-import { sm } from '@/shared/responsive'
 
 const Container = styled.div`
   ${tw`flex sm:items-center sm:flex-row flex-col items-start`}
@@ -28,7 +27,7 @@ const Avatar = styled.div`
   height: 50px;
   ${props => `
       width: ${props.small ? '48' : '70'}px;
-      height: ${props.small ? '48' : '70'}px;    
+      height: ${props.small ? '48' : '70'}px;
     `}
 `
 

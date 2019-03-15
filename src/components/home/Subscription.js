@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { SubHeading } from '@/shared/styled'
 import tw from 'tailwind.macro'
-import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import { withPrefix } from 'gatsby'
 import { sm } from '@/shared/responsive'
 import isEmail from 'validator/lib/isEmail'
 import isURL from 'validator/lib/isURL'
@@ -37,12 +34,12 @@ const Input = styled.input`
   height: 56px;
   padding: 0 16px;
   margin-bottom: 18px;
-  ${props => `  
+  ${props => `
   background-color: ${props.theme.main.background};
   border: 1px solid ${props.theme.main.border};
   outline:none;
   &:focus{
-    border-color: ${props.theme.main.primary};    
+    border-color: ${props.theme.main.primary};
   }
   `}
 `

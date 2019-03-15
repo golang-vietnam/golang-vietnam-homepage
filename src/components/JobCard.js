@@ -8,7 +8,6 @@ import {
   Dot,
   Hyperlink,
 } from '@/shared/styled'
-import styled from 'styled-components'
 import TimeAgo from 'javascript-time-ago'
 import en from 'javascript-time-ago/locale/en'
 

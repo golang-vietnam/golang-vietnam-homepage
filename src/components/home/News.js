@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
 import NewsCard from '@/components/NewsCard'
@@ -16,7 +15,7 @@ class News extends Component {
           {/* <Head title="News" link="/news" /> */}
           <Head title="News" />
 
-          {this.props.data.slice(0, 3).map((news, i) => (
+          {this.props.data.slice(0, 5).map((news, i) => (
             <NewsCard {...news} key={i} />
           ))}
         </div>

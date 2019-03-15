@@ -3,8 +3,8 @@ import Hero from './Hero'
 import Jobs from './Jobs'
 import News from './News'
 import Events from './Events'
-import Sponsors from './Sponsors'
-import Subscription from './Subscription'
+import Supporters from './Supporters'
+// import Subscription from './Subscription'
 import { graphql, StaticQuery } from 'gatsby'
 
 const query = graphql`
@@ -83,8 +83,9 @@ const HomePageBody = () => {
             <Jobs data={jobList} />
             <News data={newsList} />
             <Events data={eventList} />
-            <Sponsors />
-            <Subscription />
+            <Supporters />
+            <div className="pt-20" />
+            {/* <Subscription /> */}
           </>
         )
       }}

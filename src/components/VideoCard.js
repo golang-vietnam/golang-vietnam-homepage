@@ -4,13 +4,13 @@ import styled, { keyframes } from 'styled-components'
 import tw from 'tailwind.macro'
 import PropTypes from 'prop-types'
 import { withPrefix } from 'gatsby'
-import { FaPlayCircle, FaCircleNotch } from 'react-icons/fa'
+import { FaPlayCircle } from 'react-icons/fa'
 import { MdClose } from 'react-icons/md'
 import dayjs from 'dayjs'
 
 const Container = styled.div`
   ${props => `
-    color: ${props.theme.card.foreground};    
+    color: ${props.theme.card.foreground};
     background-color: ${props.theme.card.background};
     box-shadow: ${props.theme.card.boxShadow};
   `}
@@ -65,11 +65,11 @@ const IframeWrapper = styled.div`
       props.loading
         ? `
     opacity: 0;
-    transform: scale(0.8);      
+    transform: scale(0.8);
     `
         : `
     opacity: 1;
-    transform: scale(1);      
+    transform: scale(1);
     `}
   }
 
@@ -155,7 +155,11 @@ class VidePopup extends Component {
       <PopupContainer>
         <IframeWrapper loading={this.state.loading}>
           <div>
-            <iframe ref={node => (this.ref = node)} src={this.props.link} />
+            <iframe
+              ref={node => (this.ref = node)}
+              src={this.props.link}
+              title="Video Popup"
+            />
           </div>
         </IframeWrapper>
         <LoadingIcon loading={this.state.loading} />
@@ -191,7 +195,7 @@ class VideoCard extends Component {
   }
 
   render() {
-    const { image, title, date, iframeLink } = this.props
+    const { image, title, date } = this.props
     return (
       <Container>
         <Preview onClick={this.openVideo}>

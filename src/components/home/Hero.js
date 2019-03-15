@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import tw from 'tailwind.macro'
 import { FaGithubAlt, FaSlack, FaFacebookF, FaEnvelope } from 'react-icons/fa'
 import BackgroundImage from 'gatsby-background-image'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 
 const Overlay = styled.div`
   ${tw`pin absolute`};
@@ -23,15 +23,17 @@ const Paragraph = styled.p`
   max-width: 310px;
 `
 
-const Button = styled.a`
-  text-decoration: none;
-  ${tw`px-5 py-3 inline-flex items-center rounded`};
-  ${props => `
+const Button = styled.div`
+  a {
+    text-decoration: none;
+    ${tw`px-5 py-3 inline-flex items-center rounded`};
+    ${props => `
     background-color: ${props.theme.button.primary.background};
     color: ${props.theme.button.primary.foreground};
     `};
-  svg {
-    margin-right: 10px;
+    svg {
+      margin-right: 10px;
+    }
   }
 `
 
@@ -101,14 +103,15 @@ class Hero extends Component {
                   </Paragraph>
 
                   <div className="flex items-center sm:flex-row flex-wrap flex-column">
-                    <Button
-                      href="https://github.com/golang-vietnam"
-                      className="sm:mb-0 mb-2 sm:mr-4"
-                    >
-                      <FaGithubAlt /> Visit our Github
+                    <Button className="sm:mb-0 mb-2 sm:mr-4">
+                      <a href="https://github.com/golang-vietnam">
+                        <FaGithubAlt /> Visit our Github
+                      </a>
                     </Button>
-                    <Button href="https://golang.org.vn/">
-                      <FaSlack /> Visit our Slack
+                    <Button>
+                      <Link to="/chat">
+                        <FaSlack /> Visit our Slack
+                      </Link>
                     </Button>
                   </div>
                 </div>

@@ -31,10 +31,12 @@ const DefaultLayout = ({ children, title, RightSideComponent }) => {
       <Header />
       <Container>
         <div className="container px-gutter mx-auto">
-          <Head>
-            <Heading>{title}</Heading>
-            {RightSideComponent && <RightSideComponent />}
-          </Head>
+          {title && (
+            <Head>
+              <Heading>{title}</Heading>
+              {RightSideComponent && <RightSideComponent />}
+            </Head>
+          )}{' '}
           {children}
         </div>
       </Container>
@@ -46,7 +48,7 @@ const DefaultLayout = ({ children, title, RightSideComponent }) => {
 
 DefaultLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   RightSideComponent: PropTypes.any,
 }
 

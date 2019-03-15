@@ -6,7 +6,7 @@ import EventsCard from '@/components/EventCard'
 import Head from './shared/Head'
 
 const Container = styled.section`
-  ${tw`py-20`};
+  ${tw`sm:pt-28 pt-20 sm:pb-8 pb-20`};
 `
 
 class Events extends Component {
@@ -14,7 +14,8 @@ class Events extends Component {
     return (
       <Container id="events">
         <div className="container px-gutter mx-auto">
-          <Head title="Events" link="/events" />
+          {/* <Head title="Events" link="/events" /> */}
+          <Head title="Events" />
 
           {this.props.data.slice(0, 3).map((event, index) => (
             <EventsCard {...event} key={index} />

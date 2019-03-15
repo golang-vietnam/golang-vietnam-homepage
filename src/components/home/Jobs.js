@@ -16,11 +16,16 @@ const itemPadding = 24
 const itemWidth = 295
 
 const Container = styled.section`
-  ${tw`py-20`};
+  padding-bottom: 0px;
+  padding-top: 230px;
+  margin-top: -325px;
+`
+const TitleContainer = styled.div`
+  ${tw`lg:w-1/4 w-full mb-16`};
+  margin-top: 170px;
 `
 
 const JobCardContainer = styled.div`
-  ${lg`margin-top: -185px;`}
   position: relative;
   z-index: 9;
 `
@@ -62,8 +67,8 @@ const Carousel = styled.div`
   width: ${props.display * props.itemWidth +
     props.display * props.itemPadding}px;
   overflow: hidden;
-  padding-bottom:5px;  
-  padding-top:5px;  
+  padding-bottom:5px;
+  padding-top:5px;
 `}
 `
 
@@ -71,12 +76,11 @@ const CarouselWrapper = styled.div`
   ${props => `
   width: ${props.numOfItems * props.itemWidth +
     (props.numOfItems - 1) * props.itemPadding}px;
-  display: flex;  
+  display: flex;
   transform: translate3d(${props.translate}px, 0 , 0);
   transition: transform 0.5s ease;
 `}
 `
-
 class Jobs extends Component {
   state = {
     display: 2,
@@ -111,9 +115,9 @@ class Jobs extends Component {
         <ReactResizeDetector handleWidth onResize={this.onResize} />
         <div className="container px-gutter mx-auto">
           <div className="flex flex-wrap">
-            <div className="lg:w-1/4 w-full mb-16">
+            <TitleContainer>
               <Heading>Jobs</Heading>
-            </div>
+            </TitleContainer>
             <JobCardContainer className="lg:w-3/4 w-full flex justify-between lg:mx-0 -mx-gutter">
               <Carousel
                 display={this.state.display}

@@ -51,6 +51,10 @@ const Menu = styled.nav`
     position: relative;
     padding: 20px 0;
 
+    &.active > a {
+      color: ${props => props.theme.primary}!important;
+    }
+
     &:hover {
       ul {
         opacity: 1;
@@ -229,22 +233,14 @@ const BurgerButton = styled.div`
       : ``}
 `
 
-const debounce = (fn, ms = 0) => {
-  let timeoutId
-  return function(...args) {
-    clearTimeout(timeoutId)
-    timeoutId = setTimeout(() => fn.apply(this, args), ms)
-  }
-}
-
 class Header extends Component {
   state = {
     open: false,
     fixed: false,
+    current: '',
   }
 
   onScroll = () => {
-    // if (this.freezeScrollEvent) return
     const top =
       (document.documentElement && document.documentElement.scrollTop) ||
       document.body.scrollTop
@@ -253,16 +249,54 @@ class Header extends Component {
     } else if (top === 0) {
       this.setState({ fixed: false })
     }
+
+    let current = ''
+    this.sections.forEach(({ node }) => {
+      // Start to toggle pagination after reaching the height of 2/5 screen height
+      if (top > node.offsetTop - window.screen.height * 0.2) {
+        current = '/#' + node.id
+      }
+    })
+
+    this.setState({
+      current,
+    })
+  }
+
+  handleLinkClick = href => e => {
+    if (
+      !['/#jobs', '/#news', '/#events'].includes(href) ||
+      !this.props.onePage
+    ) {
+      return
+    }
+    e.preventDefault()
+    const el = document.querySelector(href.replace('/', ''))
+    if (!el) {
+      return
+    }
+    window.scrollTo({
+      top: el.offsetTop,
+      behavior: 'smooth',
+    })
   }
 
   componentDidMount() {
-    document.addEventListener('scroll', this.onScroll)
-    this.sections = [...document.querySelectorAll('body', '#news', '#events')]
-    console.log(this.sections)
+    if (this.props.onePage) {
+      document.addEventListener('scroll', this.onScroll)
+      this.sections = ['#jobs', '#news', '#events', '#sponsors'].map(
+        selector => ({
+          node: document.querySelector(selector),
+          href: `/${selector}`,
+        })
+      )
+    }
   }
 
   componentWillUnmount() {
-    document.removeEventListener('scroll', this.onScroll)
+    if (this.props.onePage) {
+      document.removeEventListener('scroll', this.onScroll)
+    }
   }
 
   toggleOpen = () => {
@@ -332,8 +366,11 @@ class Header extends Component {
               <nav className="hidden lg:block">
                 <Menu dark={dark} fixed={this.state.fixed}>
                   {menu.map(({ children, name, href }) => (
-                    <li key={href}>
-                      <Link to={href}>
+                    <li
+                      key={href}
+                      className={this.state.current === href ? 'active' : ''}
+                    >
+                      <Link to={href} onClick={this.handleLinkClick(href)}>
                         {name} {Array.isArray(children) && <FaCaretDown />}
                       </Link>
 
@@ -362,12 +399,14 @@ Header.propTypes = {
   siteTitle: PropTypes.string,
   absolute: PropTypes.bool,
   dark: PropTypes.bool,
+  onePage: PropTypes.bool,
 }
 
 Header.defaultProps = {
   siteTitle: ``,
   absolute: false,
   dark: false,
+  onePage: false,
 }
 
 export default Header

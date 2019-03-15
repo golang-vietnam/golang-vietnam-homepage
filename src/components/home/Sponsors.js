@@ -58,7 +58,7 @@ const data = [
 ]
 
 const Container = styled.section`
-  ${tw`sm:py-20 py-5`};
+  ${tw`sm:py-20 py-0`};
 `
 
 const Image = styled.img`

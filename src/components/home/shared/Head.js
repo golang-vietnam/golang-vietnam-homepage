@@ -20,17 +20,19 @@ const Head = ({ title, link }) => {
     <Container className="flex justify-between">
       <Heading>{title}</Heading>
 
-      <Link to={link} className="flex items-center">
-        <span>View more</span>
-        <IoIosArrowRoundForward className="text-2xl" />
-      </Link>
+      {link && (
+        <Link to={link} className="flex items-center">
+          <span>View more</span>
+          <IoIosArrowRoundForward className="text-2xl" />
+        </Link>
+      )}
     </Container>
   )
 }
 
 Head.propTypes = {
   title: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  link: PropTypes.string,
 }
 
 export default Head

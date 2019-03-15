@@ -10,7 +10,7 @@ import Heading from '@/components/Heading'
 import tw from 'tailwind.macro'
 
 const Container = styled.div`
-  min-height: calc(100vh - 76px - 75px);
+  min-height: calc(100vh - 76px);
   padding: 170px 0 200px 0;
 `
 
@@ -48,7 +48,7 @@ const DefaultLayout = ({ children, title, RightSideComponent }) => {
 DefaultLayout.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
-  RightSideComponent: PropTypes.oneOf(PropTypes.element, PropTypes.func),
+  RightSideComponent: PropTypes.any,
 }
 
 export default DefaultLayout

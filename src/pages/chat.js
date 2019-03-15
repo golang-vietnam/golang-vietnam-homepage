@@ -64,8 +64,7 @@ const ChatPage = () => (
             title="slackin"
             className="chat__iframe"
             scrolling="no"
-            src="https://golang.org.vn/"
-            // src="http://slack.golang.org.vn/"
+            src="http://slack.golang.org.vn/"
           />
         </div>
       </div>

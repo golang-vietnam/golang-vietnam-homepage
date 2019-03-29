@@ -26,9 +26,11 @@ const Paragraph = styled.p`
 const Button = styled.div`
   a {
     text-decoration: none;
-    ${tw`px-5 py-3 inline-flex items-center rounded`};
+    ${tw`px-5 py-4 inline-flex items-center rounded-sm`};
     ${props => `
-    background-color: ${props.theme.button.primary.background};
+    background-color: ${
+      props.slack ? '#E13F5E' : props.theme.button.primary.background
+    };
     color: ${props.theme.button.primary.foreground};
     `};
     svg {
@@ -108,9 +110,9 @@ class Hero extends Component {
                         <FaGithubAlt /> Visit our Github
                       </a>
                     </Button>
-                    <Button>
+                    <Button slack>
                       <Link to="/chat">
-                        <FaSlack /> Visit our Slack
+                        <FaSlack /> Join Us
                       </Link>
                     </Button>
                   </div>

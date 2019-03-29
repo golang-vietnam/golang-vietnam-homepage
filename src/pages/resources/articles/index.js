@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import DefaultLayout from '@/components/DefaultLayout'
 import SEO from '@/components/seo'
+import tw from 'tailwind.macro'
 import {
   SubHeading,
   Card,
@@ -9,6 +10,7 @@ import {
   CardExcerpt,
   Hyperlink,
 } from '@/shared/styled'
+import ArticleCard from '@/components/ArticleCard'
 
 const query = graphql`
   {
@@ -20,9 +22,11 @@ const query = graphql`
           id
           frontmatter {
             list {
-              title
-              desc
-              linkURL
+              level
+              resources {
+                title
+                link
+              }
             }
           }
         }
@@ -32,10 +36,8 @@ const query = graphql`
 `
 
 const ArticlesPage = () => (
-  <DefaultLayout title="Resources">
+  <DefaultLayout title="Articles">
     <SEO title="Articles" />
-
-    <SubHeading className="mb-8">Articles</SubHeading>
 
     <StaticQuery
       query={query}
@@ -44,21 +46,7 @@ const ArticlesPage = () => (
           return null
         }
         const { list } = data.edges[0].node.frontmatter
-
-        return list.map(({ title, desc, linkURL }, i) => (
-          <Card key={i}>
-            <CardHeading>
-              <Hyperlink
-                href={linkURL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {title}
-              </Hyperlink>
-            </CardHeading>
-            <CardExcerpt>{desc}</CardExcerpt>
-          </Card>
-        ))
+        return list.map((props, i) => <ArticleCard key={i} {...props} />)
       }}
     />
   </DefaultLayout>

@@ -16,6 +16,8 @@ const Styled = styled.h2`
   }
 `
 
-const Heading = ({ children }) => <Styled>{children}</Styled>
+const Heading = ({ children, className = '' }) => (
+  <Styled className={className}>{children}</Styled>
+)
 
 export default Heading

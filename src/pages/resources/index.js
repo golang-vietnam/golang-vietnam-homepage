@@ -8,10 +8,30 @@ import Heading from '@/components/Heading'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
 import dayjs from 'dayjs'
+import ArticleCard from '@/components/ArticleCard'
+import BookCard from '@/components/BookCard'
 
 const query = graphql`
   {
-    data: allMarkdownRemark(
+    articles: allMarkdownRemark(
+      filter: { frontmatter: { key: { eq: "articles" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            list {
+              level
+              resources {
+                title
+                link
+              }
+            }
+          }
+        }
+      }
+    }
+    videos: allMarkdownRemark(
       filter: { frontmatter: { key: { eq: "videos" } } }
     ) {
       edges {
@@ -23,6 +43,23 @@ const query = graphql`
               iframeLink
               image
               title
+            }
+          }
+        }
+      }
+    }
+    books: allMarkdownRemark(
+      filter: { frontmatter: { key: { eq: "books" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            list {
+              title
+              image
+              author
+              link
             }
           }
         }
@@ -61,10 +98,14 @@ const PlayList = styled.div`
   width: 356px;
   padding-left: 20px;
   position: relative;
-  overflow: hidden;
   > div {
     ${tw` absolute pin`}
     left: 20px;
+    ${props => `
+        // background-color: ${props.theme.card.background};
+        // box-shadow: ${props.theme.card.boxShadow};
+        // padding: 10px;
+    `}
     overflow-y: auto;
   }
 `
@@ -72,10 +113,16 @@ const PlayList = styled.div`
 const VideoCard = ({ image, title, date, onPlayVideo, active }) => (
   <div
     className={'flex mb-2' + (active ? ' opacity-50 pointer-events-none' : '')}
+    onClick={onPlayVideo}
+    role="button"
+    tabIndex={0}
+    onKeyDown={({ key }) => {
+      if (key === 'Enter' || key === ' ') {
+        onPlayVideo()
+      }
+    }}
   >
     <div
-      role="button"
-      onClick={onPlayVideo}
       css={`
         width: 168px;
         ${tw`flex-none`}
@@ -116,11 +163,13 @@ const VideoCard = ({ image, title, date, onPlayVideo, active }) => (
 const Resources = () => (
   <StaticQuery
     query={query}
-    render={({ data }) => {
-      if (!data) {
+    render={({ videos, articles, books }) => {
+      if (!videos || !articles || !books) {
         return null
       }
-      const { list } = data.edges[0].node.frontmatter
+      const { list: videoList } = videos.edges[0].node.frontmatter
+      const { list: articleList } = articles.edges[0].node.frontmatter
+      const { list: bookList } = books.edges[0].node.frontmatter
 
       return (
         <NoContainerLayout title="Resources">
@@ -129,7 +178,18 @@ const Resources = () => (
             <Heading className="mb-8">Videos</Heading>
           </div>
 
-          <VideoBlock list={list} />
+          <VideoBlock list={videoList} />
+
+          <div className="container px-gutter mx-auto mt-24">
+            <Heading className="mb-10">Articles</Heading>
+            {articleList.map((article, index) => (
+              <ArticleCard {...article} key={index} />
+            ))}
+            <Heading className="mt-24 mb-10">Books</Heading>
+            {bookList.map((book, index) => (
+              <BookCard {...book} key={index} />
+            ))}
+          </div>
         </NoContainerLayout>
       )
     }}
@@ -144,9 +204,9 @@ const VideoBlock = ({ list }) => {
         <div>
           <iframe
             src={active.iframeLink}
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           />
         </div>
       </MainVideo>

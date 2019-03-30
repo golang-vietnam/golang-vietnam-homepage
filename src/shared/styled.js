@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
+import { createGlobalStyle } from 'styled-components'
 
 export const Wrapper = styled.div`
   max-width: 936px;
@@ -7,6 +8,16 @@ export const Wrapper = styled.div`
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
+`
+
+export const GlobalStyle = createGlobalStyle`
+  html, body {
+    color: ${props => props.theme.main.foreground};
+    background-color: ${props => props.theme.main.body};
+  }
+  .link-active{
+    color: ${props => props.theme.main.primary}!important;
+  }
 `
 
 export const Card = styled.div`
@@ -47,7 +58,7 @@ export const Badge = styled.span`
   display: inline-block;
   line-height: 1em;
   ${tw`text-xs`}
-  ${props => `  
+  ${props => `
   background-color: ${
     props.isActive
       ? props.theme.badge.activeBackground

@@ -346,13 +346,17 @@ class Header extends Component {
                 >
                   {menu.map(({ children, name, href }) => (
                     <li key={href}>
-                      <Link to={href}>{name}</Link>
+                      <Link to={href} activeClassName="link-active">
+                        {name}
+                      </Link>
 
                       {Array.isArray(children) && (
                         <ul>
                           {children.map(({ name, href }) => (
                             <li key={href}>
-                              <Link to={href}>{name}</Link>
+                              <Link activeClassName="link-active" to={href}>
+                                {name}
+                              </Link>
                             </li>
                           ))}
                         </ul>
@@ -369,7 +373,11 @@ class Header extends Component {
                       key={href}
                       className={this.state.current === href ? 'active' : ''}
                     >
-                      <Link to={href} onClick={this.handleLinkClick(href)}>
+                      <Link
+                        to={href}
+                        activeClassName="link-active"
+                        onClick={this.handleLinkClick(href)}
+                      >
                         {name} {Array.isArray(children) && <FaCaretDown />}
                       </Link>
 

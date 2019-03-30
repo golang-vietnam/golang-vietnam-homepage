@@ -3,15 +3,9 @@ import PropTypes from 'prop-types'
 import Root from '@/components/root'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { createGlobalStyle } from 'styled-components'
 import smoothscroll from 'smoothscroll-polyfill'
+import { GlobalStyle } from '@/shared/styled'
 
-const GlobalStyle = createGlobalStyle`
-  html, body {
-    color: ${props => props.theme.main.foreground};
-    background-color: ${props => props.theme.main.body};
-  }
-`
 const HomeLayout = ({ children }) => {
   useEffect(() => {
     // kick off the polyfill!

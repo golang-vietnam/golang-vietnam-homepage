@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
 import NewsCard from '@/components/NewsCard'
@@ -7,21 +7,43 @@ import Head from './shared/Head'
 const Container = styled.section`
   ${tw`sm:pt-28 pt-24 pb-0`};
 `
-class News extends Component {
-  render() {
-    return (
-      <Container id="news">
-        <div className="container px-gutter mx-auto">
-          {/* <Head title="News" link="/news" /> */}
-          <Head title="News" />
+const News = props => {
+  const [showAll, setState] = useState(false)
 
-          {this.props.data.slice(0, 5).map((news, i) => (
-            <NewsCard {...news} key={i} />
-          ))}
-        </div>
-      </Container>
-    )
-  }
+  return (
+    <Container id="news">
+      <div className="container px-gutter mx-auto">
+        <Head title="News" />
+
+        {props.data.slice(0, showAll ? 20 : 5).map((news, i) => (
+          <NewsCard {...news} key={i} />
+        ))}
+
+        {!showAll && (
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => setState(true)}
+              css={`
+                font-size: 20px;
+                font-weight: 500;
+                padding: 7px 3px;
+                border-bottom: 2px solid #ddd;
+                transition: all 0.15s ease;
+                &:hover {
+                  ${props => `
+                border-bottom-color: ${props.theme.primary};
+                color: ${props.theme.primary};
+                `}
+                }
+              `}
+            >
+              Show all
+            </button>
+          </div>
+        )}
+      </div>
+    </Container>
+  )
 }
 
 export default News

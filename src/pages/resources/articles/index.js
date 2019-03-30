@@ -2,14 +2,6 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import DefaultLayout from '@/components/DefaultLayout'
 import SEO from '@/components/seo'
-import tw from 'tailwind.macro'
-import {
-  SubHeading,
-  Card,
-  CardHeading,
-  CardExcerpt,
-  Hyperlink,
-} from '@/shared/styled'
 import ArticleCard from '@/components/ArticleCard'
 
 const query = graphql`
@@ -38,7 +30,6 @@ const query = graphql`
 const ArticlesPage = () => (
   <DefaultLayout title="Articles">
     <SEO title="Articles" />
-
     <StaticQuery
       query={query}
       render={({ data }) => {

@@ -129,9 +129,6 @@ const PlayList = styled.div`
 const VideoCard = ({ image, title, date, onPlayVideo, active }) => (
   <a
     css={`
-      ${tw`flex flex-none mb-2 no-underline ${
-        active ? ' opacity-50 pointer-events-none' : ''
-      }`}
       ${lg`
         width: 100%;
         margin-right: 0;
@@ -141,6 +138,10 @@ const VideoCard = ({ image, title, date, onPlayVideo, active }) => (
         margin-right: 20px;
       `}
     `}
+    className={
+      'flex flex-none mb-2 no-underline' +
+      (active ? ' opacity-50 pointer-events-none' : '')
+    }
     onClick={onPlayVideo}
     href="#video"
     role="button"
@@ -244,13 +245,12 @@ const VideoBlock = ({ list }) => {
       <PlayList>
         <div>
           {list.map((video, index) => (
-            <div key={index}>
-              <VideoCard
-                {...video}
-                onPlayVideo={() => setActive(video)}
-                active={video === active}
-              />
-            </div>
+            <VideoCard
+              key={index}
+              {...video}
+              onPlayVideo={() => setActive(video)}
+              active={video === active}
+            />
           ))}
         </div>
       </PlayList>

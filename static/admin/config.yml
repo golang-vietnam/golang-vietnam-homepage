@@ -109,18 +109,27 @@ collections:
               name: 'list',
               fields:
                 [
-                  { label: Title, name: title, required: true, widget: string },
+                  { label: Level, name: level, required: true, widget: string },
                   {
-                    label: Description,
-                    name: desc,
+                    label: Author,
+                    name: author,
                     required: true,
-                    widget: string,
-                  },
-                  {
-                    label: 'Link URL',
-                    name: linkURL,
-                    required: true,
-                    widget: string,
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: 'Title',
+                          name: title,
+                          required: true,
+                          widget: string,
+                        },
+                        {
+                          label: 'Link URL',
+                          name: link,
+                          required: true,
+                          widget: string,
+                        },
+                      ],
                   },
                 ],
             },
@@ -140,16 +149,22 @@ collections:
                 [
                   { label: Title, name: title, required: true, widget: string },
                   {
-                    label: Description,
-                    name: desc,
+                    label: Author,
+                    name: author,
                     required: true,
                     widget: string,
                   },
                   {
                     label: 'Link URL',
-                    name: linkURL,
+                    name: link,
                     required: true,
                     widget: string,
+                  },
+                  {
+                    label: 'Image',
+                    name: 'image',
+                    widget: 'image',
+                    required: true,
                   },
                 ],
             },

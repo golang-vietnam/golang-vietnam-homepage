@@ -15,19 +15,20 @@ const BookCard = ({ image, link, title, author }) => (
       padding: 16px;
     `}
   >
-    <div className="flex">
+    <div className="flex items-center">
       <div
         css={`
           ${tw`bg-center bg-cover flex-none`};
           width: 64px;
           height: 80px;
           margin-right: 16px;
+          border: 1px solid ${props => props.theme.lighter};
           background-image: url(${image});
         `}
       />
       <div
         css={`
-          margin-top: 16px;
+          margin-top: -5px;
         `}
       >
         <Hyperlink

@@ -13,21 +13,21 @@ export default [
   },
   {
     name: 'Resources',
-    href: '/resources/videos',
-    children: [
-      {
-        name: 'Videos',
-        href: '/resources/videos',
-      },
-      {
-        name: 'Articles',
-        href: '/resources/articles',
-      },
-      {
-        name: 'Books',
-        href: '/resources/books',
-      },
-    ],
+    href: '/resources',
+    // children: [
+    //   {
+    //     name: 'Videos',
+    //     href: '/resources/videos',
+    //   },
+    //   {
+    //     name: 'Articles',
+    //     href: '/resources/articles',
+    //   },
+    //   {
+    //     name: 'Books',
+    //     href: '/resources/books',
+    //   },
+    // ],
   },
   {
     name: 'Members',

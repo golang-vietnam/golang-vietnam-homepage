@@ -10,6 +10,7 @@ import tw from 'tailwind.macro'
 import dayjs from 'dayjs'
 import ArticleCard from '@/components/ArticleCard'
 import BookCard from '@/components/BookCard'
+import { md, sm, lg } from '@/shared/responsive'
 
 const query = graphql`
   {
@@ -69,19 +70,22 @@ const query = graphql`
 `
 
 const VideoHolder = styled.div`
+  ${lg`display: flex;`}
   max-width: 1360px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
   margin-top: 50px;
-  display: flex;
   position: relative;
 `
 
 const MainVideo = styled.div`
+  ${lg`
   width: 72%;
+    flex: 72% 0 0;
+  `};
+  width: 100%;
   flex-shrink: 0;
   flex-grow: 0;
-  flex: 72% 0 0;
   > div {
     padding-bottom: 60%;
     position: relative;
@@ -95,12 +99,11 @@ const MainVideo = styled.div`
 `
 
 const PlayList = styled.div`
-  width: 356px;
-  padding-left: 20px;
+  margin-top: 30px;
+  width: 100%;
   position: relative;
   > div {
-    ${tw` absolute pin`}
-    left: 20px;
+    display: block;
     ${props => `
         // background-color: ${props.theme.card.background};
         // box-shadow: ${props.theme.card.boxShadow};
@@ -108,12 +111,38 @@ const PlayList = styled.div`
     `}
     overflow-y: auto;
   }
+  ${sm`
+      > div {display: flex;}
+  `}
+  ${lg`
+    width: 356px;
+    padding-left: 20px;
+    margin-top: 0;
+    > div {
+        ${tw` absolute pin`}
+        left: 20px;
+        display: block;
+    }
+  `}
 `
 
 const VideoCard = ({ image, title, date, onPlayVideo, active }) => (
-  <div
-    className={'flex mb-2' + (active ? ' opacity-50 pointer-events-none' : '')}
+  <a
+    css={`
+      ${tw`flex flex-none mb-2 no-underline ${
+        active ? ' opacity-50 pointer-events-none' : ''
+      }`}
+      ${lg`
+        width: 100%;
+        margin-right: 0;
+      `}
+      ${sm`
+        width: 300px;
+        margin-right: 20px;
+      `}
+    `}
     onClick={onPlayVideo}
+    href="#video"
     role="button"
     tabIndex={0}
     onKeyDown={({ key }) => {
@@ -124,7 +153,8 @@ const VideoCard = ({ image, title, date, onPlayVideo, active }) => (
   >
     <div
       css={`
-        width: 168px;
+        width: 140px;
+        ${sm`width: 168px;`}
         ${tw`flex-none`}
       `}
     >
@@ -144,6 +174,7 @@ const VideoCard = ({ image, title, date, onPlayVideo, active }) => (
       <h4
         css={`
           ${tw`text-sm`}
+          color: ${props => props.theme.main.foreground};
         `}
       >
         {title}
@@ -157,7 +188,7 @@ const VideoCard = ({ image, title, date, onPlayVideo, active }) => (
         {dayjs(date).format('DD MMM, YYYY')}
       </div>
     </div>
-  </div>
+  </a>
 )
 
 const Resources = () => (
@@ -174,7 +205,7 @@ const Resources = () => (
       return (
         <NoContainerLayout title="Resources">
           <SEO title="Videos" />
-          <div className="container px-gutter mx-auto">
+          <div className="container px-gutter mx-auto" id="video">
             <Heading className="mb-8">Videos</Heading>
           </div>
 

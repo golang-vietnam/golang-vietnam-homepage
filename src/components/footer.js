@@ -21,7 +21,7 @@ const Footer = props => {
       <div className="container mx-auto text-sm px-gutter">
         <div className="flex items-center justify-between -mx-gutter sm:flex-row flex-col-reverse">
           <div className="font-medium opacity-40 px-gutter">
-            © {new Date().getFullYear()} Golang Vietnam
+            © {new Date().getFullYear()} GolangVietnam
           </div>
           <div className="px-gutter sm:mb-0 mb-5">
             <a

@@ -22,7 +22,7 @@ const EventsCard = ({ name, date, location, guests, link }) => {
           </div>
         </div>
         <div className="w-1/4 text-sm text-right whitespace-no-wrap opacity-75">
-          <div>{dayjs(date).format('DD/MM/YYYY')}</div>
+          <div>{dayjs(date).format('DD MMM, YYYY')}</div>
           <div className="mt-2">{guests} guests</div>
         </div>
       </div>

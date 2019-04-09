@@ -20,7 +20,7 @@ const NewsCard = ({ title, desc, author, postedOn, link }) => {
           <CardExcerpt dangerouslySetInnerHTML={{ __html: decode(desc) }} />
         </div>
         <div className="w-1/4 text-sm text-right whitespace-no-wrap sm:mt-0 mt-5">
-          <div className="uppercase break-words whitespace-normal my-1">
+          <div className="break-words whitespace-normal my-1">
             {decode(author)}
           </div>
         </div>

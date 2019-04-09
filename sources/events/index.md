@@ -1,6 +1,11 @@
 --- 
 key: events
 list:
+ - date: "2019-04-23T18:30:00+0700"
+   guests: "211"
+   location: "VNG Corporation, 182 Lê Đại Hành, Phường 15, Quận 11, Ho Chi Minh City, Vietnam"
+   name: "Golang & CloudNative Vietnam Meetup #16"
+   link: "https://www.facebook.com/events/278326139744023"
  - date: "2018-12-08T08:00:00+0700"
    guests: "347"
    location: "Dreamplex Coworking Space, Vietnam, Ho Chi Minh City, 195 Điện Biên Phủ , Quận Bình Thạnh"
@@ -13,7 +18,7 @@ list:
    link: "https://facebook.com/events/1040543619443588"
  - date: "2018-05-11T18:30:00+0700"
    guests: "309"
-   location: ""
+   location: "nakedHub, 241 Xuan Thuy, Cau Giay, Ha Noi, Vietnam"
    name: "Golang Vietnam Meetup #14 (Ha Noi)"
    link: "https://facebook.com/events/1701571639935879"
  - date: "2018-01-02T18:30:00+0700"

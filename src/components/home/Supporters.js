@@ -9,26 +9,6 @@ const data = [
     href: 'https://www.chotot.com/',
     image: 'chotot',
   },
-  // {
-  //   href: 'https://www.sendo.vn',
-  //   image: 'sendo',
-  // },
-  // {
-  //   href: 'https://trustingsocial.com/',
-  //   image: 'trustingsocial',
-  // },
-  // {
-  //   href: 'http://tiki.vn',
-  //   image: 'tiki',
-  // },
-  // {
-  //   href: 'https://www.designveloper.com/',
-  //   image: 'designveloper',
-  // },
-  // {
-  //   href: 'https://www.axonactive.com/',
-  //   image: 'axon',
-  // },
   {
     href: 'https://dwarves.foundation',
     image: 'dwarves',
@@ -37,10 +17,10 @@ const data = [
     href: 'https://missmp.eu/',
     image: 'missmoney',
   },
-  // {
-  //   href: 'https://lozi.vn',
-  //   image: 'lozi',
-  // },
+  {
+    href: 'https://trustingsocial.com/',
+    image: 'trustingsocial',
+  },
   {
     href: 'https://webuild.community',
     image: 'webuild',
@@ -81,7 +61,7 @@ class Supporter extends Component {
       <Container id="supporters">
         <div className="container px-gutter mx-auto">
           <div className="mb-16">
-            <Heading>Supporter</Heading>
+            <Heading>Supporters</Heading>
           </div>
 
           <div className="flex flex-wrap -mx-gutter">

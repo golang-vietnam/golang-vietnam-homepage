@@ -8,7 +8,7 @@ const EventsCard = ({ name, date, location, guests, link }) => {
   return (
     <Card>
       <div className="flex justify-between items-center">
-        <div className="w-2/3">
+        <div className="w-3/4">
           <CardHeading>
             <Hyperlink
               href={link}
@@ -21,7 +21,7 @@ const EventsCard = ({ name, date, location, guests, link }) => {
             <span className="capitalize font-medium">{location}</span>
           </div>
         </div>
-        <div className="w1/3 text-sm text-right whitespace-no-wrap opacity-75">
+        <div className="w-1/4 text-sm text-right whitespace-no-wrap opacity-75">
           <div>{dayjs(date).format('DD/MM/YYYY')}</div>
           <div className="mt-2">{guests} guests</div>
         </div>

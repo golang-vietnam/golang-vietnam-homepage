@@ -8,7 +8,7 @@ const NewsCard = ({ title, desc, author, postedOn, link }) => {
   return (
     <Card>
       <div className="flex justify-between sm:items-center item-start">
-        <div className="w-2/3">
+        <div className="w-3/4">
           <CardHeading>
             <Hyperlink
               href={link}
@@ -19,12 +19,10 @@ const NewsCard = ({ title, desc, author, postedOn, link }) => {
           </CardHeading>
           <CardExcerpt dangerouslySetInnerHTML={{ __html: decode(desc) }} />
         </div>
-        <div className="w-1/3 text-sm text-right whitespace-no-wrap sm:mt-0 mt-5">
-          <div className="opacity-75">Author</div>
+        <div className="w-1/4 text-sm text-right whitespace-no-wrap sm:mt-0 mt-5">
           <div className="uppercase break-words whitespace-normal my-1">
             {decode(author)}
           </div>
-          <div className="opacity-50">{dayjs(postedOn).format('MMM DD')}</div>
         </div>
       </div>
     </Card>

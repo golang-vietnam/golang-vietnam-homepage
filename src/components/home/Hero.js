@@ -112,14 +112,13 @@ class Hero extends Component {
                     </Button>
                     <Button slack>
                       <Link to="/chat">
-                        <FaSlack /> Join Us
+                        <FaSlack /> Join our Slack
                       </Link>
                     </Button>
                   </div>
                 </div>
                 <div className="sm:w-1/2  w-1/5 flex justify-end">
                   <ShareEdge>
-                    <div>Like our page</div>
                     <ShareButton href="http://facebook.com/groups/golang.org.vn">
                       <FaFacebookF />
                     </ShareButton>

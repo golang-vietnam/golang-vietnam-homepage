@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Heading from '@/components/Heading'
 import tw from 'tailwind.macro'
-import { Card, CardExcerpt, Dot, PrimaryButton } from '@/shared/styled'
+import { Card, CardExcerpt, Dot, PrimaryButton, Hyperlink } from '@/shared/styled'
 import { IoIosArrowRoundForward } from 'react-icons/io'
 import ReactResizeDetector from 'react-resize-detector'
 import TimeAgo from 'javascript-time-ago'
@@ -131,20 +131,23 @@ class Jobs extends Component {
                 >
                   {this.state.items.map(
                     (
-                      { title, desc, date, location, company, toString, type },
+                      { title, desc, date, location, company, toString, type, linkURL },
                       index
                     ) => (
                       <JobCard key={index}>
-                        <h3>{title}</h3>
+                        <h3>
+                          <Hyperlink href={linkURL} target="_blank" rel="noopener noreferrer">
+                            {title}
+                          </Hyperlink>
+                        </h3>
                         <JobCardInfo>
                           <div className="font-bold mb-3 mt-5">{company}</div>
                           <div className="flex items-center mb-2">
                             <span>{location}</span>
                             <Dot />
                             <span>{type}</span>
-                          </div>
-                          <div className="opacity-75 mb-4">
-                            {timeAgo.format(new Date(date).getTime())}
+                            <Dot />
+                            <span>{timeAgo.format(new Date(date).getTime())}</span>
                           </div>
                         </JobCardInfo>
                         <CardExcerpt>{desc}</CardExcerpt>

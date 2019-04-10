@@ -16,7 +16,7 @@ const BookCard = ({ image, link, title, author }) => (
           width: 64px;
           height: 80px;
           margin-right: 16px;
-          border: 1px solid ${props => props.theme.lighter};
+          border: 1px solid ${props => props.theme.grey};
           background-image: url(${image});
         `}
       />

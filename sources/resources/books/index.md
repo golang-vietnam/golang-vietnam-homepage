@@ -65,5 +65,4 @@ list:
     image: /img/video-preview.png
     link: 'https://checkmarx.gitbooks.io/go-scp/'
     title: Go programming language secure coding practices guide (FREE)
-
 ---

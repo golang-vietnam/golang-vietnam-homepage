@@ -10,6 +10,9 @@ list:
   - date: 2014-05-08
     videoId: 'VoS7DsT1rdM'
     title: GopherCon 2014 Opening Keynote - Rob Pike
+  - date: 2018-07-23
+    videoId: 'sX8r6zATHGU'
+    title: 'Go: building on the shoulders of giants and stepping on a few toes - Steve Francia'
   - date: 2015-06-10
     videoId: '29LLRKIL_TI'
     title: 7 common mistakes in Go - Steve Francia
@@ -25,6 +28,9 @@ list:
   - date: 2015-12-02
     videoId: 'rFejpH_tAHM'
     title: Simplicity is Complicated - Rob Pike
+  - date: 2015-07-28
+    videoId: '0ReKdcpNyQg'
+    title: 'The Evolution of Go - Robert Griesemer'
   - date: 2015-11-18
     videoId: 'PAAkCSZUG1c'
     title: Go Proverbs - Rob Pike

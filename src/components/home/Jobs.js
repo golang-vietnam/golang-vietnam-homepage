@@ -2,7 +2,13 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Heading from '@/components/Heading'
 import tw from 'tailwind.macro'
-import { Card, CardExcerpt, Dot, PrimaryButton, Hyperlink } from '@/shared/styled'
+import {
+  Card,
+  CardExcerpt,
+  Dot,
+  PrimaryButton,
+  Hyperlink,
+} from '@/shared/styled'
 import { IoIosArrowRoundForward } from 'react-icons/io'
 import ReactResizeDetector from 'react-resize-detector'
 import TimeAgo from 'javascript-time-ago'
@@ -131,12 +137,25 @@ class Jobs extends Component {
                 >
                   {this.state.items.map(
                     (
-                      { title, desc, date, location, company, toString, type, linkURL },
+                      {
+                        title,
+                        desc,
+                        date,
+                        location,
+                        company,
+                        toString,
+                        type,
+                        linkURL,
+                      },
                       index
                     ) => (
                       <JobCard key={index}>
                         <h3>
-                          <Hyperlink href={linkURL} target="_blank" rel="noopener noreferrer">
+                          <Hyperlink
+                            href={linkURL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             {title}
                           </Hyperlink>
                         </h3>
@@ -147,7 +166,9 @@ class Jobs extends Component {
                             <Dot />
                             <span>{type}</span>
                             <Dot />
-                            <span>{timeAgo.format(new Date(date).getTime())}</span>
+                            <span>
+                              {timeAgo.format(new Date(date).getTime())}
+                            </span>
                           </div>
                         </JobCardInfo>
                         <CardExcerpt>{desc}</CardExcerpt>
@@ -159,7 +180,7 @@ class Jobs extends Component {
 
               <Navigator
                 onClick={this.next}
-                disabled={this.state.items.length <= 2}
+                disabled={this.state.items.length <= this.state.display}
               >
                 <IoIosArrowRoundForward />
               </Navigator>

@@ -37,8 +37,7 @@ const query = graphql`
           frontmatter {
             list {
               date
-              iframeLink
-              image
+              videoId
               title
             }
           }

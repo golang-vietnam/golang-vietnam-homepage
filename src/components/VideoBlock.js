@@ -61,7 +61,7 @@ const PlayList = styled.div`
   `}
 `
 
-const VideoCard = ({ image, title, date, onPlayVideo, active }) => (
+const VideoCard = ({ videoId, title, date, onPlayVideo, active }) => (
   <a
     css={`
       ${lg`
@@ -96,7 +96,7 @@ const VideoCard = ({ image, title, date, onPlayVideo, active }) => (
     >
       <div
         css={`
-          background-image: url(${image});
+          background-image: url(https://img.youtube.com/vi/${videoId}/mqdefault.jpg);
           padding-bottom: 56.6%;
           ${tw`bg-cover bg-no-repeat bg-center`}
         `}
@@ -135,7 +135,7 @@ const VideoBlock = ({ list }) => {
         <div>
           <iframe
             title={active.title}
-            src={active.iframeLink}
+            src={`https://www.youtube.com/embed/${active.videoId}`}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

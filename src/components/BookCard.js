@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Card, CardExcerpt, Hyperlink } from '@/shared/styled'
 import tw from 'tailwind.macro'
+import { withPrefix } from 'gatsby'
 
 const BookCard = ({ image, link, title, author }) => (
   <Card
@@ -17,7 +18,7 @@ const BookCard = ({ image, link, title, author }) => (
           height: 80px;
           margin-right: 16px;
           border: 1px solid ${props => props.theme.grey};
-          background-image: url(${image});
+          background-image: url(${withPrefix(image)});
         `}
       />
       <div

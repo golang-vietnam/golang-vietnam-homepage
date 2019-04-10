@@ -30,6 +30,7 @@ const BookCard = ({ image, link, title, author }) => (
             font-weight: bold;
             margin-bottom: 5px;
             display: inline-block;
+            word-break: break-all;
           `}
           href={link}
         >

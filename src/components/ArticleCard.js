@@ -30,6 +30,7 @@ const ArticleCard = ({ level, resources }) => (
               target="_blank"
               css={`
                 text-decoration: none;
+                word-break: break-word;
                 &:hover {
                   text-decoration: underline;
                 }

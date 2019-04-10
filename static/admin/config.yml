@@ -184,16 +184,10 @@ collections:
                 [
                   { label: Title, name: title, required: true, widget: string },
                   {
-                    label: 'Iframe Link',
-                    name: iframeLink,
+                    label: 'Youtube video id',
+                    name: videoId,
                     required: true,
                     widget: string,
-                  },
-                  {
-                    label: 'Image',
-                    name: 'image',
-                    widget: 'image',
-                    required: true,
                   },
                   {
                     label: 'Date',

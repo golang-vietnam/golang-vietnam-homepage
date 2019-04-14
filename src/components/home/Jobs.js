@@ -26,7 +26,7 @@ const Container = styled.section`
   margin-top: -325px;
 `
 const TitleContainer = styled.div`
-  ${tw`lg:w-1/4 w-full mb-16`};
+  ${tw`lg:w-1/4 w-full mb-16 flex justify-between items-center`};
   margin-top: 170px;
 `
 
@@ -43,13 +43,14 @@ const JobCard = styled(Card)`
   margin-left: 12px;
   margin-right: 12px;
   box-sizing: border-box;
+  border-top: 8px solid ${props => props.theme.card.link};
   h3 {
-    ${tw`text-3xl mb-4 capitalize`}
+    ${tw`text-lg mb-4 capitalize`}
   }
 `
 
 const JobCardInfo = styled.div`
-  ${tw`text-sm opacity-75`}
+  ${tw`text-sm mb-4`}
 `
 
 const Navigator = styled(PrimaryButton)`
@@ -122,6 +123,19 @@ class Jobs extends Component {
           <div className="flex flex-wrap">
             <TitleContainer>
               <Heading>Jobs</Heading>
+              <a
+                href="https://github.com/golang-vietnam/job_board/issues"
+                target="_blank"
+                rel="noopener"
+                css={`
+                  ${tw`items-center md:hidden flex`}
+                  white-space: nowrap;
+                  color: ${props => props.theme.card.link};
+                `}
+              >
+                All Jobs
+                <IoIosArrowRoundForward className="ml-1 text-lg" />
+              </a>
             </TitleContainer>
             <JobCardContainer className="lg:w-3/4 w-full flex justify-between lg:mx-0 -mx-gutter">
               <Carousel
@@ -160,8 +174,8 @@ class Jobs extends Component {
                           </Hyperlink>
                         </h3>
                         <JobCardInfo>
-                          <div className="font-bold mb-3 mt-5">{company}</div>
-                          <div className="flex items-center mb-2">
+                          <div className="font-medium mb-3 mt-5">{company}</div>
+                          <div className="flex items-center mb-2 opacity-75">
                             <span>{location}</span>
                             <Dot />
                             <span>{type}</span>
@@ -184,6 +198,21 @@ class Jobs extends Component {
               >
                 <IoIosArrowRoundForward />
               </Navigator>
+              <a
+                href="https://github.com/golang-vietnam/job_board/issues"
+                target="_blank"
+                rel="noopener"
+                css={`
+                  ${tw`md:block hidden`}
+                  position: absolute;
+                  right: 0;
+                  top: calc(50% + 60px);
+                  white-space: nowrap;
+                  color: ${props => props.theme.card.link};
+                `}
+              >
+                All Jobs
+              </a>
             </JobCardContainer>
           </div>
         </div>

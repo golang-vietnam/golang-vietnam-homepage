@@ -14,7 +14,7 @@ const Container = styled.div`
 `
 
 const Head = styled.div`
-  ${tw`flex items-end justify-between mb-16`};
+  ${tw`flex md:flex-row flex-col justify-between mb-16`};
 `
 
 const DefaultLayout = ({ children, title, RightSideComponent }) => {

@@ -1,90 +1,48 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { FaGithub, FaLinkedin, FaMedium, FaEnvelope } from 'react-icons/fa'
 import { withPrefix } from 'gatsby'
 import tw from 'tailwind.macro'
 
 const Container = styled.div`
-  ${tw`flex sm:items-center sm:flex-row flex-col items-start`}
+  ${tw`flex flex-col items-center justify-center text-center w-full`}
 `
-
-const Icon = styled.a`
-  ${tw`text-lg`};
-  opacity: 0.4;
-  color: ${props => props.theme.main.foreground};
-  margin-right: 9px;
-  display: inline-flex;
+// TODO: investigate ${props => props.theme.main.foreground} will cause build error
+const GithubLink = styled.a`
+  ${tw`text-sm`};
+  text-decoration: none;
+  color: ${props => props.theme.black};
   &:hover {
-    opacity: 1;
-    color: ${props => props.theme.main.primary};
+    color: ${props => props.theme.primary};
   }
 `
 
 const Avatar = styled.div`
-  ${tw`rounded-full overflow-hidden flex-none sm:mb-0 mb-5`};
-  width: 50px;
-  height: 50px;
-  ${props => `
-      width: ${props.small ? '48' : '70'}px;
-      height: ${props.small ? '48' : '70'}px;
-    `}
+  ${tw`rounded-full overflow-hidden flex-none mb-5`};
+  width: 98px;
+  height: 98px;
 `
 
-const Member = ({
-  small = false,
-  name,
-  avatar,
-  github,
-  linkedin,
-  medium,
-  email,
-}) => {
-  const avatarSize = small ? '48px' : '70px'
-  const size = { width: avatarSize, height: avatarSize }
-
+const Member = ({ name, desc, avatar, github }) => {
   return (
     <Container>
-      <Avatar small={small}>
-        <img src={withPrefix(avatar)} {...size} alt={name} />
+      <Avatar>
+        <img src={withPrefix(avatar)} alt={name} />
       </Avatar>
-      <div className="sm:ml-4 ml-0">
-        <h4 className="text-lg">{name}</h4>
-        <div className="flex items-center mt-2">
-          {github && (
-            <Icon href={github} rel="noopener" target="_blank">
-              <FaGithub />
-            </Icon>
-          )}
-          {linkedin && (
-            <Icon href={linkedin} rel="noopener" target="_blank">
-              <FaLinkedin />
-            </Icon>
-          )}
-          {medium && (
-            <Icon href={medium} rel="noopener" target="_blank">
-              <FaMedium />
-            </Icon>
-          )}
-          {email && (
-            <Icon href={email} rel="noopener" target="_blank">
-              <FaEnvelope />
-            </Icon>
-          )}
-        </div>
+      <div>
+        <h4 className="text-lg mb-1">{name}</h4>
+        <GithubLink href={`https://github.com/{github}`}>@{github}</GithubLink>
+        <p className="opacity-75 text-sm mt-1 px-4">{desc}</p>
       </div>
     </Container>
   )
 }
 
 Member.propTypes = {
-  small: PropTypes.bool,
   name: PropTypes.string.isRequired,
   avatar: PropTypes.string,
+  desc: PropTypes.string,
   github: PropTypes.string,
-  linkedin: PropTypes.string,
-  medium: PropTypes.string,
-  email: PropTypes.string,
 }
 
 export default Member

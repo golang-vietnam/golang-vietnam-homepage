@@ -31,7 +31,7 @@ const Member = ({ name, desc, avatar, github }) => {
       </Avatar>
       <div>
         <h4 className="text-lg mb-1">{name}</h4>
-        <GithubLink href={`https://github.com/{github}`}>@{github}</GithubLink>
+        <GithubLink href={`https://github.com/${github}`}>@{github}</GithubLink>
         <p className="opacity-75 text-sm mt-1 px-4">{desc}</p>
       </div>
     </Container>

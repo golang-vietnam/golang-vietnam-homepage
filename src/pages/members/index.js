@@ -8,25 +8,25 @@ import Member from './Member'
 const members = [
   {
     name: 'Han Ngo',
-    avatar: '/img/members/hanngo.png',
+    avatar: '/img/members/tieubao.png',
     github: 'tieubao',
-    desc: 'Lorem ipsum dolor sit amet, coonsectetur',
-  },
-  {
-    name: 'Vu Nguyen',
-    avatar: '/img/members/vunguyen.png',
-    github: 'vu-ng',
     desc: 'Lorem ipsum dolor sit amet, coonsectetur',
   },
   {
     name: 'Thach Le',
     avatar: '/img/members/thachle.png',
-    github: 'runi_vn',
+    github: 'runivn',
+    desc: 'Lorem ipsum dolor sit amet, coonsectetur',
+  },
+  {
+    name: 'Vu Nguyen',
+    avatar: '/img/members/vunguyen.png',
+    github: 'ng-vu',
     desc: 'Lorem ipsum dolor sit amet, coonsectetur',
   },
   {
     name: 'Triet Pham',
-    avatar: '/img/members/trietpham.png',
+    avatar: '/img/members/trietphm.jpg',
     github: 'trietphm',
     desc: 'Lorem ipsum dolor sit amet, coonsectetur',
   },
@@ -44,14 +44,20 @@ const members = [
   },
   {
     name: 'Tam Nguyen',
-    avatar: '/img/members/hanngo.png',
+    avatar: '/img/members/tamnd.jpg',
     github: 'tamnd',
     desc: 'Lorem ipsum dolor sit amet, coonsectetur',
   },
   {
-    name: 'Huy',
-    avatar: '/img/members/hanngo.png',
+    name: 'Huy Do',
+    avatar: '/img/members/huydx.jpg',
     github: 'huydx',
+    desc: 'Lorem ipsum dolor sit amet, coonsectetur',
+  },
+  {
+    name: 'Nam Nguyen',
+    avatar: '/img/members/namnhce.jpg',
+    github: 'namnhce',
     desc: 'Lorem ipsum dolor sit amet, coonsectetur',
   },
 ]
@@ -64,13 +70,14 @@ const Members = () => (
         The gophers help to run the community over the past 5 years. They come
         from a wide diversity of background, company and level, but one thing in
         common:{' '}
-        <span
+        <div
           css={`
             font-weight: 700;
+            float: right;
           `}
         >
-          the passion for Go
-        </span>
+          The passion for Go
+        </div>
       </p>
     )}
   >

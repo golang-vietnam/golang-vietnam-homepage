@@ -23,7 +23,7 @@ const Avatar = styled.div`
   height: 98px;
 `
 
-const Member = ({ name, desc, avatar, github }) => {
+const Member = ({ name, company, desc, avatar, github }) => {
   return (
     <Container>
       <Avatar>
@@ -31,8 +31,9 @@ const Member = ({ name, desc, avatar, github }) => {
       </Avatar>
       <div>
         <h4 className="text-lg mb-1">{name}</h4>
+        <p className="opacity-75 text-xs mt-1 px-4">{company}</p> 
         <GithubLink href={`https://github.com/${github}`}>@{github}</GithubLink>
-        <p className="opacity-75 text-sm mt-1 px-4">{desc}</p>
+        <p className="opacity-75 text-xs mt-1 px-4">{desc}</p>
       </div>
     </Container>
   )
@@ -41,6 +42,7 @@ const Member = ({ name, desc, avatar, github }) => {
 Member.propTypes = {
   name: PropTypes.string.isRequired,
   avatar: PropTypes.string,
+  company: PropTypes.string,
   desc: PropTypes.string,
   github: PropTypes.string,
 }

@@ -3,7 +3,7 @@ import DefaultLayout from '@/components/DefaultLayout'
 import MemberSubscription from '@/components/MemberSubscription'
 import SEO from '@/components/seo'
 import { SubHeading } from '@/shared/styled'
-import Member from './Member'
+import Member from '@/components/Member'
 import { sm } from '@/shared/responsive'
 
 const members = [

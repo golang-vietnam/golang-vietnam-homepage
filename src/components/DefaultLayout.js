@@ -7,10 +7,12 @@ import styled from 'styled-components'
 import Heading from '@/components/Heading'
 import tw from 'tailwind.macro'
 import { GlobalStyle } from '@/shared/styled'
+import { sm } from '@/shared/responsive'
 
 const Container = styled.div`
   min-height: calc(100vh - 76px);
-  padding: 170px 0 200px 0;
+  padding: 150px 0 120px 0;
+  ${sm`padding: 170px 0 180px 0;`}
 `
 
 const Head = styled.div`

@@ -81,7 +81,7 @@ const members = [
   },
   {
     name: 'Doan Nguyen',
-    avatar: 'https://i.postimg.cc/kML3mHCz/IMG-20191222-120859.jpg',
+    avatar: '/img/members/IMG-20191222-120859.jpg',
     company: 'VNG Corporation',
     github: 'doannq01',
     desc:

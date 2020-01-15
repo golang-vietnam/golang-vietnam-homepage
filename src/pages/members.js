@@ -79,6 +79,14 @@ const members = [
     desc:
       'The GopherCon Vietnam 2018 could not be successful without Nam contribution to the preparation & coordination.',
   },
+  {
+    name: 'Doan Nguyen',
+    avatar: '//https://i.postimg.cc/kML3mHCz/IMG-20191222-120859.jpg',
+    company: 'VNG Corp',
+    github: 'doannq01',
+    desc:
+      'The GopherCon Vietnam 2020 could not be successful without Doan contribution to the preparation & coordination.',
+  },
 ]
 
 const Members = () => (

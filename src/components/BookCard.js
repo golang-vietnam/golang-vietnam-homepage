@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Card, CardExcerpt, Hyperlink } from '@/shared/styled'
-import tw from 'tailwind.macro'
-import { withPrefix } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Card, CardExcerpt, Hyperlink } from '@/shared/styled';
+import tw from 'tailwind.macro';
+import { withPrefix } from 'gatsby';
 
 const BookCard = ({ image, link, title, author }) => (
   <Card
@@ -41,12 +41,12 @@ const BookCard = ({ image, link, title, author }) => (
       </div>
     </div>
   </Card>
-)
+);
 
 BookCard.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-}
+  author: PropTypes.string.isRequired
+};
 
-export default BookCard
+export default BookCard;

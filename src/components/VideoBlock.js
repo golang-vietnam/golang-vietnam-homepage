@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import tw from 'tailwind.macro'
-import { sm, lg } from '@/shared/responsive'
-import dayjs from 'dayjs'
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import tw from 'tailwind.macro';
+import { sm, lg } from '@/shared/responsive';
+import dayjs from 'dayjs';
 
 const VideoHolder = styled.div`
   ${lg`display: flex;`}
@@ -11,7 +11,7 @@ const VideoHolder = styled.div`
   padding: 0 15px;
   margin-top: 50px;
   position: relative;
-`
+`;
 
 const MainVideo = styled.div`
   ${lg`
@@ -31,7 +31,7 @@ const MainVideo = styled.div`
       height: 100%;
     }
   }
-`
+`;
 
 const PlayList = styled.div`
   margin-top: 30px;
@@ -59,7 +59,7 @@ const PlayList = styled.div`
         display: block;
     }
   `}
-`
+`;
 
 const VideoCard = ({ videoId, title, date, onPlayVideo, active }) => (
   <a
@@ -83,7 +83,7 @@ const VideoCard = ({ videoId, title, date, onPlayVideo, active }) => (
     tabIndex={0}
     onKeyDown={({ key }) => {
       if (key === 'Enter' || key === ' ') {
-        onPlayVideo()
+        onPlayVideo();
       }
     }}
   >
@@ -125,10 +125,10 @@ const VideoCard = ({ videoId, title, date, onPlayVideo, active }) => (
       </div>
     </div>
   </a>
-)
+);
 
 const VideoBlock = ({ list }) => {
-  const [active, setActive] = useState(list[0])
+  const [active, setActive] = useState(list[0]);
   return (
     <VideoHolder>
       <MainVideo>
@@ -155,7 +155,7 @@ const VideoBlock = ({ list }) => {
         </div>
       </PlayList>
     </VideoHolder>
-  )
-}
+  );
+};
 
-export default VideoBlock
+export default VideoBlock;

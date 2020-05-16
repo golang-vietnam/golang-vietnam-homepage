@@ -1,19 +1,19 @@
 export default [
   {
     name: 'Jobs',
-    href: '/#jobs',
+    href: '/#jobs'
   },
   {
     name: 'News',
-    href: '/#news',
+    href: '/#news'
   },
   {
     name: 'Events',
-    href: '/#events',
+    href: '/#events'
   },
   {
     name: 'Resources',
-    href: '/resources',
+    href: '/resources'
     // children: [
     //   {
     //     name: 'Videos',
@@ -31,6 +31,6 @@ export default [
   },
   {
     name: 'Members',
-    href: '/members',
-  },
-]
+    href: '/members'
+  }
+];

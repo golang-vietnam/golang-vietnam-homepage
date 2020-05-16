@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Card, CardHeading, Hyperlink } from '@/shared/styled'
-import dayjs from 'dayjs'
-import decode from 'unescape'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Card, CardHeading, Hyperlink } from '@/shared/styled';
+import dayjs from 'dayjs';
+import decode from 'unescape';
 
 const EventsCard = ({ name, date, location, guests, link }) => {
   return (
@@ -27,14 +27,14 @@ const EventsCard = ({ name, date, location, guests, link }) => {
         </div>
       </div>
     </Card>
-  )
-}
+  );
+};
 
 EventsCard.propTypes = {
   name: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  guests: PropTypes.string.isRequired,
-}
+  guests: PropTypes.string.isRequired
+};
 
-export default EventsCard
+export default EventsCard;

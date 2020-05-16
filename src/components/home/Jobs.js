@@ -1,39 +1,39 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import Heading from '@/components/Heading'
-import tw from 'tailwind.macro'
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Heading from '@/components/Heading';
+import tw from 'tailwind.macro';
 import {
   Card,
   CardExcerpt,
   Dot,
   PrimaryButton,
-  Hyperlink,
-} from '@/shared/styled'
-import { IoIosArrowRoundForward } from 'react-icons/io'
-import ReactResizeDetector from 'react-resize-detector'
-import TimeAgo from 'javascript-time-ago'
-import en from 'javascript-time-ago/locale/en'
+  Hyperlink
+} from '@/shared/styled';
+import { IoIosArrowRoundForward } from 'react-icons/io';
+import ReactResizeDetector from 'react-resize-detector';
+import TimeAgo from 'javascript-time-ago';
+import en from 'javascript-time-ago/locale/en';
 
-TimeAgo.addLocale(en)
-const timeAgo = new TimeAgo()
+TimeAgo.addLocale(en);
+const timeAgo = new TimeAgo();
 
-const itemPadding = 24
-const itemWidth = 295
+const itemPadding = 24;
+const itemWidth = 295;
 
 const Container = styled.section`
   padding-bottom: 0px;
   padding-top: 230px;
   margin-top: -325px;
-`
+`;
 const TitleContainer = styled.div`
-  ${tw`lg:w-1/4 w-full mb-16 flex justify-between items-center`};
+  ${tw`lg:w-1/4 w-full mb-16 lg:block flex flex-col lg:flex-col sm:flex-row justify-between sm:items-center`};
   margin-top: 170px;
-`
+`;
 
 const JobCardContainer = styled.div`
   position: relative;
   z-index: 9;
-`
+`;
 
 const JobCard = styled(Card)`
   width: 295px;
@@ -47,11 +47,11 @@ const JobCard = styled(Card)`
   h3 {
     ${tw`text-lg mb-4 capitalize`}
   }
-`
+`;
 
 const JobCardInfo = styled.div`
   ${tw`text-sm mb-4`}
-`
+`;
 
 const Navigator = styled(PrimaryButton)`
   width: 55px;
@@ -66,54 +66,57 @@ const Navigator = styled(PrimaryButton)`
   &:disabled {
     ${tw`opacity-50 pointer-events-none`};
   }
-`
+`;
 
 const Carousel = styled.div`
   ${props => `
-  width: ${props.display * props.itemWidth +
-    props.display * props.itemPadding}px;
+  width: ${
+    props.display * props.itemWidth + props.display * props.itemPadding
+  }px;
   overflow: hidden;
   padding-bottom:5px;
   padding-top:5px;
 `}
-`
+`;
 
 const CarouselWrapper = styled.div`
   ${props => `
-  width: ${props.numOfItems * props.itemWidth +
-    (props.numOfItems - 1) * props.itemPadding}px;
+  width: ${
+    props.numOfItems * props.itemWidth +
+    (props.numOfItems - 1) * props.itemPadding
+  }px;
   display: flex;
   transform: translate3d(${props.translate}px, 0 , 0);
   transition: transform 0.5s ease;
 `}
-`
+`;
 class Jobs extends Component {
   state = {
     display: 2,
     items: this.props.data,
     current: 0,
-    translate: 0,
-  }
+    translate: 0
+  };
 
   next = () => {
     this.setState(prevState => {
       const current =
         (this.state.items.length + prevState.current + this.state.display) %
-        this.state.items.length
+        this.state.items.length;
       return {
         translate: -(current * itemWidth + itemPadding * current),
-        current,
-      }
-    })
-  }
+        current
+      };
+    });
+  };
 
   onResize = width => {
     if (width <= 567 && this.state.display === 2) {
-      this.setState({ display: 1, translate: 0, current: 0 })
+      this.setState({ display: 1, translate: 0, current: 0 });
     } else if (this.state.display === 1) {
-      this.setState({ display: 2, translate: 0, current: 0 })
+      this.setState({ display: 2, translate: 0, current: 0 });
     }
-  }
+  };
 
   render() {
     return (
@@ -123,19 +126,35 @@ class Jobs extends Component {
           <div className="flex flex-wrap">
             <TitleContainer>
               <Heading>Jobs</Heading>
-              <a
-                href="https://github.com/golang-vietnam/job_board/issues"
-                target="_blank"
-                rel="noopener"
-                css={`
-                  ${tw`items-center md:hidden flex`}
-                  white-space: nowrap;
-                  color: ${props => props.theme.card.link};
-                `}
-              >
-                All Jobs
-                <IoIosArrowRoundForward className="ml-1 text-lg" />
-              </a>
+              <div className="flex items-center sm:mt-0 mt-8 sm:justify-start justify-between">
+                <a
+                  href="https://github.com/golang-vietnam/jobs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  css={`
+                    ${tw`items-center inline-flex lg:mt-5 py-2 text-sm px-3 rounded-sm`}
+                    text-decoration: none;
+                    background-color: ${props =>
+                      props.theme.button.primary.background};
+                    color: ${props => props.theme.button.primary.foreground};
+                  `}
+                >
+                  Post a job
+                </a>
+                <a
+                  href="https://github.com/golang-vietnam/job_board/issues"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  css={`
+                    ${tw`items-center md:hidden flex ml-5`}
+                    white-space: nowrap;
+                    color: ${props => props.theme.card.link};
+                  `}
+                >
+                  All Jobs
+                  <IoIosArrowRoundForward className="ml-1 text-lg" />
+                </a>
+              </div>
             </TitleContainer>
             <JobCardContainer className="lg:w-3/4 w-full flex justify-between lg:mx-0 -mx-gutter">
               <Carousel
@@ -159,7 +178,7 @@ class Jobs extends Component {
                         company,
                         toString,
                         type,
-                        linkURL,
+                        linkURL
                       },
                       index
                     ) => (
@@ -201,7 +220,7 @@ class Jobs extends Component {
               <a
                 href="https://github.com/golang-vietnam/job_board/issues"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 css={`
                   ${tw`md:block hidden`}
                   position: absolute;
@@ -217,8 +236,8 @@ class Jobs extends Component {
           </div>
         </div>
       </Container>
-    )
+    );
   }
 }
 
-export default Jobs
+export default Jobs;

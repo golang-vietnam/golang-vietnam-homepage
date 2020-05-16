@@ -1,19 +1,19 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import tw from 'tailwind.macro'
-import { FaGithubAlt, FaSlack, FaFacebookF, FaEnvelope } from 'react-icons/fa'
-import BackgroundImage from 'gatsby-background-image'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import tw from 'tailwind.macro';
+import { FaGithubAlt, FaSlack, FaFacebookF, FaEnvelope } from 'react-icons/fa';
+import BackgroundImage from 'gatsby-background-image';
+import { StaticQuery, graphql, Link } from 'gatsby';
 
 const Overlay = styled.div`
   ${tw`pin absolute`};
   background-color: rgba(0, 0, 0, 0.5);
-`
+`;
 
 const Heading = styled.h1`
   ${tw`text-5xl mb-5`};
   color: ${props => props.theme.white};
-`
+`;
 
 const Paragraph = styled.p`
   ${tw`opacity-80 mb-12`};
@@ -21,7 +21,7 @@ const Paragraph = styled.p`
   padding-left: 11px;
   border-left: 2px solid ${props => props.theme.primary};
   max-width: 310px;
-`
+`;
 
 const Button = styled.div`
   a {
@@ -37,7 +37,7 @@ const Button = styled.div`
       margin-right: 10px;
     }
   }
-`
+`;
 
 const ShareEdge = styled.div`
   ${tw`flex-col items-center flex`};
@@ -52,7 +52,7 @@ const ShareEdge = styled.div`
   a:first-of-type {
     margin-bottom: 14px;
   }
-`
+`;
 
 const ShareButton = styled.a`
   background-color: ${props => props.theme.white};
@@ -64,7 +64,7 @@ const ShareButton = styled.a`
   align-items: center;
   border-radius: 999px;
   font-size: 18px;
-`
+`;
 
 class Hero extends Component {
   render() {
@@ -83,7 +83,7 @@ class Hero extends Component {
         `}
         render={data => {
           // Set ImageData.
-          const imageData = data.desktop.childImageSharp.fluid
+          const imageData = data.desktop.childImageSharp.fluid;
           return (
             <BackgroundImage
               Tag="section"
@@ -129,11 +129,11 @@ class Hero extends Component {
                 </div>
               </div>
             </BackgroundImage>
-          )
+          );
         }}
       />
-    )
+    );
   }
 }
 
-export default Hero
+export default Hero;

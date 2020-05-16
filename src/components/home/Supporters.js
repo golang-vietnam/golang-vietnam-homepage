@@ -1,43 +1,43 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import Heading from '@/components/Heading'
-import tw from 'tailwind.macro'
-import { withPrefix } from 'gatsby'
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Heading from '@/components/Heading';
+import tw from 'tailwind.macro';
+import { withPrefix } from 'gatsby';
 
 const data = [
   {
     href: 'https://www.chotot.com/',
-    image: 'chotot',
+    image: 'chotot'
   },
   {
     href: 'https://dwarves.foundation',
-    image: 'dwarves',
+    image: 'dwarves'
   },
   {
     href: 'https://missmp.eu/',
-    image: 'missmoney',
+    image: 'missmoney'
   },
   {
     href: 'https://trustingsocial.com/',
-    image: 'trustingsocial',
+    image: 'trustingsocial'
   },
   {
     href: 'https://webuild.community',
-    image: 'webuild',
+    image: 'webuild'
   },
   {
     href: 'https://gdgvietnam.com/',
-    image: 'gdg',
+    image: 'gdg'
   },
   {
     href: 'http://www.coderschool.vn/',
-    image: 'coderschool',
-  },
-]
+    image: 'coderschool'
+  }
+];
 
 const Container = styled.section`
   ${tw`sm:py-20 py-0`};
-`
+`;
 
 const Image = styled.img`
   filter: gray;
@@ -47,13 +47,13 @@ const Image = styled.img`
     filter: none;
     -webkit-filter: none;
   }
-`
+`;
 
 const ImageLink = styled.a`
   ${tw`block leading-none`};
   font-size: 0;
   box-shadow: ${props => props.theme.card.boxShadow};
-`
+`;
 
 class Supporter extends Component {
   render() {
@@ -84,8 +84,8 @@ class Supporter extends Component {
           </div>
         </div>
       </Container>
-    )
+    );
   }
 }
 
-export default Supporter
+export default Supporter;

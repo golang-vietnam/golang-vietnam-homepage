@@ -1,9 +1,9 @@
-const white = '#ffffff'
-const primary = '#3BA2BC'
-const black = '#080808'
-const grey = '#E7E7E7'
-const greyLigher = '#F8F8F8'
-const greyDarker = '#9B9B9B'
+const white = '#ffffff';
+const primary = '#3BA2BC';
+const black = '#080808';
+const grey = '#E7E7E7';
+const greyLigher = '#F8F8F8';
+const greyDarker = '#9B9B9B';
 
 export default {
   white,
@@ -15,30 +15,30 @@ export default {
   error: {
     foreground: '#EC4C47',
     border: '#BF0E08',
-    background: '#FEF6F6',
+    background: '#FEF6F6'
   },
   main: {
     primary,
     background: white,
     body: greyLigher,
     foreground: black,
-    border: grey,
+    border: grey
   },
   button: {
     primary: {
       background: primary,
-      foreground: white,
-    },
+      foreground: white
+    }
   },
   footer: {
     background: grey,
-    foreground: black,
+    foreground: black
   },
   card: {
     background: white,
     foreground: black,
     link: primary,
-    boxShadow: '0 0px 4px rgba(0,0,0,0.15)',
+    boxShadow: '0 0px 4px rgba(0,0,0,0.15)'
   },
   header: {
     background: white,
@@ -49,14 +49,14 @@ export default {
       nav: {
         link: {
           foreground: white,
-          activeForeground: primary,
-        },
-      },
+          activeForeground: primary
+        }
+      }
     },
     nav: {
       link: {
         foreground: black,
-        activeForeground: primary,
+        activeForeground: primary
       },
       submenu: {
         background: white,
@@ -66,9 +66,9 @@ export default {
           background: white,
           foreground: black,
           activeBackground: primary,
-          activeForeground: white,
-        },
-      },
+          activeForeground: white
+        }
+      }
     },
     mobileNav: {
       background: black,
@@ -76,15 +76,15 @@ export default {
       link: {
         foreground: white,
         active: {
-          foreground: primary,
-        },
-      },
-    },
+          foreground: primary
+        }
+      }
+    }
   },
   badge: {
     activeBackground: primary,
     activeForeground: white,
     inactiveBackground: greyDarker,
-    inactiveForeground: white,
-  },
-}
+    inactiveForeground: white
+  }
+};

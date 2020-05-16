@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import tw from 'tailwind.macro'
-import { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components';
+import tw from 'tailwind.macro';
+import { createGlobalStyle } from 'styled-components';
 
 export const Wrapper = styled.div`
   max-width: 936px;
@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
-`
+`;
 
 export const GlobalStyle = createGlobalStyle`
   html, body {
@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
   .link-active{
     color: ${props => props.theme.main.primary}!important;
   }
-`
+`;
 
 export const Card = styled.div`
   ${props => `
@@ -27,14 +27,14 @@ export const Card = styled.div`
   box-shadow: ${props.theme.card.boxShadow};`}
   padding: 20px 32px;
   margin-bottom: 24px;
-`
+`;
 
 export const CardHeading = styled.h4`
   ${tw`text-lg`};
   margin-bottom: 6px;
   line-height: 1.6em;
   text-transform: capitalize;
-`
+`;
 
 export const Hyperlink = styled.a`
   text-decoration: none;
@@ -43,12 +43,12 @@ export const Hyperlink = styled.a`
   &:hover {
     color: ${props => props.theme.card.link};
   }
-`
+`;
 
 export const CardExcerpt = styled.p`
   ${tw`opacity-80 text-sm`};
   line-height: 1.71em;
-`
+`;
 
 export const Badge = styled.span`
   font-weight: bold;
@@ -70,14 +70,14 @@ export const Badge = styled.span`
       : props.theme.badge.inactiveForeground
   };
   `}
-`
+`;
 
 export const PrimaryButton = styled.button`
   ${props => `
     background-color: ${props.theme.button.primary.background};
     color: ${props.theme.button.primary.foreground};
   `}
-`
+`;
 
 export const Dot = styled.span`
   display: block;
@@ -86,10 +86,10 @@ export const Dot = styled.span`
   border-radius: 100px;
   margin: 0 10px;
   background-color: ${props => props.theme.card.foreground};
-`
+`;
 
 export const SubHeading = styled.h3`
   ${tw`text-3xl`};
   font-weight: 500;
   line-height: 1.53em;
-`
+`;

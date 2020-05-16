@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import DefaultLayout from '@/components/DefaultLayout'
-import NotFoundIllustration from '@/components/svg/NotFoundIllustration'
+import React from 'react';
+import { Link } from 'gatsby';
+import DefaultLayout from '@/components/DefaultLayout';
+import NotFoundIllustration from '@/components/svg/NotFoundIllustration';
 
-import SEO from '../components/seo'
+import SEO from '../components/seo';
 
 const NotFoundPage = () => (
   <DefaultLayout>
@@ -44,6 +44,6 @@ const NotFoundPage = () => (
       </p>
     </div>
   </DefaultLayout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

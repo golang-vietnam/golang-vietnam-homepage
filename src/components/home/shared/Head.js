@@ -1,10 +1,10 @@
-import React from 'react'
-import Heading from '@/components/Heading'
-import { IoIosArrowRoundForward } from 'react-icons/io'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
-import tw from 'tailwind.macro'
+import React from 'react';
+import Heading from '@/components/Heading';
+import { IoIosArrowRoundForward } from 'react-icons/io';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import tw from 'tailwind.macro';
 
 const Container = styled.div`
   ${tw`flex justify-between items-end mb-16`};
@@ -13,7 +13,7 @@ const Container = styled.div`
     text-decoration: none;
     color: ${props => props.theme.main.primary};
   }
-`
+`;
 
 const Head = ({ title, link }) => {
   return (
@@ -27,12 +27,12 @@ const Head = ({ title, link }) => {
         </Link>
       )}
     </Container>
-  )
-}
+  );
+};
 
 Head.propTypes = {
   title: PropTypes.string.isRequired,
-  link: PropTypes.string,
-}
+  link: PropTypes.string
+};
 
-export default Head
+export default Head;

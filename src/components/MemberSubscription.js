@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { sm } from '@/shared/responsive'
+import React, { Component } from 'react';
+import { sm } from '@/shared/responsive';
 
 class MemberSubscription extends Component {
   render() {
@@ -24,8 +24,8 @@ class MemberSubscription extends Component {
           width="100%"
         />
       </div>
-    )
+    );
   }
 }
 
-export default MemberSubscription
+export default MemberSubscription;

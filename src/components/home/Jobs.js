@@ -1,39 +1,39 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import Heading from '@/components/Heading'
-import tw from 'tailwind.macro'
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Heading from '@/components/Heading';
+import tw from 'tailwind.macro';
 import {
   Card,
   CardExcerpt,
   Dot,
   PrimaryButton,
-  Hyperlink,
-} from '@/shared/styled'
-import { IoIosArrowRoundForward } from 'react-icons/io'
-import ReactResizeDetector from 'react-resize-detector'
-import TimeAgo from 'javascript-time-ago'
-import en from 'javascript-time-ago/locale/en'
+  Hyperlink
+} from '@/shared/styled';
+import { IoIosArrowRoundForward } from 'react-icons/io';
+import ReactResizeDetector from 'react-resize-detector';
+import TimeAgo from 'javascript-time-ago';
+import en from 'javascript-time-ago/locale/en';
 
-TimeAgo.addLocale(en)
-const timeAgo = new TimeAgo()
+TimeAgo.addLocale(en);
+const timeAgo = new TimeAgo();
 
-const itemPadding = 24
-const itemWidth = 295
+const itemPadding = 24;
+const itemWidth = 295;
 
 const Container = styled.section`
   padding-bottom: 0px;
   padding-top: 230px;
   margin-top: -325px;
-`
+`;
 const TitleContainer = styled.div`
   ${tw`lg:w-1/4 w-full mb-16 flex justify-between items-center`};
   margin-top: 170px;
-`
+`;
 
 const JobCardContainer = styled.div`
   position: relative;
   z-index: 9;
-`
+`;
 
 const JobCard = styled(Card)`
   width: 295px;
@@ -47,11 +47,11 @@ const JobCard = styled(Card)`
   h3 {
     ${tw`text-lg mb-4 capitalize`}
   }
-`
+`;
 
 const JobCardInfo = styled.div`
   ${tw`text-sm mb-4`}
-`
+`;
 
 const Navigator = styled(PrimaryButton)`
   width: 55px;
@@ -66,54 +66,57 @@ const Navigator = styled(PrimaryButton)`
   &:disabled {
     ${tw`opacity-50 pointer-events-none`};
   }
-`
+`;
 
 const Carousel = styled.div`
   ${props => `
-  width: ${props.display * props.itemWidth +
-    props.display * props.itemPadding}px;
+  width: ${
+    props.display * props.itemWidth + props.display * props.itemPadding
+  }px;
   overflow: hidden;
   padding-bottom:5px;
   padding-top:5px;
 `}
-`
+`;
 
 const CarouselWrapper = styled.div`
   ${props => `
-  width: ${props.numOfItems * props.itemWidth +
-    (props.numOfItems - 1) * props.itemPadding}px;
+  width: ${
+    props.numOfItems * props.itemWidth +
+    (props.numOfItems - 1) * props.itemPadding
+  }px;
   display: flex;
   transform: translate3d(${props.translate}px, 0 , 0);
   transition: transform 0.5s ease;
 `}
-`
+`;
 class Jobs extends Component {
   state = {
     display: 2,
     items: this.props.data,
     current: 0,
-    translate: 0,
-  }
+    translate: 0
+  };
 
   next = () => {
     this.setState(prevState => {
       const current =
         (this.state.items.length + prevState.current + this.state.display) %
-        this.state.items.length
+        this.state.items.length;
       return {
         translate: -(current * itemWidth + itemPadding * current),
-        current,
-      }
-    })
-  }
+        current
+      };
+    });
+  };
 
   onResize = width => {
     if (width <= 567 && this.state.display === 2) {
-      this.setState({ display: 1, translate: 0, current: 0 })
+      this.setState({ display: 1, translate: 0, current: 0 });
     } else if (this.state.display === 1) {
-      this.setState({ display: 2, translate: 0, current: 0 })
+      this.setState({ display: 2, translate: 0, current: 0 });
     }
-  }
+  };
 
   render() {
     return (
@@ -159,7 +162,7 @@ class Jobs extends Component {
                         company,
                         toString,
                         type,
-                        linkURL,
+                        linkURL
                       },
                       index
                     ) => (
@@ -217,8 +220,8 @@ class Jobs extends Component {
           </div>
         </div>
       </Container>
-    )
+    );
   }
 }
 
-export default Jobs
+export default Jobs;

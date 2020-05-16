@@ -1,10 +1,10 @@
-import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
-import DefaultLayout from '@/components/DefaultLayout'
-import SEO from '@/components/seo'
-import EventCard from '@/components/EventCard'
-import { SubHeading } from '@/shared/styled'
-import dayjs from 'dayjs'
+import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
+import DefaultLayout from '@/components/DefaultLayout';
+import SEO from '@/components/seo';
+import EventCard from '@/components/EventCard';
+import { SubHeading } from '@/shared/styled';
+import dayjs from 'dayjs';
 
 const query = graphql`
   {
@@ -27,7 +27,7 @@ const query = graphql`
       }
     }
   }
-`
+`;
 
 const EventsPage = () => (
   <DefaultLayout title="Events">
@@ -37,20 +37,20 @@ const EventsPage = () => (
       query={query}
       render={({ data }) => {
         if (!data) {
-          return null
+          return null;
         }
-        const { list } = data.edges[0].node.frontmatter
-        const fortcoming = []
-        const past = []
-        const now = Date.now()
+        const { list } = data.edges[0].node.frontmatter;
+        const fortcoming = [];
+        const past = [];
+        const now = Date.now();
 
         list.forEach(event => {
           if (dayjs(event.date).isBefore(dayjs(now))) {
-            past.unshift(event)
+            past.unshift(event);
           } else {
-            fortcoming.unshift(event)
+            fortcoming.unshift(event);
           }
-        })
+        });
 
         return (
           <>
@@ -76,10 +76,10 @@ const EventsPage = () => (
               past.map((event, index) => <EventCard {...event} key={index} />)
             )}
           </>
-        )
+        );
       }}
     />
   </DefaultLayout>
-)
+);
 
-export default EventsPage
+export default EventsPage;

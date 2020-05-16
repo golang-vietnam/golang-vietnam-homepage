@@ -1,7 +1,7 @@
-import React from 'react'
-import DefaultLayout from '../components/DefaultLayout'
-import SEO from '../components/seo'
-import styled from 'styled-components'
+import React from 'react';
+import DefaultLayout from '../components/DefaultLayout';
+import SEO from '../components/seo';
+import styled from 'styled-components';
 
 const Container = styled.div`
   .chat__section {
@@ -52,7 +52,7 @@ const Container = styled.div`
       width: 100%;
     }
   }
-`
+`;
 
 const ChatPage = () => (
   <DefaultLayout>
@@ -70,6 +70,6 @@ const ChatPage = () => (
       </div>
     </Container>
   </DefaultLayout>
-)
+);
 
-export default ChatPage
+export default ChatPage;

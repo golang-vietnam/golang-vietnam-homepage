@@ -1,10 +1,10 @@
-import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
-import DefaultLayout from '@/components/DefaultLayout'
-import SEO from '@/components/seo'
-import JobCard from '@/components/JobCard'
-import tw from 'tailwind.macro'
-import styled from 'styled-components'
+import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
+import DefaultLayout from '@/components/DefaultLayout';
+import SEO from '@/components/seo';
+import JobCard from '@/components/JobCard';
+import tw from 'tailwind.macro';
+import styled from 'styled-components';
 
 const query = graphql`
   {
@@ -28,7 +28,7 @@ const query = graphql`
       }
     }
   }
-`
+`;
 
 const InfoBlock = styled.div`
   ${tw`flex items-center`};
@@ -36,31 +36,31 @@ const InfoBlock = styled.div`
     color: ${props => props.theme.main.primary};
     margin-right: 20px;
   }
-`
+`;
 
 const JobPage = () => (
   <StaticQuery
     query={query}
     render={({ data }) => {
       if (!data) {
-        return null
+        return null;
       }
-      const { list } = data.edges[0].node.frontmatter
+      const { list } = data.edges[0].node.frontmatter;
 
       const { numOfOpen, numOfClosed } = list.reduce(
         (a, { isOpened }) => {
           if (isOpened) {
-            a.numOfOpen = a.numOfOpen + 1
+            a.numOfOpen = a.numOfOpen + 1;
           } else {
-            a.numOfClosed = a.numOfClosed + 1
+            a.numOfClosed = a.numOfClosed + 1;
           }
-          return a
+          return a;
         },
         {
           numOfOpen: 0,
-          numOfClosed: 0,
+          numOfClosed: 0
         }
-      )
+      );
 
       return (
         <DefaultLayout
@@ -77,9 +77,9 @@ const JobPage = () => (
             <JobCard {...data} key={i} />
           ))}
         </DefaultLayout>
-      )
+      );
     }}
   />
-)
+);
 
-export default JobPage
+export default JobPage;

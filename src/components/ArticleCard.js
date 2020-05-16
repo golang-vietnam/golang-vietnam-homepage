@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Card, SubHeading } from '@/shared/styled'
-import tw from 'tailwind.macro'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Card, SubHeading } from '@/shared/styled';
+import tw from 'tailwind.macro';
 
 const ArticleCard = ({ level, resources }) => (
   <div className="mb-10">
@@ -45,11 +45,11 @@ const ArticleCard = ({ level, resources }) => (
       </ul>
     </Card>
   </div>
-)
+);
 
 ArticleCard.propTypes = {
   level: PropTypes.string.isRequired,
-  resources: PropTypes.array,
-}
+  resources: PropTypes.array
+};
 
-export default ArticleCard
+export default ArticleCard;

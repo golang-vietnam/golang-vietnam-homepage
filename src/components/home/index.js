@@ -1,11 +1,11 @@
-import React from 'react'
-import Hero from './Hero'
-import Jobs from './Jobs'
-import News from './News'
-import Events from './Events'
-import Supporters from './Supporters'
+import React from 'react';
+import Hero from './Hero';
+import Jobs from './Jobs';
+import News from './News';
+import Events from './Events';
+import Supporters from './Supporters';
 // import Subscription from './Subscription'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby';
 
 const query = graphql`
   {
@@ -63,7 +63,7 @@ const query = graphql`
       }
     }
   }
-`
+`;
 
 const HomePageBody = () => {
   return (
@@ -71,11 +71,11 @@ const HomePageBody = () => {
       query={query}
       render={({ jobs, events, news }) => {
         if (!jobs || !events || !news) {
-          return null
+          return null;
         }
-        const { list: jobList } = jobs.edges[0].node.frontmatter
-        const { list: eventList } = events.edges[0].node.frontmatter
-        const { list: newsList } = news.edges[0].node.frontmatter
+        const { list: jobList } = jobs.edges[0].node.frontmatter;
+        const { list: eventList } = events.edges[0].node.frontmatter;
+        const { list: newsList } = news.edges[0].node.frontmatter;
 
         return (
           <>
@@ -87,10 +87,10 @@ const HomePageBody = () => {
             <div className="pt-20" />
             {/* <Subscription /> */}
           </>
-        )
+        );
       }}
     />
-  )
-}
+  );
+};
 
-export default HomePageBody
+export default HomePageBody;

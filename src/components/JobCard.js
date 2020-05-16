@@ -1,18 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Card,
   CardExcerpt,
   CardHeading,
   Badge,
   Dot,
-  Hyperlink,
-} from '@/shared/styled'
-import TimeAgo from 'javascript-time-ago'
-import en from 'javascript-time-ago/locale/en'
+  Hyperlink
+} from '@/shared/styled';
+import TimeAgo from 'javascript-time-ago';
+import en from 'javascript-time-ago/locale/en';
 
-TimeAgo.addLocale(en)
-const timeAgo = new TimeAgo()
+TimeAgo.addLocale(en);
+const timeAgo = new TimeAgo();
 
 const JobCard = ({
   title,
@@ -23,7 +23,7 @@ const JobCard = ({
   company,
   type,
   isOpened,
-  linkURL,
+  linkURL
 }) => {
   return (
     <Card>
@@ -48,8 +48,8 @@ const JobCard = ({
         </div>
       </div>
     </Card>
-  )
-}
+  );
+};
 
 JobCard.propTypes = {
   title: PropTypes.string,
@@ -60,7 +60,7 @@ JobCard.propTypes = {
   company: PropTypes.string,
   type: PropTypes.string,
   linkURL: PropTypes.string,
-  isOpened: PropTypes.bool,
-}
+  isOpened: PropTypes.bool
+};
 
-export default JobCard
+export default JobCard;

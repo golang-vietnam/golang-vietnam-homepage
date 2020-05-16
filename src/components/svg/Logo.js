@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Logo = props => (
   <svg width={161} height={61} {...props}>
@@ -209,6 +209,6 @@ const Logo = props => (
       </g>
     </g>
   </svg>
-)
+);
 
-export default Logo
+export default Logo;

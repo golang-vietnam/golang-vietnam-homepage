@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { FaEnvelope } from 'react-icons/fa'
+import React from 'react';
+import styled from 'styled-components';
+import { FaEnvelope } from 'react-icons/fa';
 
 const Container = styled.footer`
   background-color: ${props => props.theme.grey};
@@ -13,7 +13,7 @@ const Container = styled.footer`
       text-decoration: underline;
     }
   }
-`
+`;
 
 const Footer = props => {
   return (
@@ -34,7 +34,7 @@ const Footer = props => {
         </div>
       </div>
     </Container>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

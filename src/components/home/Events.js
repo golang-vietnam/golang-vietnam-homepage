@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import tw from 'tailwind.macro'
-import EventsCard from '@/components/EventCard'
-import Head from './shared/Head'
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import tw from 'tailwind.macro';
+import EventsCard from '@/components/EventCard';
+import Head from './shared/Head';
 
 const Container = styled.section`
   ${tw`sm:pt-28 pt-20 sm:pb-8 pb-20`};
-`
+`;
 
 class Events extends Component {
   render() {
@@ -21,8 +21,8 @@ class Events extends Component {
           ))}
         </div>
       </Container>
-    )
+    );
   }
 }
 
-export default Events
+export default Events;

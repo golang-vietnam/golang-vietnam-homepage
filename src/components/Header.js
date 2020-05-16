@@ -1,11 +1,11 @@
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-import Logo from '@/components/svg/Logo'
-import styled from 'styled-components'
-import tw from 'tailwind.macro'
-import menu from '@/data/menu'
-import { FaCaretDown } from 'react-icons/fa'
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import Logo from '@/components/svg/Logo';
+import styled from 'styled-components';
+import tw from 'tailwind.macro';
+import menu from '@/data/menu';
+import { FaCaretDown } from 'react-icons/fa';
 
 const Container = styled.header`
   padding: 5px 0;
@@ -22,7 +22,7 @@ const Container = styled.header`
     };
     box-shadow: ${props.dark ? `none` : `0 1px 2px rgba(0, 0, 0, 0.1)`};
   `}
-`
+`;
 
 const LogoWrapper = styled.div`
   position: relative;
@@ -36,7 +36,7 @@ const LogoWrapper = styled.div`
   svg {
     transition: all 0.25s ease;
   }
-`
+`;
 
 const Menu = styled.nav`
   ${tw`list-reset`};
@@ -102,7 +102,7 @@ const Menu = styled.nav`
       }
     }
   }
-`
+`;
 
 const MobileMenu = styled.ul`
   ${tw`list-reset`};
@@ -170,7 +170,7 @@ const MobileMenu = styled.ul`
       color: ${props => props.theme.header.mobileNav.link.active.foreground};
     }
   }
-`
+`;
 
 const BurgerButton = styled.div`
   ${tw`lg:hidden`};
@@ -230,82 +230,82 @@ const BurgerButton = styled.div`
     }
   `
       : ``}
-`
+`;
 
 class Header extends Component {
   state = {
     open: false,
     fixed: false,
-    current: '',
-  }
+    current: ''
+  };
 
   onScroll = () => {
     const top =
       (document.documentElement && document.documentElement.scrollTop) ||
-      document.body.scrollTop
+      document.body.scrollTop;
     if (top > 0 && !this.state.fixed) {
-      this.setState({ fixed: true })
+      this.setState({ fixed: true });
     } else if (top === 0) {
-      this.setState({ fixed: false })
+      this.setState({ fixed: false });
     }
 
-    let current = ''
+    let current = '';
     this.sections.forEach(({ node }) => {
       // Start to toggle pagination after reaching the height of 2/5 screen height
       if (top > node.offsetTop - window.screen.height * 0.2) {
-        current = '/#' + node.id
+        current = '/#' + node.id;
       }
-    })
+    });
 
     this.setState({
-      current,
-    })
-  }
+      current
+    });
+  };
 
   handleLinkClick = href => e => {
     if (
       !['/#jobs', '/#news', '/#events'].includes(href) ||
       !this.props.onePage
     ) {
-      return
+      return;
     }
-    e.preventDefault()
-    const el = document.querySelector(href.replace('/', ''))
+    e.preventDefault();
+    const el = document.querySelector(href.replace('/', ''));
     if (!el) {
-      return
+      return;
     }
     window.scrollTo({
       top: el.offsetTop,
-      behavior: 'smooth',
-    })
-  }
+      behavior: 'smooth'
+    });
+  };
 
   componentDidMount() {
     if (this.props.onePage) {
-      document.addEventListener('scroll', this.onScroll)
+      document.addEventListener('scroll', this.onScroll);
       this.sections = ['#jobs', '#news', '#events', '#supporters'].map(
         selector => ({
           node: document.querySelector(selector),
-          href: `/${selector}`,
+          href: `/${selector}`
         })
-      )
+      );
     }
   }
 
   componentWillUnmount() {
     if (this.props.onePage) {
-      document.removeEventListener('scroll', this.onScroll)
+      document.removeEventListener('scroll', this.onScroll);
     }
   }
 
   toggleOpen = () => {
     this.setState(({ open }) => ({
-      open: !open,
-    }))
-  }
+      open: !open
+    }));
+  };
 
   render() {
-    const { absolute, dark } = this.props
+    const { absolute, dark } = this.props;
     return (
       <Container absolute={absolute} dark={dark} fixed={this.state.fixed}>
         <div className="container mx-auto px-gutter">
@@ -398,20 +398,20 @@ class Header extends Component {
           </div>
         </div>
       </Container>
-    )
+    );
   }
 }
 
 Header.propTypes = {
   absolute: PropTypes.bool,
   dark: PropTypes.bool,
-  onePage: PropTypes.bool,
-}
+  onePage: PropTypes.bool
+};
 
 Header.defaultProps = {
   absolute: false,
   dark: false,
-  onePage: false,
-}
+  onePage: false
+};
 
-export default Header
+export default Header;

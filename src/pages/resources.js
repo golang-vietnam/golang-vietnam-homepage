@@ -1,12 +1,12 @@
-import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
 
-import NoContainerLayout from '@/components/NoContainerLayout'
-import SEO from '@/components/seo'
-import Heading from '@/components/Heading'
-import ArticleCard from '@/components/ArticleCard'
-import BookCard from '@/components/BookCard'
-import VideoBlock from '@/components/VideoBlock'
+import NoContainerLayout from '@/components/NoContainerLayout';
+import SEO from '@/components/seo';
+import Heading from '@/components/Heading';
+import ArticleCard from '@/components/ArticleCard';
+import BookCard from '@/components/BookCard';
+import VideoBlock from '@/components/VideoBlock';
 
 const query = graphql`
   {
@@ -62,18 +62,18 @@ const query = graphql`
       }
     }
   }
-`
+`;
 
 const Resources = () => (
   <StaticQuery
     query={query}
     render={({ videos, articles, books }) => {
       if (!videos || !articles || !books) {
-        return null
+        return null;
       }
-      const { list: videoList } = videos.edges[0].node.frontmatter
-      const { list: articleList } = articles.edges[0].node.frontmatter
-      const { list: bookList } = books.edges[0].node.frontmatter
+      const { list: videoList } = videos.edges[0].node.frontmatter;
+      const { list: articleList } = articles.edges[0].node.frontmatter;
+      const { list: bookList } = books.edges[0].node.frontmatter;
 
       return (
         <NoContainerLayout title="Resources">
@@ -95,9 +95,9 @@ const Resources = () => (
             ))}
           </div>
         </NoContainerLayout>
-      )
+      );
     }}
   />
-)
+);
 
-export default Resources
+export default Resources;

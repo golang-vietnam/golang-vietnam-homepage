@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const Styled = styled.h2`
   font-size: 40px;
@@ -14,10 +14,10 @@ const Styled = styled.h2`
     height: 2px;
     background-color: ${props => props.theme.primary};
   }
-`
+`;
 
 const Heading = ({ children, className = '' }) => (
   <Styled className={className}>{children}</Styled>
-)
+);
 
-export default Heading
+export default Heading;

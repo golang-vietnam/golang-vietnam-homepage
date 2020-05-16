@@ -45,14 +45,19 @@
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "parse-news": "node golangWeeklyParser.js"
+    "parse-news": "node golangWeeklyParser.js",
+    "prettify": "prettier -c --write \"*/**\""
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "fs-extra": "^7.0.1",
     "gatsby-plugin-root-import": "^2.0.5",
     "jsdom": "^13.2.0",
-    "prettier": "^1.15.2",
     "rss-parser": "^3.6.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5",
     "tailwindcss": "^0.7.4"
   },
   "repository": {
@@ -61,5 +66,17 @@
   },
   "bugs": {
     "url": "https://github.com/.../golang-vietnam-website/issues"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

@@ -26,7 +26,7 @@ const Container = styled.section`
   margin-top: -325px;
 `;
 const TitleContainer = styled.div`
-  ${tw`lg:w-1/4 w-full mb-16 flex justify-between items-center`};
+  ${tw`lg:w-1/4 w-full mb-16 lg:block flex flex-col lg:flex-col sm:flex-row justify-between sm:items-center`};
   margin-top: 170px;
 `;
 
@@ -126,19 +126,35 @@ class Jobs extends Component {
           <div className="flex flex-wrap">
             <TitleContainer>
               <Heading>Jobs</Heading>
-              <a
-                href="https://github.com/golang-vietnam/job_board/issues"
-                target="_blank"
-                rel="noopener"
-                css={`
-                  ${tw`items-center md:hidden flex`}
-                  white-space: nowrap;
-                  color: ${props => props.theme.card.link};
-                `}
-              >
-                All Jobs
-                <IoIosArrowRoundForward className="ml-1 text-lg" />
-              </a>
+              <div className="flex items-center sm:mt-0 mt-8 sm:justify-start justify-between">
+                <a
+                  href="https://github.com/golang-vietnam/jobs"
+                  target="_blank"
+                  rel="noopener"
+                  css={`
+                    ${tw`items-center inline-flex lg:mt-5 py-2 text-sm px-3 rounded-sm`}
+                    text-decoration: none;
+                    background-color: ${props =>
+                      props.theme.button.primary.background};
+                    color: ${props => props.theme.button.primary.foreground};
+                  `}
+                >
+                  Post a job
+                </a>
+                <a
+                  href="https://github.com/golang-vietnam/job_board/issues"
+                  target="_blank"
+                  rel="noopener"
+                  css={`
+                    ${tw`items-center md:hidden flex ml-5`}
+                    white-space: nowrap;
+                    color: ${props => props.theme.card.link};
+                  `}
+                >
+                  All Jobs
+                  <IoIosArrowRoundForward className="ml-1 text-lg" />
+                </a>
+              </div>
             </TitleContainer>
             <JobCardContainer className="lg:w-3/4 w-full flex justify-between lg:mx-0 -mx-gutter">
               <Carousel

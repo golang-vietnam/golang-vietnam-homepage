@@ -130,7 +130,7 @@ class Jobs extends Component {
                 <a
                   href="https://github.com/golang-vietnam/jobs"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   css={`
                     ${tw`items-center inline-flex lg:mt-5 py-2 text-sm px-3 rounded-sm`}
                     text-decoration: none;
@@ -144,7 +144,7 @@ class Jobs extends Component {
                 <a
                   href="https://github.com/golang-vietnam/job_board/issues"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   css={`
                     ${tw`items-center md:hidden flex ml-5`}
                     white-space: nowrap;
@@ -220,7 +220,7 @@ class Jobs extends Component {
               <a
                 href="https://github.com/golang-vietnam/job_board/issues"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 css={`
                   ${tw`md:block hidden`}
                   position: absolute;

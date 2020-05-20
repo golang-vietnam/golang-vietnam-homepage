@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
-import theme from '@/shared/theme';
-import '@/css/style.css';
+import theme from 'shared/theme';
+import 'css/style.css';
 
 const Root = ({ children }) => (
   <StaticQuery

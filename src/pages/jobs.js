@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import DefaultLayout from '@/components/DefaultLayout';
-import SEO from '@/components/seo';
-import JobCard from '@/components/JobCard';
+import DefaultLayout from 'components/DefaultLayout';
+import SEO from 'components/seo';
+import JobCard from 'components/JobCard';
 import tw from 'tailwind.macro';
 import styled from 'styled-components';
 

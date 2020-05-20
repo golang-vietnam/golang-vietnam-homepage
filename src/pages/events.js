@@ -1,9 +1,9 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import DefaultLayout from '@/components/DefaultLayout';
-import SEO from '@/components/seo';
-import EventCard from '@/components/EventCard';
-import { SubHeading } from '@/shared/styled';
+import DefaultLayout from 'components/DefaultLayout';
+import SEO from 'components/seo';
+import EventCard from 'components/EventCard';
+import { SubHeading } from 'shared/styled';
 import dayjs from 'dayjs';
 
 const query = graphql`

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
-import NewsCard from '@/components/NewsCard';
+import NewsCard from 'components/NewsCard';
 import Head from './shared/Head';
 
 const Container = styled.section`

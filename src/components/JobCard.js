@@ -7,7 +7,7 @@ import {
   Badge,
   Dot,
   Hyperlink
-} from '@/shared/styled';
+} from 'shared/styled';
 import TimeAgo from 'javascript-time-ago';
 import en from 'javascript-time-ago/locale/en';
 

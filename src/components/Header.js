@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import menu from 'data/menu';
 import { FaCaretDown } from 'react-icons/fa';
+import classnames from 'classnames';
 
 const Container = styled.header`
   padding: 5px 0;
@@ -91,6 +92,7 @@ const Menu = styled.nav`
     a {
       padding: 0 27px;
       min-width: 150px;
+      white-space: nowrap;
       height: 40px;
       ${tw`flex items-center`};
       color: ${props => props.theme.header.nav.submenu.link.foreground};
@@ -346,17 +348,31 @@ class Header extends Component {
                 >
                   {menu.map(({ children, name, href }) => (
                     <li key={href}>
-                      <Link to={href} activeClassName="link-active">
-                        {name}
-                      </Link>
+                      {href === '#' ? (
+                        <a>{name}</a>
+                      ) : (
+                        <Link to={href} activeClassName="link-active">
+                          {name}
+                        </Link>
+                      )}
 
                       {Array.isArray(children) && (
                         <ul>
                           {children.map(({ name, href }) => (
                             <li key={href}>
-                              <Link activeClassName="link-active" to={href}>
-                                {name}
-                              </Link>
+                              {href.startsWith('http') ? (
+                                <a
+                                  href={href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {name}
+                                </a>
+                              ) : (
+                                <Link to={href} activeClassName="link-active">
+                                  {name}
+                                </Link>
+                              )}
                             </li>
                           ))}
                         </ul>
@@ -371,10 +387,15 @@ class Header extends Component {
                   {menu.map(({ children, name, href }) => (
                     <li
                       key={href}
-                      className={this.state.current === href ? 'active' : ''}
+                      className={classnames({
+                        active: this.state.current === href
+                      })}
                     >
                       <Link
                         to={href}
+                        className={classnames({
+                          'pointer-events-none': href === '#'
+                        })}
                         activeClassName="link-active"
                         onClick={this.handleLinkClick(href)}
                       >
@@ -385,7 +406,17 @@ class Header extends Component {
                         <ul>
                           {children.map(({ name, href }) => (
                             <li key={href}>
-                              <Link to={href}>{name}</Link>
+                              {href.startsWith('http') ? (
+                                <a
+                                  href={href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {name}
+                                </a>
+                              ) : (
+                                <Link to={href}>{name}</Link>
+                              )}
                             </li>
                           ))}
                         </ul>

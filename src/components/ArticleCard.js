@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, SubHeading } from '@/shared/styled';
+import { Card, SubHeading } from 'shared/styled';
 import tw from 'tailwind.macro';
 
 const ArticleCard = ({ level, resources }) => (

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Heading from '@/components/Heading';
+import Heading from 'components/Heading';
 import tw from 'tailwind.macro';
 import {
   Card,
@@ -8,7 +8,7 @@ import {
   Dot,
   PrimaryButton,
   Hyperlink
-} from '@/shared/styled';
+} from 'shared/styled';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import ReactResizeDetector from 'react-resize-detector';
 import TimeAgo from 'javascript-time-ago';

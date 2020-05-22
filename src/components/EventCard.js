@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardHeading, Hyperlink } from '@/shared/styled';
+import { Card, CardHeading, Hyperlink } from 'shared/styled';
 import dayjs from 'dayjs';
 import decode from 'unescape';
 

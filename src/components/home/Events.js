@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
-import EventsCard from '@/components/EventCard';
+import EventsCard from 'components/EventCard';
 import Head from './shared/Head';
 
 const Container = styled.section`

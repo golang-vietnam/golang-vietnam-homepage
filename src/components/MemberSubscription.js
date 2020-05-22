@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { sm } from '@/shared/responsive';
+import { sm } from 'shared/responsive';
 
 class MemberSubscription extends Component {
   render() {

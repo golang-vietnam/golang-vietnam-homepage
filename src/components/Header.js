@@ -1,10 +1,10 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Logo from '@/components/svg/Logo';
+import Logo from 'components/svg/Logo';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
-import menu from '@/data/menu';
+import menu from 'data/menu';
 import { FaCaretDown } from 'react-icons/fa';
 
 const Container = styled.header`

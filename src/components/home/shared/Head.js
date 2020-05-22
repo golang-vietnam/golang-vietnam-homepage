@@ -1,5 +1,5 @@
 import React from 'react';
-import Heading from '@/components/Heading';
+import Heading from 'components/Heading';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';

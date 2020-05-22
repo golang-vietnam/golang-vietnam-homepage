@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from '@/components/Header';
-import Root from '@/components/root';
-import Footer from '@/components/Footer';
+import Header from 'components/Header';
+import Root from 'components/root';
+import Footer from 'components/Footer';
 import styled from 'styled-components';
-import Heading from '@/components/Heading';
+import Heading from 'components/Heading';
 import tw from 'tailwind.macro';
-import { GlobalStyle } from '@/shared/styled';
-import { sm } from '@/shared/responsive';
+import { GlobalStyle } from 'shared/styled';
+import { sm } from 'shared/responsive';
 
 const Container = styled.div`
   min-height: calc(100vh - 76px);

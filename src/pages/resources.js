@@ -1,12 +1,12 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 
-import NoContainerLayout from '@/components/NoContainerLayout';
-import SEO from '@/components/seo';
-import Heading from '@/components/Heading';
-import ArticleCard from '@/components/ArticleCard';
-import BookCard from '@/components/BookCard';
-import VideoBlock from '@/components/VideoBlock';
+import NoContainerLayout from 'components/NoContainerLayout';
+import SEO from 'components/seo';
+import Heading from 'components/Heading';
+import ArticleCard from 'components/ArticleCard';
+import BookCard from 'components/BookCard';
+import VideoBlock from 'components/VideoBlock';
 
 const query = graphql`
   {

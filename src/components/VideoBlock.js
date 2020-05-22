@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
-import { sm, lg } from '@/shared/responsive';
+import { sm, lg } from 'shared/responsive';
 import dayjs from 'dayjs';
 
 const VideoHolder = styled.div`

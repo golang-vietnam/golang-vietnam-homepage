@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardExcerpt, Hyperlink } from '@/shared/styled';
+import { Card, CardExcerpt, Hyperlink } from 'shared/styled';
 import tw from 'tailwind.macro';
 import { withPrefix } from 'gatsby';
 

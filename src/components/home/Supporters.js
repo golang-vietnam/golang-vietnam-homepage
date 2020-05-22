@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Heading from '@/components/Heading';
+import Heading from 'components/Heading';
 import tw from 'tailwind.macro';
 import { withPrefix } from 'gatsby';
 

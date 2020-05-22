@@ -1,5 +1,19 @@
 export default [
   {
+    name: 'GopherCon',
+    href: '#',
+    children: [
+      {
+        name: 'Gohphercon 2019',
+        href: 'https://gophercon.vn/'
+      },
+      {
+        name: 'Gohphercon 2018',
+        href: 'https://2018.gophercon.vn/'
+      }
+    ]
+  },
+  {
     name: 'Jobs',
     href: '/#jobs'
   },
@@ -14,19 +28,5 @@ export default [
   {
     name: 'Members',
     href: '/members'
-  },
-  {
-    name: 'GopherCon',
-    href: '#',
-    children: [
-      {
-        name: 'Gohphercon 2019',
-        href: 'https://gophercon.vn/'
-      },
-      {
-        name: 'Gohphercon 2018',
-        href: 'https://2018.gophercon.vn/'
-      }
-    ]
   }
 ];

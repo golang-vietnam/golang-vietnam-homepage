@@ -23,7 +23,7 @@ class Events extends Component {
               href="https://airtable.com/embed/shrAIh2b0JJoJZbxU"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary text-underline ml-1"
+              className="text-primary text-underline ml-1 underline"
               css={`
                 color: ${props => props.theme.primary};
               `}

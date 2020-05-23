@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 import { createGlobalStyle } from 'styled-components';
 
 export const Wrapper = styled.div`
@@ -30,10 +30,9 @@ export const Card = styled.div`
 `;
 
 export const CardHeading = styled.h4`
-  ${tw`text-lg`};
+  ${tw`text-lg font-bold capitalize`};
   margin-bottom: 6px;
   line-height: 1.6em;
-  text-transform: capitalize;
 `;
 
 export const Hyperlink = styled.a`
@@ -51,13 +50,12 @@ export const CardExcerpt = styled.p`
 `;
 
 export const Badge = styled.span`
+  ${tw`font-bold uppercase inline-block text-xs`};
   font-weight: bold;
   text-transform: uppercase;
   padding: 6px 8px;
   border-radius: 2px;
-  display: inline-block;
   line-height: 1em;
-  ${tw`text-xs`}
   ${props => `
   background-color: ${
     props.isActive
@@ -80,10 +78,9 @@ export const PrimaryButton = styled.button`
 `;
 
 export const Dot = styled.span`
-  display: block;
+  ${tw`block rounded-full`}
   width: 2px;
   height: 2px;
-  border-radius: 100px;
   margin: 0 10px;
   background-color: ${props => props.theme.card.foreground};
 `;

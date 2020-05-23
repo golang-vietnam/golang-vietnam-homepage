@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Logo from 'components/svg/Logo';
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 import menu from 'data/menu';
 import { FaCaretDown } from 'react-icons/fa';
 import classnames from 'classnames';
@@ -40,7 +40,6 @@ const LogoWrapper = styled.div`
 `;
 
 const Menu = styled.nav`
-  ${tw`list-reset`};
   a {
     text-decoration: none;
     font-weight: 500;
@@ -80,7 +79,6 @@ const Menu = styled.nav`
     }
   }
   ul {
-    ${tw`list-reset`};
     bottom: 1px;
     visibility: hidden;
     opacity: 0;
@@ -107,7 +105,6 @@ const Menu = styled.nav`
 `;
 
 const MobileMenu = styled.ul`
-  ${tw`list-reset`};
   position: absolute;
   z-index: 1;
   right: 0;
@@ -142,7 +139,6 @@ const MobileMenu = styled.ul`
     }
   }
   ul {
-    ${tw`list-reset`};
     padding-top: 10px;
     a {
       padding: 0 16px;

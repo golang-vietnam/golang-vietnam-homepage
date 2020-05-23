@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { SubHeading } from 'shared/styled';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 import { sm } from 'shared/responsive';
 import isEmail from 'validator/lib/isEmail';
 import isURL from 'validator/lib/isURL';

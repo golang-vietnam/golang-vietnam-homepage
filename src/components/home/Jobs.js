@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Heading from 'components/Heading';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 import {
   Card,
   CardExcerpt,
@@ -146,7 +146,7 @@ class Jobs extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                   css={`
-                    ${tw`items-center md:hidden flex ml-5`}
+                    ${tw`items-center md:hidden flex ml-5 underline`}
                     white-space: nowrap;
                     color: ${props => props.theme.card.link};
                   `}
@@ -183,7 +183,7 @@ class Jobs extends Component {
                       index
                     ) => (
                       <JobCard key={index}>
-                        <h3>
+                        <h3 className="font-bold">
                           <Hyperlink
                             href={linkURL}
                             target="_blank"
@@ -222,7 +222,7 @@ class Jobs extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
                 css={`
-                  ${tw`md:block hidden`}
+                  ${tw`md:block hidden underline`}
                   position: absolute;
                   right: 0;
                   top: calc(50% + 60px);

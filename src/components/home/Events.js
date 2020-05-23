@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 import EventsCard from 'components/EventCard';
 import Head from './shared/Head';
 
@@ -23,7 +23,7 @@ class Events extends Component {
               href="https://airtable.com/embed/shrAIh2b0JJoJZbxU"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary text-underline ml-1"
+              className="text-primary text-underline ml-1 underline"
               css={`
                 color: ${props => props.theme.primary};
               `}

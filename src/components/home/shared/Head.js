@@ -4,7 +4,7 @@ import { IoIosArrowRoundForward } from 'react-icons/io';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 
 const Container = styled.div`
   ${tw`flex justify-between items-end mb-16`};

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Heading from 'components/Heading';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 import { withPrefix } from 'gatsby';
 
 const data = [
@@ -70,7 +70,11 @@ class Supporter extends Component {
                 className="sm:w-1/3 w-1/2 px-gutter mb-gutter mt-gutter"
                 key={image}
               >
-                <ImageLink href={href} target="__blank">
+                <ImageLink
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Image
                     alt={image}
                     src={withPrefix(`/img/supporters/${image}_shrink.png`)}

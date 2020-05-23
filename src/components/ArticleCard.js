@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, SubHeading } from 'shared/styled';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 
 const ArticleCard = ({ level, resources }) => (
   <div className="mb-10">
     <SubHeading className="mb-6">{level}</SubHeading>
     <Card>
       <ul
+        className="list-disc"
         css={`
           margin: 0;
           padding: 10px 15px;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import styled, { keyframes } from 'styled-components';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 import PropTypes from 'prop-types';
 import { withPrefix } from 'gatsby';
 import { FaPlayCircle } from 'react-icons/fa';
@@ -31,7 +31,7 @@ const Preview = styled.div`
 `;
 
 const PlayIcon = styled.div`
-  ${tw`absolute pin flex items-center justify-center opacity-50`};
+  ${tw`absolute inset-0 flex items-center justify-center opacity-50`};
   color: ${props => props.theme.white};
   font-size: 48px;
 `;

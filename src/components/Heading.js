@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import tw from 'twin.macro';
 
 const Styled = styled.h2`
   font-size: 40px;
-  padding-bottom: 20px;
-  position: relative;
+  ${tw`relative font-bold pb-5`};
   &:after {
     content: '';
     position: absolute;

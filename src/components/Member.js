@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { withPrefix } from 'gatsby';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 
 const Container = styled.div`
   ${tw`flex flex-col items-center justify-center text-center w-full`}
@@ -30,7 +30,7 @@ const Member = ({ name, company, desc, avatar, github }) => {
         <img src={withPrefix(avatar)} alt={name} />
       </Avatar>
       <div>
-        <h4 className="text-lg mb-1">{name}</h4>
+        <h4 className="text-lg mb-1 font-bold">{name}</h4>
         <p className="opacity-75 text-xs mt-1 px-4">{company}</p>
         <GithubLink href={`https://github.com/${github}`}>@{github}</GithubLink>
         <p className="opacity-75 text-xs mt-1 px-4">{desc}</p>

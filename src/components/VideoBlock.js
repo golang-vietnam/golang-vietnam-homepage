@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 import { sm, lg } from 'shared/responsive';
 import dayjs from 'dayjs';
 
@@ -26,7 +26,7 @@ const MainVideo = styled.div`
     position: relative;
     background-color: ${props => props.theme.greyDarker};
     iframe {
-      ${tw`absolute pin`};
+      ${tw`absolute inset-0`};
       width: 100%;
       height: 100%;
     }
@@ -54,7 +54,7 @@ const PlayList = styled.div`
     padding-left: 20px;
     margin-top: 0;
     > div {
-        ${tw` absolute pin`}
+        ${tw` absolute inset-0`}
         left: 20px;
         display: block;
     }
@@ -109,7 +109,7 @@ const VideoCard = ({ videoId, title, date, onPlayVideo, active }) => (
     >
       <h4
         css={`
-          ${tw`text-sm`}
+          ${tw`text-sm font-bold`}
           color: ${props => props.theme.main.foreground};
         `}
       >

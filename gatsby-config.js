@@ -1,4 +1,5 @@
 const path = require('path');
+const tailwindConfig = require('./tailwind.config.js');
 
 module.exports = {
   siteMetadata: {
@@ -63,12 +64,14 @@ module.exports = {
       }
     },
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-postcss`,
     {
-      resolve: 'gatsby-plugin-purgecss',
+      resolve: `gatsby-plugin-postcss`,
       options: {
-        tailwind: true,
-        purgeOnly: ['src/css/style.css'] // Purge only tailwind
+        postCssPlugins: [
+          require(`tailwindcss`)(tailwindConfig),
+          require(`autoprefixer`),
+          ...(process.env.NODE_ENV === `production` ? [require(`cssnano`)] : [])
+        ]
       }
     },
     {

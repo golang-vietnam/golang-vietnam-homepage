@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from 'gatsby';
 import DefaultLayout from 'components/DefaultLayout';
 import SEO from 'components/seo';
 import JobCard from 'components/JobCard';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 import styled from 'styled-components';
 
 const query = graphql`

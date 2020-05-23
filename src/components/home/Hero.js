@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 import { FaGithubAlt, FaSlack, FaFacebookF, FaEnvelope } from 'react-icons/fa';
 import BackgroundImage from 'gatsby-background-image';
 import { StaticQuery, graphql, Link } from 'gatsby';
 
 const Overlay = styled.div`
-  ${tw`pin absolute`};
+  ${tw`inset-0 absolute`};
   background-color: rgba(0, 0, 0, 0.5);
 `;
 
 const Heading = styled.h1`
-  ${tw`text-5xl mb-5`};
-  color: ${props => props.theme.white};
+  ${tw`text-5xl mb-5 font-bold text-white`};
 `;
 
 const Paragraph = styled.p`
-  ${tw`opacity-80 mb-12`};
-  color: ${props => props.theme.white};
+  ${tw`opacity-80 mb-12 text-white`};
   padding-left: 11px;
   border-left: 2px solid ${props => props.theme.primary};
   max-width: 310px;

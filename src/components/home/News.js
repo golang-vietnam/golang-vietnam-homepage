@@ -8,7 +8,7 @@ import ShowAllButton from 'components/ShowAllButton';
 const Container = styled.section`
   ${tw`sm:pt-28 pt-24 pb-0`};
 `;
-const News = props => {
+const News = ({ data }) => {
   const [showAll, setState] = useState(false);
 
   return (
@@ -16,11 +16,11 @@ const News = props => {
       <div className="container px-gutter mx-auto">
         <Head title="News" />
 
-        {props.data.slice(0, showAll ? 20 : 5).map((news, i) => (
+        {data.slice(0, showAll ? 20 : 5).map((news, i) => (
           <NewsCard {...news} key={i} />
         ))}
 
-        {props.data.length > 5 && !showAll && (
+        {data.length > 5 && !showAll && (
           <div className="mt-12 text-center">
             <ShowAllButton onClick={() => setState(true)}>
               Show all

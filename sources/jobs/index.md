@@ -18,59 +18,55 @@ Grab began as a taxi-hailing app in 2012, but has extended its product platform 
     title: 'Golang Engineer'
     type: 'Fulltime'
     hot: true
-  - company: 'Toripu'
-    date: '2019-05-13T02:08:09Z'
-    desc: 'Requirements
-
-- 1+ years of hands-on experience in backend designing, developing, testing and deploying applications in any language or stack.
-- Data modelling experience in both Relational and NoSQL databases.
-- Ability to design, build and optimise backend application for maximum speed, scalability and availability.
-- Ability to implement security and data protection.'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/18'
+  - company: 'Exgo'
+    date: '2019-07-02T09:19:18Z'
+    desc: 'Dist. 2, Saigon, Vietnam'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/19'
     location: 'HCM'
-    title: 'Backend Developer'
+    title: 'Senior Software Engineer'
     type: 'Fulltime'
     hot: false
-  - company: 'Bocasay Vietnam'
-    date: '2019-11-14T08:14:10Z'
-    desc: 'Your Responsibilities
-
-* Develop the back-end system of an IT Infrastructure Monitoring Tools
-* Preventive and corrective maintenance of the product (support level 3)
-* Skills transfers made in internal team
-* Participating in the development of specification techniques
-* Load estimation of product evolution
-* Write and execute the unit and functional test
-* Delivery and integration of the product'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/24'
-    location: 'HN'
-    title: 'Golang Team Lead'
+  - company: 'GoldenCloud'
+    date: '2020-02-20T10:11:57Z'
+    desc: 'Charmington La Pointe Building, 181 Cao Thang Str, Ward 12, District 10, Ho Chi Minh.
+* Fulltime.'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/29'
+    location: 'Others'
+    title: 'Go/Vuejs Developer'
     type: 'Fulltime'
     hot: false
   - company: 'Grab'
-    date: '2019-04-16T04:59:06Z'
-    desc: 'Grab is more than just the leading ride-hailing and mobile payments app in Southeast Asia. We use data and technology to improve everything from transportation to payments and logistics across a region of more than 620 million people. Working with governments, drivers, passengers, and charities, we aim to unlock the true potential of the region by solving problems that hinder progress.
+    date: '2019-04-16T05:30:03Z'
+    desc: 'MapleTree, 1060 Nguyen Van Linh Str., District 7, Saigon
+* Fulltime
+* Grab is more than just the leading ride-hailing and mobile payments app in Southeast Asia. We use data and technology to improve everything from transportation to payments and logistics across a region of more than 620 million people. Working with governments, drivers, passengers, and charities, we aim to unlock the true potential of the region by solving problems that hinder progress.
 Grab began as a taxi-hailing app in 2012, but has extended its product platform to include private car services (GrabCar & GrabShare), motorcycle taxis (GrabBike), social carpooling (GrabHitch) and last mile delivery (GrabExpress). We are focused on pioneering new commuting alternatives for drivers and passengers with an emphasis on speed, safety, and reliability. Currently we offer services in Singapore, Indonesia, Philippines, Malaysia, Thailand and Vietnam; however, we also have R&D offices in Bangalore, Beijing, & Seattle'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/16'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/17'
     location: 'HCM'
-    title: 'Engineering Manager'
+    title: 'Software Engineer, Fullstack'
     type: 'Fulltime'
     hot: false
   - company: 'JX'
     date: '2020-04-26T13:26:14Z'
-    desc: 'Requirements
-* Golang
-* Biết thêm ngôn ngữ nào nữa càng tốt'
+    desc: 'Saigon, Vietnam
+* Remote'
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/31'
     location: 'HCM'
     title: 'Golang dev'
     type: 'Parttime'
     hot: false
+  - company: 'Bocasay Vietnam'
+    date: '2019-11-14T08:14:10Z'
+    desc: '107 DETECH TOWER II, Nguyen Phong Sac, Dich Vong Hau, Cau Giay, Hanoi'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/24'
+    location: 'HN'
+    title: 'Golang Team Lead'
+    type: 'Fulltime'
+    hot: false
   - company: 'JRB'
     date: '2019-11-27T05:55:21Z'
-    desc: 'Requirements
-* Show us your project
-* 0.5+ years Software Engineering experience'
+    desc: 'Saigon, Vietnam
+* Remote'
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/25'
     location: 'Others'
     title: 'GOLANG DEV'
@@ -78,33 +74,19 @@ Grab began as a taxi-hailing app in 2012, but has extended its product platform 
     hot: false
   - company: 'FETCH TECHNOLOGY VIETNAM'
     date: '2018-12-05T08:14:10Z'
-    desc: ' About job
-
-With our client website for business, SMEs can pay rent, salaries, invoices and even corporate tax using the credit cards they already have in their wallet today. SMEs love this website because it works like a credit card but pays like cash. It’s secure and easy to use platform reliably delivers payments to vendors while freeing up cash and providing access to interest free credit.'
+    desc: '42B Ho Ba Phan Street, Phuoc Long A Ward, District 9, Ho Chi Minh City.'
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/12'
     location: 'HCM'
     title: 'Golang Developer'
     type: 'Fulltime'
     hot: false
-  - company: 'GoldenCloud'
-    date: '2020-02-20T10:11:57Z'
-    desc: 'Contact
-
-Homepage: [trueProfit.io](https://trueprofit.io)
-Mr. Được: duocnguyen@goldencloud.io'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/29'
+  - company: 'Grab'
+    date: '2019-03-07T04:57:43Z'
+    desc: 'Grab is more than just the leading ride-hailing and mobile payments app in Southeast Asia. We use data and technology to improve everything from transportation to payments and logistics across a region of more than 620 million people. Working with governments, drivers, passengers, and charities, we aim to unlock the true potential of the region by solving problems that hinder progress.
+Grab began as a taxi-hailing app in 2012, but has extended its product platform to include private car services (GrabCar & GrabShare), motorcycle taxis (GrabBike), social carpooling (GrabHitch) and last mile delivery (GrabExpress). We are focused on pioneering new commuting alternatives for drivers and passengers with an emphasis on speed, safety, and reliability. Currently we offer services in Singapore, Indonesia, Philippines, Malaysia, Thailand and Vietnam; however, we also have R&D offices in Bangalore, Beijing, & Seattle'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/14'
     location: 'Others'
-    title: 'Go/Vuejs Developer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'Exgo'
-    date: '2019-07-02T09:19:18Z'
-    desc: 'Requirements
-
-* Experienced in using GoLang or Experienced in using C++/Python/Java and willing to switch to GoLang.'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/19'
-    location: 'HCM'
-    title: 'Senior Software Engineer'
-    type: 'Fulltime'
-    hot: false
+    title: 'Back'
+    type: 'Saigon'
+    hot: true
 ---

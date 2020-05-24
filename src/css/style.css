@@ -19,3 +19,7 @@ p {
 html {
   scroll-behavior: smooth;
 }
+
+button {
+  outline: none !important;
+}

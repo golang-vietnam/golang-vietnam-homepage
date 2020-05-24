@@ -22,9 +22,8 @@ const MainVideo = styled.div`
   flex-shrink: 0;
   flex-grow: 0;
   > div {
+    ${tw`relative bg-gray-500`};
     padding-bottom: 60%;
-    position: relative;
-    background-color: ${props => props.theme.greyDarker};
     iframe {
       ${tw`absolute inset-0`};
       width: 100%;
@@ -39,11 +38,6 @@ const PlayList = styled.div`
   position: relative;
   > div {
     display: block;
-    ${props => `
-        // background-color: ${props.theme.card.background};
-        // box-shadow: ${props.theme.card.boxShadow};
-        // padding: 10px;
-    `}
     overflow-y: auto;
   }
   ${sm`
@@ -107,20 +101,8 @@ const VideoCard = ({ videoId, title, date, onPlayVideo, active }) => (
         padding: 5px 0 0 10px;
       `}
     >
-      <h4
-        css={`
-          ${tw`text-sm font-bold`}
-          color: ${props => props.theme.main.foreground};
-        `}
-      >
-        {title}
-      </h4>
-      <div
-        css={`
-          ${tw`text-xs mt-2`}
-          color: ${props => props.theme.greyDarker}
-        `}
-      >
+      <h4 className="text-sm font-bold text-gray-900">{title}</h4>
+      <div className="text-xs mt-2 text-gray-500">
         {dayjs(date).format('DD MMM, YYYY')}
       </div>
     </div>

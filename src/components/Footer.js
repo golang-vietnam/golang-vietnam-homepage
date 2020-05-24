@@ -1,23 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 import { FaEnvelope } from 'react-icons/fa';
-
-const Container = styled.footer`
-  background-color: ${props => props.theme.grey};
-  padding: 30px 0;
-
-  a {
-    color: ${props => props.theme.black};
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-`;
+import tw from 'twin.macro';
 
 const Footer = props => {
   return (
-    <Container>
+    <div className="bg-gray-200 py-7">
       <div className="container mx-auto text-sm px-gutter">
         <div className="flex items-center justify-between -mx-gutter sm:flex-row flex-col-reverse">
           <div className="font-medium opacity-40 px-gutter">
@@ -25,7 +12,7 @@ const Footer = props => {
           </div>
           <div className="px-gutter sm:mb-0 mb-5">
             <a
-              className="opacity-80 flex items-center"
+              className="opacity-80 flex items-center no-underline text-gray-900 hover:underline"
               href="mailto:gophers@golang.org.vn"
             >
               <FaEnvelope className="mr-2" /> <span>gophers@golang.org.vn</span>
@@ -33,7 +20,7 @@ const Footer = props => {
           </div>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 

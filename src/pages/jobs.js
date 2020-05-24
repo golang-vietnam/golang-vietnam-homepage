@@ -33,8 +33,7 @@ const query = graphql`
 const InfoBlock = styled.div`
   ${tw`flex items-center`};
   b {
-    color: ${props => props.theme.main.primary};
-    margin-right: 20px;
+    ${tw`text-primary mr-5`};
   }
 `;
 

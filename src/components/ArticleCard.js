@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, SubHeading } from 'shared/styled';
+import classnames from 'classnames';
 import tw from 'twin.macro';
 
 const ArticleCard = ({ level, resources }) => (
@@ -17,26 +18,16 @@ const ArticleCard = ({ level, resources }) => (
         {resources.map(({ title, link }, index) => (
           <li
             key={index}
-            css={`
-              + * {
-                margin-top: 10px;
-              }
-              ${tw`text-sm font-medium`}
-            `}
+            className={classnames('text-sm font-medium leading-normal', {
+              'mb-2': index !== resources.length - 1
+            })}
           >
             {title}
-            <span css={{ margin: '0 7px 0 0' }}>:</span>
+            <span className="mr-2">:</span>
             <a
               href={link}
               target="_blank"
-              css={`
-                text-decoration: none;
-                word-break: break-all;
-                &:hover {
-                  text-decoration: underline;
-                }
-                color: ${props => props.theme.primary};
-              `}
+              className="text-primary hover:underline no-underline break-words"
               rel="noopener noreferrer"
             >
               {link}

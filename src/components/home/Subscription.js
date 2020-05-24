@@ -21,35 +21,22 @@ const Wrapper = styled.div`
 const Button = styled.button`
   padding: 12px 40px;
   display: inline-block;
-  ${tw`mt-10`};
-  ${props => `
-    background-color: ${props.theme.button.primary.background};
-    color: ${props.theme.button.primary.foreground};
-  `}
+  ${tw`mt-10 bg-primary text-white`};
 `;
 
 const Input = styled.input`
-  display: block;
   width: 100%;
   height: 56px;
-  padding: 0 16px;
   margin-bottom: 18px;
-  ${props => `
-  background-color: ${props.theme.main.background};
-  border: 1px solid ${props.theme.main.border};
-  outline:none;
-  &:focus{
-    border-color: ${props.theme.main.primary};
-  }
-  `}
+  outline: none;
+  ${tw`block px-4 bg-white border border-gray-100 focus:border-primary`};
 `;
 
 const ErrorMessage = styled.p`
-  ${tw`text-sm`};
+  ${tw`text-sm text-red-500`};
   text-align: left;
   margin-bottom: 18px;
   margin-top: -10px;
-  color: ${props => props.theme.error.foreground};
 `;
 
 class Subscription extends Component {

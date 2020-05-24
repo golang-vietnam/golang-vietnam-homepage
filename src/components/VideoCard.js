@@ -9,11 +9,7 @@ import { MdClose } from 'react-icons/md';
 import dayjs from 'dayjs';
 
 const Container = styled.div`
-  ${props => `
-    color: ${props.theme.card.foreground};
-    background-color: ${props.theme.card.background};
-    box-shadow: ${props.theme.card.boxShadow};
-  `}
+  ${tw`text-gray-900 bg-white shadow`}
 `;
 
 const Heading = styled.h4`
@@ -31,8 +27,7 @@ const Preview = styled.div`
 `;
 
 const PlayIcon = styled.div`
-  ${tw`absolute inset-0 flex items-center justify-center opacity-50`};
-  color: ${props => props.theme.white};
+  ${tw`absolute inset-0 flex items-center justify-center opacity-50 text-white`};
   font-size: 48px;
 `;
 

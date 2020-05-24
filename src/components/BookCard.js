@@ -5,34 +5,20 @@ import tw from 'twin.macro';
 import { withPrefix } from 'gatsby';
 
 const BookCard = ({ image, link, title, author }) => (
-  <Card
-    css={`
-      padding: 16px;
-    `}
-  >
+  <Card className="p-4">
     <div className="flex items-center">
       <div
         css={`
-          ${tw`bg-center bg-cover flex-none`};
+          ${tw`bg-center bg-cover flex-none border border-gray-200`};
           width: 64px;
           height: 80px;
           margin-right: 16px;
-          border: 1px solid ${props => props.theme.grey};
           background-image: url(${withPrefix(image)});
         `}
       />
-      <div
-        css={`
-          margin-top: -5px;
-        `}
-      >
+      <div className="-mt-1">
         <Hyperlink
-          css={`
-            font-weight: bold;
-            margin-bottom: 5px;
-            display: inline-block;
-            word-break: break-all;
-          `}
+          className="font-bold mb-1 inline-block break-words"
           href={link}
         >
           {title}

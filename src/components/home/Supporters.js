@@ -50,9 +50,8 @@ const Image = styled.img`
 `;
 
 const ImageLink = styled.a`
-  ${tw`block leading-none`};
+  ${tw`block leading-none shadow`};
   font-size: 0;
-  box-shadow: ${props => props.theme.card.boxShadow};
 `;
 
 class Supporter extends Component {

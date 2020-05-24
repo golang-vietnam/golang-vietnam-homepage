@@ -8,11 +8,7 @@ import {
   Dot,
   Hyperlink
 } from 'shared/styled';
-import TimeAgo from 'javascript-time-ago';
-import en from 'javascript-time-ago/locale/en';
-
-TimeAgo.addLocale(en);
-const timeAgo = new TimeAgo();
+import toTimeAgo from 'utils/toTimeAgo';
 
 const JobCard = ({
   title,
@@ -41,9 +37,7 @@ const JobCard = ({
           <CardExcerpt>{desc}</CardExcerpt>
         </div>
         <div className="w-1/3 mt-2 text-sm text-right whitespace-no-wrap">
-          <div className="opacity-75 mb-4">
-            {timeAgo.format(new Date(date).getTime())}
-          </div>
+          <div className="opacity-75 mb-4">{toTimeAgo(date)}</div>
           <Badge isActive={isOpened}>{isOpened ? 'Open' : 'Closed'}</Badge>
         </div>
       </div>

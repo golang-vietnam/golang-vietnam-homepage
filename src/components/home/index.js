@@ -23,6 +23,7 @@ const query = graphql`
               location
               title
               type
+              hot
             }
           }
         }

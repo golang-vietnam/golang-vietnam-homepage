@@ -9,12 +9,41 @@ list:
     location: Saigon
     title: Backend Engineer
     type: Fulltime
+    hot: true
   - company: Dwarves Foundation
     date: 2019-04-02T02:29:07.004Z
     desc: Be the person stands behind all the cool products. We seek for dynamic, proactive, open-minded and passionate talents who are committed to making the best impact ever.
     isOpened: true
     linkURL: 'https://dwarves.careers/job/golang-engineer--dwarves-foundation--saigon'
     location: Saigon
+    title: Fullstack Engineer
+    type: Fulltime
+    hot: true
+  - company: Dwarves Foundation
+    date: 2020-04-02T02:29:07.004Z
+    desc: Be the person stands behind all the cool products. We seek for dynamic, proactive, open-minded and passionate talents who are committed to making the best impact ever.
+    isOpened: true
+    linkURL: 'https://dwarves.careers/job/golang-engineer--dwarves-foundation--saigon'
+    location: Saigon
     title: Golang Engineer
     type: Fulltime
+    hot: false
+  - company: Dwarves Foundation
+    date: 2020-05-02T02:29:07.004Z
+    desc: Be the person stands behind all the cool products. We seek for dynamic, proactive, open-minded and passionate talents who are committed to making the best impact ever.
+    isOpened: true
+    linkURL: 'https://dwarves.careers/job/golang-engineer--dwarves-foundation--saigon'
+    location: Saigon
+    title: DevOps Engineer
+    type: Fulltime
+    hot: false
+  - company: Dwarves Foundation
+    date: 2020-01-02T02:29:07.004Z
+    desc: Be the person stands behind all the cool products. We seek for dynamic, proactive, open-minded and passionate talents who are committed to making the best impact ever.
+    isOpened: true
+    linkURL: 'https://dwarves.careers/job/golang-engineer--dwarves-foundation--saigon'
+    location: Saigon
+    title: Backend Engineer
+    type: Fulltime
+    hot: false
 ---

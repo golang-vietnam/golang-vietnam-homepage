@@ -11,7 +11,7 @@ list:
     title: 'Golang Engineer
 '
     type: 'Fulltime'
-    hot: 'true'
+    hot: true
   - company: 'Grab'
     date: '2019-03-07T04:57:43Z'
     desc: 'Backend Developer'
@@ -20,7 +20,7 @@ list:
     location: 'Others'
     title: 'Backend Developer'
     type: 'Saigon'
-    hot: 'true'
+    hot: true
   - company: 'FETCH TECHNOLOGY VIETNAM'
     date: '2018-12-05T08:14:10Z'
     desc: 'Golang Developer'
@@ -29,7 +29,7 @@ list:
     location: 'HCM'
     title: 'Golang Developer'
     type: 'Fulltime'
-    hot: 'false'
+    hot: false
   - company: 'Grab'
     date: '2019-04-16T04:32:51Z'
     desc: 'Software Engineer, Frontend'
@@ -38,7 +38,7 @@ list:
     location: 'HCM'
     title: 'Software Engineer, Frontend'
     type: 'Fulltime'
-    hot: 'false'
+    hot: false
   - company: 'Exgo'
     date: '2019-07-02T09:19:18Z'
     desc: 'Senior Software Engineer'
@@ -47,7 +47,7 @@ list:
     location: 'HCM'
     title: 'Senior Software Engineer'
     type: 'Fulltime'
-    hot: 'false'
+    hot: false
   - company: 'GoldenCloud'
     date: '2020-02-20T10:11:57Z'
     desc: 'Go/Vuejs Developer'
@@ -56,7 +56,7 @@ list:
     location: 'Others'
     title: 'Go/Vuejs Developer'
     type: 'Fulltime'
-    hot: 'false'
+    hot: false
   - company: 'Quoine'
     date: '2019-07-04T05:33:48Z'
     desc: 'Backend Engineer (Blockchain)'
@@ -65,7 +65,7 @@ list:
     location: 'HCM'
     title: 'Backend Engineer (Blockchain)'
     type: 'Fulltime'
-    hot: 'false'
+    hot: false
   - company: 'BStar Solutions'
     date: '2019-10-31T09:03:20Z'
     desc: 'Go Developer'
@@ -74,7 +74,7 @@ list:
     location: 'HCM'
     title: 'Go Developer'
     type: 'Fulltime'
-    hot: 'false'
+    hot: false
   - company: 'JRB'
     date: '2019-11-27T05:55:21Z'
     desc: 'GOLANG DEV'
@@ -83,7 +83,7 @@ list:
     location: 'Others'
     title: 'GOLANG DEV'
     type: 'Parttime'
-    hot: 'false'
+    hot: false
   - company: 'Viettin Group'
     date: '2020-04-14T07:06:22Z'
     desc: 'Backend Developer'
@@ -92,7 +92,7 @@ list:
     location: 'HN'
     title: 'Backend Developer'
     type: 'Fulltime'
-    hot: 'false'
+    hot: false
   - company: 'Grab'
     date: '2019-04-16T05:30:03Z'
     desc: 'Software Engineer, Fullstack'
@@ -101,7 +101,7 @@ list:
     location: 'HCM'
     title: 'Software Engineer, Fullstack'
     type: 'Fulltime'
-    hot: 'false'
+    hot: false
   - company: 'VNG'
     date: '2019-08-08T04:16:58Z'
     desc: 'Senior Software Engineer (Golang)'
@@ -110,7 +110,7 @@ list:
     location: 'HCM'
     title: 'Senior Software Engineer (Golang)'
     type: 'Fulltime'
-    hot: 'false'
+    hot: false
   - company: 'Grab'
     date: '2019-04-16T04:59:06Z'
     desc: 'Engineering Manager'
@@ -119,7 +119,7 @@ list:
     location: 'HCM'
     title: 'Engineering Manager'
     type: 'Fulltime'
-    hot: 'false'
+    hot: false
   - company: 'Dwarves Foundation'
     date: '2018-12-05T08:14:10Z'
     desc: 'Golang Engineer
@@ -130,7 +130,7 @@ list:
     title: 'Golang Engineer
 '
     type: 'Fulltime'
-    hot: 'true'
+    hot: true
   - company: 'Toripu'
     date: '2019-05-13T02:08:09Z'
     desc: 'Backend Developer'
@@ -139,7 +139,7 @@ list:
     location: 'HCM'
     title: 'Backend Developer'
     type: 'Fulltime'
-    hot: 'false'
+    hot: false
   - company: 'Stably'
     date: '2019-12-31T00:51:36Z'
     desc: 'Fullstack Engineer'
@@ -148,7 +148,7 @@ list:
     location: 'HCM'
     title: 'Fullstack Engineer'
     type: 'Fulltime'
-    hot: 'false'
+    hot: false
   - company: 'Bocasay Vietnam'
     date: '2019-11-14T08:14:10Z'
     desc: 'Golang Team Lead'
@@ -157,7 +157,7 @@ list:
     location: 'HN'
     title: 'Golang Team Lead'
     type: 'Fulltime'
-    hot: 'false'
+    hot: false
   - company: 'Grab'
     date: '2019-03-07T04:57:43Z'
     desc: 'Backend Developer'
@@ -166,7 +166,7 @@ list:
     location: 'Others'
     title: 'Backend Developer'
     type: 'Saigon'
-    hot: 'true'
+    hot: true
   - company: 'JX'
     date: '2020-04-26T13:26:14Z'
     desc: 'Golang dev'
@@ -175,5 +175,5 @@ list:
     location: 'HCM'
     title: 'Golang dev'
     type: 'Parttime'
-    hot: 'false'
+    hot: false
 ---

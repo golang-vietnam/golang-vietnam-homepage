@@ -8,13 +8,12 @@ const BookCard = ({ image, link, title, author }) => (
   <Card className="p-4">
     <div className="flex items-center">
       <div
-        css={`
-          ${tw`bg-center bg-cover flex-none border border-gray-200`};
-          width: 64px;
-          height: 80px;
-          margin-right: 16px;
-          background-image: url(${withPrefix(image)});
-        `}
+        className="bg-center bg-cover flex-none border border-gray-200 mr-4"
+        style={{
+          width: '64px',
+          height: '80px',
+          backgroundImage: `url(${withPrefix(image)})`
+        }}
       />
       <div className="-mt-1">
         <Hyperlink

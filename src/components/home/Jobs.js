@@ -207,11 +207,8 @@ class Jobs extends Component {
                 href="https://github.com/golang-vietnam/job_board/issues"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="md:block hidden underline absolute whitespace-no-wrap text-primary"
-                css={`
-                  right: 0;
-                  top: calc(50% + 60px);
-                `}
+                className="md:block hidden underline absolute whitespace-no-wrap text-primary right-0"
+                style={{ top: 'calc(50% + 60px)' }}
               >
                 All Jobs
               </a>

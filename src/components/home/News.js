@@ -23,13 +23,7 @@ const News = props => {
           <div className="mt-12 text-center">
             <button
               onClick={() => setState(true)}
-              className="text-primary hover:border-primary font-medium transition transition-all duration-200"
-              css={`
-                font-size: 20px;
-                padding: 7px 3px;
-                border-bottom: 2px solid #ddd;
-                }
-              `}
+              className="text-gray-900 hover:text-primary hover:border-primary font-medium transition transition-all duration-200 border-b-2 border-gray-200 py-2 px-1 text-xl"
             >
               Show all
             </button>

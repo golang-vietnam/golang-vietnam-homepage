@@ -8,13 +8,7 @@ const ArticleCard = ({ level, resources }) => (
   <div className="mb-10">
     <SubHeading className="mb-6">{level}</SubHeading>
     <Card>
-      <ul
-        className="list-disc"
-        css={`
-          margin: 0;
-          padding: 10px 15px;
-        `}
-      >
+      <ul className="list-disc m-0" style={{ padding: '10px 15px' }}>
         {resources.map(({ title, link }, index) => (
           <li
             key={index}

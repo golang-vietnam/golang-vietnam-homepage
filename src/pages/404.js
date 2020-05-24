@@ -12,12 +12,7 @@ const NotFoundPage = () => (
       className="w-full text-center flex flex-col justify-center items-center"
       style={{ minHeight: 'calc(100vh - 480px)' }}
     >
-      <div
-        css={`
-          width: 100%;
-          max-width: 456px;
-        `}
-      >
+      <div className="w-full" style={{ maxWidth: '456px' }}>
         <NotFoundIllustration />
       </div>
       <h1 className="mt-8" style={{ fontSize: '40px' }}>

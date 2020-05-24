@@ -7,7 +7,7 @@ list:
 Grab began as a taxi-hailing app in 2012, but has extended its product platform to include private car services (GrabCar & GrabShare), motorcycle taxis (GrabBike), social carpooling (GrabHitch) and last mile delivery (GrabExpress). We are focused on pioneering new commuting alternatives for drivers and passengers with an emphasis on speed, safety, and reliability. Currently we offer services in Singapore, Indonesia, Philippines, Malaysia, Thailand and Vietnam; however, we also have R&D offices in Bangalore, Beijing, & Seattle'
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/14'
     location: 'Others'
-    title: 'Back'
+    title: 'Backend Developer'
     type: 'Saigon'
     hot: true
   - company: 'Dwarves Foundation'

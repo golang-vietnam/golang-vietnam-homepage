@@ -80,12 +80,6 @@ collections:
                   { label: Description, name: desc, widget: string },
                   { label: 'Link URL', name: linkURL, widget: string },
                   { label: 'Date', name: date, widget: date },
-                  {
-                    label: 'Is Open',
-                    name: isOpened,
-                    widget: boolean,
-                    default: true,
-                  },
                 ],
             }
   - name: 'resources'

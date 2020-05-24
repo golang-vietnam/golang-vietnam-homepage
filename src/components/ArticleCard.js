@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, SubHeading } from 'shared/styled';
 import classnames from 'classnames';
-import tw from 'twin.macro';
 
 const ArticleCard = ({ level, resources }) => (
   <div className="mb-10">

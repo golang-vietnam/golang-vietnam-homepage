@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, CardExcerpt, Hyperlink } from 'shared/styled';
-import tw from 'twin.macro';
 import { withPrefix } from 'gatsby';
 
 const BookCard = ({ image, link, title, author }) => (

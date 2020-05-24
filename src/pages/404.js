@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import DefaultLayout from 'components/DefaultLayout';
 import NotFoundIllustration from 'components/svg/NotFoundIllustration';
-import tw from 'twin.macro';
 import SEO from '../components/seo';
 
 const NotFoundPage = () => (

@@ -80,13 +80,12 @@ Grab began as a taxi-hailing app in 2012, but has extended its product platform 
     title: 'Golang Developer'
     type: 'Fulltime'
     hot: false
-  - company: 'Grab'
-    date: '2019-03-07T04:57:43Z'
-    desc: 'Grab is more than just the leading ride-hailing and mobile payments app in Southeast Asia. We use data and technology to improve everything from transportation to payments and logistics across a region of more than 620 million people. Working with governments, drivers, passengers, and charities, we aim to unlock the true potential of the region by solving problems that hinder progress.
-Grab began as a taxi-hailing app in 2012, but has extended its product platform to include private car services (GrabCar & GrabShare), motorcycle taxis (GrabBike), social carpooling (GrabHitch) and last mile delivery (GrabExpress). We are focused on pioneering new commuting alternatives for drivers and passengers with an emphasis on speed, safety, and reliability. Currently we offer services in Singapore, Indonesia, Philippines, Malaysia, Thailand and Vietnam; however, we also have R&D offices in Bangalore, Beijing, & Seattle'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/14'
-    location: 'Others'
-    title: 'Back'
-    type: 'Saigon'
-    hot: true
+  - company: 'Viettin Group'
+    date: '2020-04-14T07:06:22Z'
+    desc: 'HN, Hoan Kiem District, centre location'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/30'
+    location: 'HN'
+    title: 'Backend Developer'
+    type: 'Fulltime'
+    hot: false
 ---

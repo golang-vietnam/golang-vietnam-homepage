@@ -8,10 +8,8 @@ import tw from 'twin.macro';
 
 const Container = styled.div`
   ${tw`flex justify-between items-end mb-16`};
-
   a {
-    text-decoration: none;
-    color: ${props => props.theme.main.primary};
+    ${tw`no-underline text-primary`};
   }
 `;
 

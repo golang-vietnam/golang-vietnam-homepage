@@ -1,6 +1,7 @@
 import React from 'react';
 import DefaultLayout from '../components/DefaultLayout';
 import SEO from '../components/seo';
+import tw from 'twin.macro';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -38,12 +39,12 @@ const Container = styled.div`
       margin-top: 0;
       width: 400px;
       box-shadow: none;
-      background-color: ${props => props.theme.main.body};
+      ${tw`bg-gray-100`};
     }
 
     .chat__section {
       min-height: 400px;
-      background-color: ${props => props.theme.main.body};
+      ${tw`bg-gray-100`};
     }
   }
 

@@ -15,22 +15,15 @@ const Heading = styled.h1`
 `;
 
 const Paragraph = styled.p`
-  ${tw`opacity-80 mb-12 text-white`};
-  padding-left: 11px;
-  border-left: 2px solid ${props => props.theme.primary};
+  border-left: 2px solid;
   max-width: 310px;
+  ${tw`opacity-80 mb-12 text-white pl-3 border-primary`};
 `;
 
 const Button = styled.div`
   a {
-    text-decoration: none;
-    ${tw`px-5 py-4 inline-flex items-center rounded-sm`};
-    ${props => `
-    background-color: ${
-      props.slack ? '#E13F5E' : props.theme.button.primary.background
-    };
-    color: ${props.theme.button.primary.foreground};
-    `};
+    ${tw`px-5 py-4 inline-flex items-center rounded-sm text-white no-underline`};
+    ${props => (props.slack ? `background-color: #E13F5E` : tw`bg-primary`)};
     svg {
       margin-right: 10px;
     }
@@ -40,11 +33,9 @@ const Button = styled.div`
 const ShareEdge = styled.div`
   ${tw`flex-col items-center flex`};
   div {
-    color: ${props => props.theme.white};
+    ${tw`text-white mb-6 opacity-75`}
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    margin-bottom: 24px;
-    ${tw`opacity-75`}
   }
 
   a:first-of-type {
@@ -53,14 +44,9 @@ const ShareEdge = styled.div`
 `;
 
 const ShareButton = styled.a`
-  background-color: ${props => props.theme.white};
-  color: ${props => props.theme.black};
-  display: flex;
+  ${tw`bg-white text-gray-900 flex justify-center items-center rounded-full`}
   width: 32px;
   height: 32px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 999px;
   font-size: 18px;
 `;
 

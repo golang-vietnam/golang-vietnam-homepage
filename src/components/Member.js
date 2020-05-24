@@ -7,14 +7,9 @@ import tw from 'twin.macro';
 const Container = styled.div`
   ${tw`flex flex-col items-center justify-center text-center w-full`}
 `;
-// TODO: investigate ${props => props.theme.main.foreground} will cause build error
 const GithubLink = styled.a`
-  ${tw`text-sm`};
+  ${tw`text-sm text-gray-900 hover:text-primary`};
   text-decoration: none;
-  color: ${props => props.theme.black};
-  &:hover {
-    color: ${props => props.theme.primary};
-  }
 `;
 
 const Avatar = styled.div`

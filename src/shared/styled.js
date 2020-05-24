@@ -12,21 +12,15 @@ export const Wrapper = styled.div`
 
 export const GlobalStyle = createGlobalStyle`
   html, body {
-    color: ${props => props.theme.main.foreground};
-    background-color: ${props => props.theme.main.body};
+    ${tw`text-gray-900 bg-gray-100`}
   }
   .link-active{
-    color: ${props => props.theme.main.primary}!important;
+    color: #3BA2BC!important;
   }
 `;
 
 export const Card = styled.div`
-  ${props => `
-  background-color: ${props.theme.card.background};
-  color: ${props.theme.card.foreground};
-  box-shadow: ${props.theme.card.boxShadow};`}
-  padding: 20px 32px;
-  margin-bottom: 24px;
+  ${tw`bg-white text-gray-900 shadow mb-6 py-5 px-8`};
 `;
 
 export const CardHeading = styled.h4`
@@ -36,12 +30,7 @@ export const CardHeading = styled.h4`
 `;
 
 export const Hyperlink = styled.a`
-  text-decoration: none;
-  color: ${props => props.theme.card.foreground};
-  transition: color 0.2s ease-in-out;
-  &:hover {
-    color: ${props => props.theme.card.link};
-  }
+  ${tw`no-underline text-gray-900 hover:text-primary transition transition-colors duration-200`};
 `;
 
 export const CardExcerpt = styled.p`
@@ -56,33 +45,19 @@ export const Badge = styled.span`
   padding: 6px 8px;
   border-radius: 2px;
   line-height: 1em;
-  ${props => `
-  background-color: ${
-    props.isActive
-      ? props.theme.badge.activeBackground
-      : props.theme.badge.inactiveBackground
-  };
-  color: ${
-    props.isActive
-      ? props.theme.badge.activeForeground
-      : props.theme.badge.inactiveForeground
-  };
-  `}
+  ${props =>
+    props.isActive ? tw`bg-primary text-white` : tw`bg-gray-500 text-white`};
 `;
 
 export const PrimaryButton = styled.button`
-  ${props => `
-    background-color: ${props.theme.button.primary.background};
-    color: ${props.theme.button.primary.foreground};
-  `}
+  ${tw`bg-primary text-white`}
 `;
 
 export const Dot = styled.span`
-  ${tw`block rounded-full`}
+  ${tw`block rounded-full bg-gray-900`}
   width: 2px;
   height: 2px;
   margin: 0 10px;
-  background-color: ${props => props.theme.card.foreground};
 `;
 
 export const SubHeading = styled.h3`

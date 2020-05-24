@@ -38,12 +38,8 @@ const JobCardContainer = styled.div`
 const JobCard = styled(Card)`
   width: 295px;
   flex: 295px 0 0;
-  padding: 32px;
-  margin-bottom: 0;
-  margin-left: 12px;
-  margin-right: 12px;
-  box-sizing: border-box;
-  border-top: 8px solid ${props => props.theme.card.link};
+  border-top: 8px solid;
+  ${tw`border-primary mx-3 mb-0 p-8`}
   h3 {
     ${tw`text-lg mb-4 capitalize`}
   }
@@ -131,13 +127,7 @@ class Jobs extends Component {
                   href="https://github.com/golang-vietnam/jobs"
                   target="_blank"
                   rel="noopener noreferrer"
-                  css={`
-                    ${tw`items-center inline-flex lg:mt-5 py-2 text-sm px-3 rounded-sm`}
-                    text-decoration: none;
-                    background-color: ${props =>
-                      props.theme.button.primary.background};
-                    color: ${props => props.theme.button.primary.foreground};
-                  `}
+                  className="items-center inline-flex lg:mt-5 py-2 text-sm px-3 rounded-sm bg-primary text-white no-underline"
                 >
                   Post a job
                 </a>
@@ -145,11 +135,7 @@ class Jobs extends Component {
                   href="https://github.com/golang-vietnam/job_board/issues"
                   target="_blank"
                   rel="noopener noreferrer"
-                  css={`
-                    ${tw`items-center md:hidden flex ml-5 underline`}
-                    white-space: nowrap;
-                    color: ${props => props.theme.card.link};
-                  `}
+                  className="items-center md:hidden flex ml-5 underline whitespace-no-wrap text-primary"
                 >
                   All Jobs
                   <IoIosArrowRoundForward className="ml-1 text-lg" />
@@ -221,14 +207,8 @@ class Jobs extends Component {
                 href="https://github.com/golang-vietnam/job_board/issues"
                 target="_blank"
                 rel="noopener noreferrer"
-                css={`
-                  ${tw`md:block hidden underline`}
-                  position: absolute;
-                  right: 0;
-                  top: calc(50% + 60px);
-                  white-space: nowrap;
-                  color: ${props => props.theme.card.link};
-                `}
+                className="md:block hidden underline absolute whitespace-no-wrap text-primary right-0"
+                style={{ top: 'calc(50% + 60px)' }}
               >
                 All Jobs
               </a>

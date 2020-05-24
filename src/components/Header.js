@@ -9,33 +9,30 @@ import { FaCaretDown } from 'react-icons/fa';
 import classnames from 'classnames';
 
 const Container = styled.header`
+  ${tw`transition transition-all duration-200 fixed`}
   padding: 5px 0;
-  transition: all 0.25s ease;
-  ${props => `
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    background-color: ${
-      props.dark && !props.fixed
-        ? props.theme.header.dark.background
-        : props.theme.header.background
-    };
-    box-shadow: ${props.dark ? `none` : `0 1px 2px rgba(0, 0, 0, 0.1)`};
-  `}
+  left: 0;
+  right: 0;
+  z-index: 99;
+  box-shadow: ${props =>
+    props.dark ? `none` : `0 1px 2px rgba(0, 0, 0, 0.1)`};
+  ${props =>
+    props.dark && !props.fixed
+      ? `background-color: rgba(0,0,0,0.5);`
+      : tw`bg-white`}
 `;
 
 const LogoWrapper = styled.div`
   position: relative;
   z-index: 2;
   a {
-    color: ${props =>
+    ${props =>
       (props.dark && !props.fixed) || props.open
-        ? props.theme.header.dark.foreground
-        : props.theme.header.foreground};
-  }
-  svg {
-    transition: all 0.25s ease;
+        ? tw`text-white`
+        : tw`text-gray-900`};
+    svg {
+      ${tw`transition transition-all duration-200`};
+    }
   }
 `;
 
@@ -51,13 +48,12 @@ const Menu = styled.nav`
     padding: 20px 0;
 
     &.active > a {
-      color: ${props => props.theme.primary}!important;
+      ${tw`text-primary`};
     }
 
     &:hover {
       ul {
-        opacity: 1;
-        visibility: visible;
+        ${tw`opacity-100 visible`}
       }
     }
   }
@@ -67,68 +63,46 @@ const Menu = styled.nav`
     svg {
       margin-left: 2px;
     }
-    color: ${props =>
+    ${props =>
       props.dark && !props.fixed
-        ? props.theme.header.dark.nav.link.foreground
-        : props.theme.header.nav.link.foreground};
-    &:hover {
-      color: ${props =>
-        props.dark && !props.fixed
-          ? props.theme.header.dark.nav.link.activeForeground
-          : props.theme.header.nav.link.activeForeground};
-    }
+        ? tw`text-white hover:text-primary`
+        : tw`text-gray-900 hover:text-primary`}
   }
   ul {
+    ${tw`absolute shadow bg-white`}
     bottom: 1px;
     visibility: hidden;
     opacity: 0;
     transform: translateY(100%);
-    position: absolute;
-    background-color: ${props => props.theme.header.nav.submenu.background};
-    box-shadow: ${props => props.theme.header.nav.submenu.boxShadow};
     padding: 10px 0;
     a {
       padding: 0 27px;
       min-width: 150px;
       white-space: nowrap;
       height: 40px;
-      ${tw`flex items-center`};
-      color: ${props => props.theme.header.nav.submenu.link.foreground};
-
-      &:hover {
-        background-color: ${props =>
-          props.theme.header.nav.submenu.link.activeBackground};
-        color: ${props => props.theme.header.nav.submenu.link.activeForeground};
-      }
+      ${tw`flex items-center text-gray-900 hover:text-white hover:bg-primary bg-white`};
     }
   }
 `;
 
 const MobileMenu = styled.ul`
-  position: absolute;
+  ${tw`bg-black absolute pb-5`}
+  padding-top: 90px;
   z-index: 1;
   right: 0;
   left: 0;
-  background-color: black;
   top: 0;
-  padding-top: 90px;
   font-size: 20px;
-  padding-bottom: 20px;
 
   a {
-    text-decoration: none;
-    font-weight: 500;
+    ${tw`font-medium no-underline`}
   }
   > li {
-    display: block;
-    margin-left: 40px;
-    position: relative;
-    padding: 20px 0;
+    ${tw`relative ml-10 block py-5`}
 
     &:hover {
       ul {
-        opacity: 1;
-        visibility: visible;
+        ${tw`opacity-100 visible`}
       }
     }
   }
@@ -141,43 +115,32 @@ const MobileMenu = styled.ul`
   ul {
     padding-top: 10px;
     a {
-      padding: 0 16px;
+      ${tw`flex items-center px-4 mt-6`};
       min-width: 150px;
-      margin-top: 25px;
-      ${tw`flex items-center`};
       &:before {
         content: '';
         display: block;
         width: 27px;
         height: 2px;
         margin-right: 10px;
-        background-color: ${props =>
-          props.theme.header.mobileNav.link.foreground};
+        ${tw`bg-white`}
       }
       &:hover:before {
-        background-color: ${props =>
-          props.theme.header.mobileNav.link.active.foreground};
+        ${tw`bg-primary`}
       }
     }
   }
-
   a {
-    color: ${props => props.theme.header.mobileNav.link.foreground};
-
-    &:hover {
-      color: ${props => props.theme.header.mobileNav.link.active.foreground};
-    }
+    ${tw`text-white hover:text-primary`}
   }
 `;
 
 const BurgerButton = styled.div`
-  ${tw`lg:hidden`};
+  ${tw`lg:hidden cursor-pointer relative`};
   z-index: 2;
   margin-right: 5px;
-  cursor: pointer;
   width: 26px;
   height: 20px;
-  position: relative;
 
   span {
     width: 28px;
@@ -188,46 +151,28 @@ const BurgerButton = styled.div`
     transition: all 0.25s ease;
     background-color: ${props =>
       props.open
-        ? props.theme.header.mobileNav.foreground
+        ? tw`bg-white`
         : props.dark && !props.fixed
-        ? props.theme.header.dark.nav.link.foreground
-        : props.theme.header.nav.link.foreground};
+        ? tw`bg-white`
+        : tw`bg-gray-900`}
 
     &:nth-child(1) {
-      top: 0;
+      top: ${props => (props.open ? '50%' : 0)};
+      transform: ${props => (props.open ? 'rotate(45deg)' : 'rotate(0deg)')};
     }
 
     &:nth-child(2) {
       top: 50%;
       margin-top: -2px;
+      display: ${props => (props.open ? 'none' : 'block')};
     }
 
     &:nth-child(3) {
-      bottom: 0px;
+      bottom: ${props => (props.open ? 'auto' : '0px')};
+      top: ${props => (props.open ? '50%' : 'auto')};
+      transform: ${props => (props.open ? 'rotate(-45deg)' : 'rotate(0deg)')};
     }
   }
-
-  ${props =>
-    props.open
-      ? `
-    span {
-      &:nth-child(1) {
-        top: 50%;
-        transform: rotate(45deg);
-      }
-
-      &:nth-child(2) {
-        display: none;
-      }
-
-      &:nth-child(3) {
-        transform: rotate(-45deg);
-        bottom: auto;
-        top: 50%;
-      }
-    }
-  `
-      : ``}
 `;
 
 class Header extends Component {

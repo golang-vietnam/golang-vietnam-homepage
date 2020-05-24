@@ -88,15 +88,7 @@ const Members = () => (
         The gophers help to run the community over the past 5 years. They come
         from a wide diversity of background, company and level, but one thing in
         common:{' '}
-        <span
-          css={`
-            display: block;
-            font-weight: 700;
-            text-align: center;
-            margin-top: 10px;
-            ${sm`text-align: right; margin-top: 0;`}
-          `}
-        >
+        <span className="block text-center sm:text-right mt-2 sm:mt-0 font-bold">
           The passion for Go
         </span>
       </p>

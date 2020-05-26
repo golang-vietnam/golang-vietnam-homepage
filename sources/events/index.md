@@ -1,6 +1,11 @@
 ---
 key: events
 list:
+  - date: '2020-05-30T20:00:00Z'
+    guests: '0'
+    location: 'locatio'
+    name: 'test 2' 
+    link: ''
   - date: '2020-05-28T19:42:00Z'
     guests: '0'
     location: 'test'

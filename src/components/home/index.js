@@ -18,11 +18,11 @@ const query = graphql`
               company
               date
               desc
-              isOpened
               linkURL
               location
               title
               type
+              hot
             }
           }
         }

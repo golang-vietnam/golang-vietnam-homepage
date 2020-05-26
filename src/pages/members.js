@@ -3,7 +3,6 @@ import DefaultLayout from 'components/DefaultLayout';
 import MemberSubscription from 'components/MemberSubscription';
 import SEO from 'components/seo';
 import Member from 'components/Member';
-import { sm } from 'shared/responsive';
 
 const members = [
   {

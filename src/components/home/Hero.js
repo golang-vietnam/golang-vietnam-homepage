@@ -88,8 +88,8 @@ class Hero extends Component {
                     <br /> Let’s join us!
                   </Paragraph>
 
-                  <div className="flex items-center sm:flex-row flex-wrap flex-column">
-                    <Button className="sm:mb-0 mb-2 sm:mr-4">
+                  <div className="md:flex items-center md:flex-row flex-wrap flex-column">
+                    <Button className="md:mb-0 mb-2 md:mr-4">
                       <a href="https://github.com/golang-vietnam">
                         <FaGithubAlt /> Visit our Github
                       </a>

@@ -6,7 +6,7 @@ import decode from 'unescape';
 const NewsCard = ({ title, desc, author, postedOn, link }) => {
   return (
     <Card>
-      <div className="flex justify-between sm:items-center item-start">
+      <div className="flex justify-between">
         <div className="w-3/4">
           <CardHeading>
             <Hyperlink
@@ -18,7 +18,7 @@ const NewsCard = ({ title, desc, author, postedOn, link }) => {
           </CardHeading>
           <CardExcerpt dangerouslySetInnerHTML={{ __html: decode(desc) }} />
         </div>
-        <div className="w-1/4 text-sm text-right whitespace-no-wrap sm:mt-0 mt-5">
+        <div className="w-1/4 text-sm text-right whitespace-no-wrap pt-2 pl-2">
           <div className="break-words whitespace-normal my-1">
             {decode(author)}
           </div>

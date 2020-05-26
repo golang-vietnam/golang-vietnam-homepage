@@ -3,8 +3,6 @@ import { graphql, StaticQuery } from 'gatsby';
 import DefaultLayout from 'components/DefaultLayout';
 import SEO from 'components/seo';
 import JobCard from 'components/JobCard';
-import tw from 'twin.macro';
-import styled from 'styled-components';
 
 const query = graphql`
   {
@@ -17,7 +15,6 @@ const query = graphql`
               company
               date
               desc
-              isOpened
               linkURL
               location
               title
@@ -30,13 +27,6 @@ const query = graphql`
   }
 `;
 
-const InfoBlock = styled.div`
-  ${tw`flex items-center`};
-  b {
-    ${tw`text-primary mr-5`};
-  }
-`;
-
 const JobPage = () => (
   <StaticQuery
     query={query}
@@ -46,31 +36,8 @@ const JobPage = () => (
       }
       const { list } = data.edges[0].node.frontmatter;
 
-      const { numOfOpen, numOfClosed } = list.reduce(
-        (a, { isOpened }) => {
-          if (isOpened) {
-            a.numOfOpen = a.numOfOpen + 1;
-          } else {
-            a.numOfClosed = a.numOfClosed + 1;
-          }
-          return a;
-        },
-        {
-          numOfOpen: 0,
-          numOfClosed: 0
-        }
-      );
-
       return (
-        <DefaultLayout
-          title="Jobs"
-          RightSideComponent={() => (
-            <InfoBlock>
-              <b>{numOfOpen} open</b>
-              <span>{numOfClosed} closed</span>
-            </InfoBlock>
-          )}
-        >
+        <DefaultLayout title="Jobs">
           <SEO title="Jobs" />
           {list.map((data, i) => (
             <JobCard {...data} key={i} />

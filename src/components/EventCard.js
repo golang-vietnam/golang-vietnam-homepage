@@ -7,7 +7,7 @@ import decode from 'unescape';
 const EventsCard = ({ name, date, location, guests, link }) => {
   return (
     <Card>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between">
         <div className="w-3/4">
           <CardHeading>
             <Hyperlink
@@ -21,9 +21,9 @@ const EventsCard = ({ name, date, location, guests, link }) => {
             <span className="capitalize font-medium">{location}</span>
           </div>
         </div>
-        <div className="w-1/4 text-sm text-right whitespace-no-wrap opacity-75">
+        <div className="w-1/4 text-sm text-right whitespace-no-wrap opacity-75 pt-2 pl-2">
           <div>{dayjs(date).format('DD MMM, YYYY')}</div>
-          <div className="mt-2">{guests} guests</div>
+          {guests > 0 && <div className="mt-2">{guests} guests</div>}
         </div>
       </div>
     </Card>

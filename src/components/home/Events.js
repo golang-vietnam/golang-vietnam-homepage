@@ -15,19 +15,20 @@ const Events = ({ data }) => {
   return (
     <Container id="events">
       <div className="container px-gutter mx-auto">
-        <Head title="Events" />
-
-        <p className="text-base mb-8 font-semibold">
-          <span>Want to host a next Golang meetup or Need media sponsor?</span>
-          <a
-            href="https://airtable.com/embed/shrAIh2b0JJoJZbxU"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary text-underline ml-1 underline text-primary"
-          >
-            Contact us
-          </a>
-        </p>
+        <Head
+          title="Events"
+          className="items-center"
+          extraRight={
+            <a
+              href="https://airtable.com/embed/shrAIh2b0JJoJZbxU"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-2 text-sm px-3 rounded-sm bg-primary text-white no-underline"
+            >
+              Organize an Event
+            </a>
+          }
+        />
 
         {data.slice(0, showAll ? 20 : 5).map((event, index) => (
           <EventsCard {...event} key={index} />

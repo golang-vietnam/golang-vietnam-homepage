@@ -1,6 +1,7 @@
 // See https://tailwindcss.com/docs/configuration for details
 module.exports = {
   purge: ['./src/**/*.html', './src/**/*.jsx', './src/**/*.js'],
+  important: true,
   theme: {
     container: {
       center: true

@@ -72,6 +72,14 @@ Grab began as a taxi-hailing app in 2012, but has extended its product platform 
     title: 'GOLANG DEV'
     type: 'Parttime'
     hot: false
+  - company: 'BTaskee'
+    date: '2020-06-02T03:22:57Z'
+    desc: '284/25/20 Ly Thuong Kiet, District 10, HCMC'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/32'
+    location: 'HCM'
+    title: 'Golang Developer'
+    type: 'Ft'
+    hot: false
   - company: 'FETCH TECHNOLOGY VIETNAM'
     date: '2018-12-05T08:14:10Z'
     desc: '42B Ho Ba Phan Street, Phuoc Long A Ward, District 9, Ho Chi Minh City.'

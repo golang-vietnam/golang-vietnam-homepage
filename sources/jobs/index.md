@@ -43,13 +43,4 @@ Grab began as a taxi-hailing app in 2012, but has extended its product platform 
     title: 'Go/Vuejs Developer'
     type: 'Fulltime'
     hot: false
-  - company: 'JX'
-    date: '2020-04-26T13:26:14Z'
-    desc: 'Saigon, Vietnam
-* Remote'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/31'
-    location: 'HCM'
-    title: 'Golang dev'
-    type: 'Parttime'
-    hot: false
 ---

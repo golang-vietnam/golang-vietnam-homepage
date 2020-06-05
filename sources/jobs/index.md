@@ -18,6 +18,15 @@ Grab began as a taxi-hailing app in 2012, but has extended its product platform 
     title: 'Golang Engineer'
     type: 'Fulltime'
     hot: true
+  - company: 'JX'
+    date: '2020-04-26T13:26:14Z'
+    desc: 'Saigon, Vietnam
+* Remote'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/31'
+    location: 'HCM'
+    title: 'Golang dev'
+    type: 'Parttime'
+    hot: false
   - company: 'Viettin Group'
     date: '2020-04-14T07:06:22Z'
     desc: 'HN, Hoan Kiem District, centre location'

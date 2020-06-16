@@ -52,4 +52,12 @@ Grab began as a taxi-hailing app in 2012, but has extended its product platform 
     title: 'Go/Vuejs Developer'
     type: 'Fulltime'
     hot: false
+  - company: 'Colibri Growth'
+    date: '2020-06-15T10:03:29Z'
+    desc: 'Saigon, Vietnam'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/33'
+    location: 'HCM'
+    title: 'Fullstack Golang ReactJS'
+    type: 'Fulltime'
+    hot: false
 ---

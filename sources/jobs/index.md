@@ -17,15 +17,6 @@ list:
     title: 'Golang Developer'
     type: 'Ft'
     hot: false
-  - company: 'JX'
-    date: '2020-04-26T13:26:14Z'
-    desc: 'Saigon, Vietnam
-* Remote'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/31'
-    location: 'HCM'
-    title: 'Golang dev'
-    type: 'Parttime'
-    hot: false
   - company: 'Viettin Group'
     date: '2020-04-14T07:06:22Z'
     desc: 'HN, Hoan Kiem District, centre location'

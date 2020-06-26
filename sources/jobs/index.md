@@ -1,23 +1,6 @@
 ---
 key: jobs
 list:
-  - company: 'Grab'
-    date: '2019-03-07T04:57:43Z'
-    desc: 'Grab is more than just the leading ride-hailing and mobile payments app in Southeast Asia. We use data and technology to improve everything from transportation to payments and logistics across a region of more than 620 million people. Working with governments, drivers, passengers, and charities, we aim to unlock the true potential of the region by solving problems that hinder progress.
-Grab began as a taxi-hailing app in 2012, but has extended its product platform to include private car services (GrabCar & GrabShare), motorcycle taxis (GrabBike), social carpooling (GrabHitch) and last mile delivery (GrabExpress). We are focused on pioneering new commuting alternatives for drivers and passengers with an emphasis on speed, safety, and reliability. Currently we offer services in Singapore, Indonesia, Philippines, Malaysia, Thailand and Vietnam; however, we also have R&D offices in Bangalore, Beijing, & Seattle'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/14'
-    location: 'Others'
-    title: 'Backend Developer'
-    type: 'Saigon'
-    hot: true
-  - company: 'Dwarves Foundation'
-    date: '2018-12-05T08:14:10Z'
-    desc: 'Be the person stands behind all the cool products. We seek for dynamic, proactive, open-minded and passionate talents who are committed to making the best impact ever.'
-    linkURL: 'https://dwarves.careers/job/golang-engineer--dwarves-foundation--saigon'
-    location: 'HCM'
-    title: 'Golang Engineer'
-    type: 'Fulltime'
-    hot: true
   - company: 'JX'
     date: '2020-04-26T13:26:14Z'
     desc: 'Saigon, Vietnam

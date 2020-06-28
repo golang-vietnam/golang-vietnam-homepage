@@ -1,12 +1,12 @@
 ---
 key: jobs
 list:
-  - company: 'Viettin Group'
-    date: '2020-04-14T07:06:22Z'
-    desc: 'HN, Hoan Kiem District, centre location'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/30'
-    location: 'HN'
-    title: 'Backend Developer'
+  - company: 'Colibri Growth'
+    date: '2020-06-15T10:03:29Z'
+    desc: 'Saigon, Vietnam'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/33'
+    location: 'HCM'
+    title: 'Fullstack Golang ReactJS'
     type: 'Fulltime'
     hot: false
   - company: 'BTaskee'
@@ -17,6 +17,14 @@ list:
     title: 'Golang Developer'
     type: 'Ft'
     hot: false
+  - company: 'Viettin Group'
+    date: '2020-04-14T07:06:22Z'
+    desc: 'HN, Hoan Kiem District, centre location'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/30'
+    location: 'HN'
+    title: 'Backend Developer'
+    type: 'Fulltime'
+    hot: false
   - company: 'GoldenCloud'
     date: '2020-02-20T10:11:57Z'
     desc: 'Charmington La Pointe Building, 181 Cao Thang Str, Ward 12, District 10, Ho Chi Minh.
@@ -24,14 +32,6 @@ list:
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/29'
     location: 'Others'
     title: 'Go/Vuejs Developer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'Colibri Growth'
-    date: '2020-06-15T10:03:29Z'
-    desc: 'Saigon, Vietnam'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/33'
-    location: 'HCM'
-    title: 'Fullstack Golang ReactJS'
     type: 'Fulltime'
     hot: false
 ---

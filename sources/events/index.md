@@ -1,6 +1,11 @@
 ---
 key: events
 list:
+  - date: '2020-06-30T09:16:00Z'
+    guests: '0'
+    location: 'CirCO Co-working Space'
+    name: 'Golang VietNam Meetup #17: VN gophers after COVID' 
+    link: 'https://www.facebook.com/events/654012421817437'
   - date: '2019-04-23T15:52:00Z'
     guests: '0'
     location: 'VNG Corporation, 182 Lê Đại Hành, Phường 15, Quận 11, Ho Chi Minh City, Vietnam'

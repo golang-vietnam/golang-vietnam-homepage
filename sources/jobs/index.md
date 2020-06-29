@@ -1,6 +1,15 @@
 ---
 key: jobs
 list:
+  - company: 'Autonomous'
+    date: '2020-06-29T05:14:55Z'
+    desc: 'Hong Ha Street, Phu Nhuan Dist, Saigon, Vietnam
+* Full-time contract'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/34'
+    location: 'HCM'
+    title: 'Backend Engineer (Golang)'
+    type: 'Fulltime'
+    hot: false
   - company: 'Colibri Growth'
     date: '2020-06-15T10:03:29Z'
     desc: 'Saigon, Vietnam'

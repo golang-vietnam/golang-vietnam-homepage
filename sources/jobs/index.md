@@ -1,6 +1,15 @@
 ---
 key: jobs
 list:
+  - company: 'Blank Network'
+    date: '2020-07-01T09:47:40Z'
+    desc: 'HCM City, Vietnam
+* Working Remotely in a Hong Kong start-up company'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/35'
+    location: 'Others'
+    title: 'Golang/Blockchain developers'
+    type: 'Fulltime'
+    hot: false
   - company: 'Autonomous'
     date: '2020-06-29T05:14:55Z'
     desc: 'Hong Ha Street, Phu Nhuan Dist, Saigon, Vietnam

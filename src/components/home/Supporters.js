@@ -32,6 +32,10 @@ const data = [
   {
     href: 'http://www.coderschool.vn/',
     image: 'coderschool'
+  },
+  {
+    href: 'https://circo.co/',
+    image: 'circo'
   }
 ];
 

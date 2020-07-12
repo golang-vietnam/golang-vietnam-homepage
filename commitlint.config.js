@@ -17,7 +17,8 @@ module.exports = {
         'chore',
         'revert',
         'ci',
-        'build'
+        'build',
+        'content'
       ]
     ]
   }

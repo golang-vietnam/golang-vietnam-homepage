@@ -1,6 +1,15 @@
 ---
 key: jobs
 list:
+  - company: 'Paditech'
+    date: '2020-07-17T10:40:26Z'
+    desc: 'Hanoi, Vietnam
+* Fulltime'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/40'
+    location: 'HN'
+    title: 'Senior Golang Developer'
+    type: 'Fulltime'
+    hot: false
   - company: 'Blank Network'
     date: '2020-07-01T09:47:40Z'
     desc: 'HCM City, Vietnam

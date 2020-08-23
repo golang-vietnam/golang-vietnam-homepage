@@ -1,6 +1,24 @@
 ---
 key: jobs
 list:
+  - company: 'SotaTek'
+    date: '2020-08-11T04:44:51Z'
+    desc: 'Hanoi, Vietnam
+* Fulltime'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/44'
+    location: 'HN'
+    title: 'Golang Developer'
+    type: 'Fulltime'
+    hot: false
+  - company: 'French Start up'
+    date: '2020-08-02T14:16:37Z'
+    desc: 'Saigon, Hanoi, Vietnam
+* Remote'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/42'
+    location: 'HCM'
+    title: 'Senior Backend Golang'
+    type: 'Fulltime'
+    hot: false
   - company: 'Paditech'
     date: '2020-07-17T10:40:26Z'
     desc: 'Hanoi, Vietnam
@@ -8,6 +26,14 @@ list:
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/40'
     location: 'HN'
     title: 'Senior Golang Developer'
+    type: 'Fulltime'
+    hot: false
+  - company: 'JRB'
+    date: '2020-07-17T03:00:12Z'
+    desc: 'Saigon, Vietnam'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/39'
+    location: 'HCM'
+    title: 'Golang Developer'
     type: 'Fulltime'
     hot: false
   - company: 'Blank Network'

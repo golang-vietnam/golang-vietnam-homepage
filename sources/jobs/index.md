@@ -1,6 +1,14 @@
 ---
 key: jobs
 list:
+  - company: 'Manabie Vietnam'
+    date: '2020-08-20T09:24:23Z'
+    desc: '15th Floor, 180 Nguyen Cong Tru, Nguyen Thai Binh Ward, District 1, HCMC'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/47'
+    location: 'HCM'
+    title: 'Fullstack Engineer (Golang/ ReactJs)'
+    type: 'Fulltime'
+    hot: false
   - company: 'SotaTek'
     date: '2020-08-11T04:44:51Z'
     desc: 'Hanoi, Vietnam
@@ -76,15 +84,6 @@ list:
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/30'
     location: 'HN'
     title: 'Backend Developer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'GoldenCloud'
-    date: '2020-02-20T10:11:57Z'
-    desc: 'Charmington La Pointe Building, 181 Cao Thang Str, Ward 12, District 10, Ho Chi Minh.
-* Fulltime.'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/29'
-    location: 'Others'
-    title: 'Go/Vuejs Developer'
     type: 'Fulltime'
     hot: false
 ---

@@ -1,6 +1,14 @@
 ---
 key: jobs
 list:
+  - company: 'GAPO'
+    date: '2020-10-06T02:26:09Z'
+    desc: '275 Nguyen Trai Thanh Xuan Ha Noi Vietnam'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/53'
+    location: 'HN'
+    title: 'Junior Golang Developer'
+    type: 'Fulltime'
+    hot: false
   - company: 'Fetch Tech'
     date: '2020-09-25T07:56:54Z'
     desc: '42B Ho Ba Phan Street, Phuoc Long A Ward, District 9, Ho Chi Minh City.
@@ -78,14 +86,6 @@ list:
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/40'
     location: 'HN'
     title: 'Senior Golang Developer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'JRB'
-    date: '2020-07-17T03:00:12Z'
-    desc: 'Saigon, Vietnam'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/39'
-    location: 'HCM'
-    title: 'Golang Developer'
     type: 'Fulltime'
     hot: false
 ---

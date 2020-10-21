@@ -2,6 +2,14 @@
 key: jobs
 list:
   - company: 'GAPO'
+    date: '2020-10-19T02:30:36Z'
+    desc: '275 Nguyen Trai Thanh Xuan Ha Noi'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/58'
+    location: 'HN'
+    title: 'Fresher Golang Developer'
+    type: 'Fulltime'
+    hot: false
+  - company: 'GAPO'
     date: '2020-10-06T02:26:09Z'
     desc: '275 Nguyen Trai Thanh Xuan Ha Noi Vietnam'
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/53'
@@ -77,15 +85,6 @@ list:
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/42'
     location: 'HCM'
     title: 'Senior Backend Golang'
-    type: 'Fulltime'
-    hot: false
-  - company: 'Paditech'
-    date: '2020-07-17T10:40:26Z'
-    desc: 'Hanoi, Vietnam
-* Fulltime'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/40'
-    location: 'HN'
-    title: 'Senior Golang Developer'
     type: 'Fulltime'
     hot: false
 ---

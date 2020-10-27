@@ -1,12 +1,28 @@
 ---
 key: jobs
 list:
+  - company: 'Nara Reading Pte. Ltd.'
+    date: '2020-10-19T03:15:11Z'
+    desc: '-   Remote or HCMC'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/59'
+    location: 'HCM'
+    title: 'Senior Golang Engineer(interns are also welcome)'
+    type: 'Parttime'
+    hot: false
   - company: 'GAPO'
     date: '2020-10-19T02:30:36Z'
     desc: '275 Nguyen Trai Thanh Xuan Ha Noi'
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/58'
     location: 'HN'
     title: 'Fresher Golang Developer'
+    type: 'Fulltime'
+    hot: false
+  - company: 'DTAC'
+    date: '2020-10-18T07:59:24Z'
+    desc: 'Remote'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/56'
+    location: 'HCM'
+    title: 'Senior Golang Engineer'
     type: 'Fulltime'
     hot: false
   - company: 'GAPO'
@@ -67,24 +83,6 @@ list:
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/45'
     location: 'HCM'
     title: 'Middle/Senior Backend Dev ( Golang )'
-    type: 'Fulltime'
-    hot: false
-  - company: 'SotaTek'
-    date: '2020-08-11T04:44:51Z'
-    desc: 'Hanoi, Vietnam
-* Fulltime'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/44'
-    location: 'HN'
-    title: 'Golang Developer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'French Start up'
-    date: '2020-08-02T14:16:37Z'
-    desc: 'Saigon, Hanoi, Vietnam
-* Remote'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/42'
-    location: 'HCM'
-    title: 'Senior Backend Golang'
     type: 'Fulltime'
     hot: false
 ---

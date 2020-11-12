@@ -1,6 +1,48 @@
 ---
 key: jobs
 list:
+  - company: 'Dtac'
+    date: '2020-11-02T15:07:56Z'
+    desc: 'Saigon, Vietnam'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/64'
+    location: 'HCM'
+    title: 'Senior Golang Microservices Engineer'
+    type: 'Fulltime'
+    hot: false
+  - company: 'Dtac'
+    date: '2020-11-02T15:01:28Z'
+    desc: 'Saigon, Vietnam'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/63'
+    location: 'HCM'
+    title: 'Technical Leader'
+    type: 'Fulltime'
+    hot: false
+  - company: 'Autonomous Inc.'
+    date: '2020-10-30T09:14:08Z'
+    desc: 'Phu Nhuan
+* Saigon, Vietnam'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/62'
+    location: 'HCM'
+    title: 'Senior Golang Developer'
+    type: 'Fulltime'
+    hot: false
+  - company: 'VieON'
+    date: '2020-10-29T15:06:05Z'
+    desc: '222 Pasteur, Ward 6, District 3, Ho Chi Minh City'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/61'
+    location: 'HCM'
+    title: 'Backend Engineer & DevOps (6 vacancies)'
+    type: 'Fulltime'
+    hot: false
+  - company: 'Plus Team Global Company'
+    date: '2020-10-23T05:13:34Z'
+    desc: 'Saigon, Vietnam
+* Remote'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/60'
+    location: 'HCM'
+    title: 'Senior Golang Blockchain Developer'
+    type: 'Fulltime'
+    hot: false
   - company: 'Nara Reading Pte. Ltd.'
     date: '2020-10-19T03:15:11Z'
     desc: '-   Remote or HCMC'
@@ -41,48 +83,5 @@ list:
     location: 'HCM'
     title: 'Senior Golang Developer'
     type: 'Parttime'
-    hot: false
-  - company: 'Chợ Tốt'
-    date: '2020-09-16T04:40:31Z'
-    desc: 'HCMC, Vietnam'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/50'
-    location: 'HCM'
-    title: 'Backend Software Engineer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'OneID'
-    date: '2020-09-09T04:46:26Z'
-    desc: 'Hai Ba Trung 
-* Hanoi, Vietnam
-* Fulltime'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/49'
-    location: 'HN'
-    title: 'Golang Developer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'Couture Consulting Vietnam'
-    date: '2020-09-03T11:53:54Z'
-    desc: 'Saigon, Vietnam (Strongly preferred)
-* Remote within Vietnam (possible)'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/48'
-    location: 'HCM'
-    title: 'Senior Go Lang Microservices Engineer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'Manabie Vietnam'
-    date: '2020-08-20T09:24:23Z'
-    desc: '15th Floor, 180 Nguyen Cong Tru, Nguyen Thai Binh Ward, District 1, HCMC'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/47'
-    location: 'HCM'
-    title: 'Fullstack Engineer (Golang/ ReactJs)'
-    type: 'Fulltime'
-    hot: false
-  - company: 'Gapo'
-    date: '2020-08-20T03:29:01Z'
-    desc: 'Hanoi, HCM, Vietnam'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/45'
-    location: 'HCM'
-    title: 'Middle/Senior Backend Dev ( Golang )'
-    type: 'Fulltime'
     hot: false
 ---

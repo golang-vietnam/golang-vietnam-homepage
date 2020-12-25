@@ -37,6 +37,14 @@ list:
     title: 'Junior/Middle Golang Dev'
     type: 'Fulltime'
     hot: false
+  - company: 'PRESSMERCE'
+    date: '2020-11-13T05:03:43Z'
+    desc: '61 Nguy Nhu Kom Tum, Thanh Xuan District, Hanoi'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/65'
+    location: 'HN'
+    title: 'Backend Dev (Golang)'
+    type: 'Fulltime'
+    hot: false
   - company: 'Dtac'
     date: '2020-11-02T15:07:56Z'
     desc: 'Saigon, Vietnam'
@@ -78,13 +86,5 @@ list:
     location: 'HCM'
     title: 'Senior Golang Blockchain Developer'
     type: 'Fulltime'
-    hot: false
-  - company: 'Nara Reading Pte. Ltd.'
-    date: '2020-10-19T03:15:11Z'
-    desc: '-   Remote or HCMC'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/59'
-    location: 'HCM'
-    title: 'Senior Golang Engineer(interns are also welcome)'
-    type: 'Parttime'
     hot: false
 ---

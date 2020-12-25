@@ -1,6 +1,42 @@
 ---
 key: jobs
 list:
+  - company: 'WATA Corp'
+    date: '2020-12-15T07:28:09Z'
+    desc: 'Saigon, Vietnam
+* Fulltime'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/74'
+    location: 'HCM'
+    title: 'Middle/Senior Golang Developer'
+    type: 'Fulltime'
+    hot: false
+  - company: 'VMO'
+    date: '2020-12-14T11:46:29Z'
+    desc: 'Ton That Thuyet, Cau Giay, Vietnam
+* Full-time'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/72'
+    location: 'HN'
+    title: 'Tuyển dụng Golang Developer'
+    type: 'Fulltime'
+    hot: false
+  - company: 'SmartOSC'
+    date: '2020-12-07T09:15:40Z'
+    desc: 'Pham Hung, Hanoi, Vietnam
+* Full-time'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/71'
+    location: 'HN'
+    title: 'Junior/Senior Golang developers'
+    type: 'Fulltime'
+    hot: false
+  - company: 'HBLAB'
+    date: '2020-11-25T04:34:30Z'
+    desc: '82 Dịch Vọng Hậu, Hà Nội
+## Salary Expectation'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/67'
+    location: 'HN'
+    title: 'Junior/Middle Golang Dev'
+    type: 'Fulltime'
+    hot: false
   - company: 'Dtac'
     date: '2020-11-02T15:07:56Z'
     desc: 'Saigon, Vietnam'
@@ -49,39 +85,6 @@ list:
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/59'
     location: 'HCM'
     title: 'Senior Golang Engineer(interns are also welcome)'
-    type: 'Parttime'
-    hot: false
-  - company: 'GAPO'
-    date: '2020-10-19T02:30:36Z'
-    desc: '275 Nguyen Trai Thanh Xuan Ha Noi'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/58'
-    location: 'HN'
-    title: 'Fresher Golang Developer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'DTAC'
-    date: '2020-10-18T07:59:24Z'
-    desc: 'Remote'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/56'
-    location: 'HCM'
-    title: 'Senior Golang Engineer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'GAPO'
-    date: '2020-10-06T02:26:09Z'
-    desc: '275 Nguyen Trai Thanh Xuan Ha Noi Vietnam'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/53'
-    location: 'HN'
-    title: 'Junior Golang Developer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'Fetch Tech'
-    date: '2020-09-25T07:56:54Z'
-    desc: '42B Ho Ba Phan Street, Phuoc Long A Ward, District 9, Ho Chi Minh City.
-* Part-time (3 months)'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/52'
-    location: 'HCM'
-    title: 'Senior Golang Developer'
     type: 'Parttime'
     hot: false
 ---

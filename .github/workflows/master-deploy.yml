@@ -1,0 +1,24 @@
+name: Master deployment
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    # run at 23:00 UTC+0 daily
+    - cron: '0 23 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Netlify deployment
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_APP_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          yarn
+          yarn build
+          npx netlify-cli deploy --dir=public --prod --message='Deployment for ${GITHUB_REF}'

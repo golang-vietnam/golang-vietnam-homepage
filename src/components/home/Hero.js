@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
-import { FaGithubAlt, FaSlack, FaFacebookF, FaEnvelope } from 'react-icons/fa';
+import {
+  FaGithubAlt,
+  FaDiscord,
+  FaFacebookF,
+  FaEnvelope
+} from 'react-icons/fa';
 import BackgroundImage from 'gatsby-background-image';
 import { StaticQuery, graphql, Link } from 'gatsby';
 
@@ -23,7 +28,7 @@ const Paragraph = styled.p`
 const Button = styled.div`
   a {
     ${tw`px-5 py-4 inline-flex items-center rounded-sm text-white no-underline`};
-    ${props => (props.slack ? `background-color: #E13F5E` : tw`bg-primary`)};
+    ${props => (props.discord ? `background-color: #E13F5E` : tw`bg-primary`)};
     svg {
       margin-right: 10px;
     }
@@ -94,9 +99,9 @@ class Hero extends Component {
                         <FaGithubAlt /> Visit our Github
                       </a>
                     </Button>
-                    <Button slack>
+                    <Button discord>
                       <Link to="/chat">
-                        <FaSlack /> Join our Slack
+                        <FaDiscord /> Join our Discord
                       </Link>
                     </Button>
                   </div>

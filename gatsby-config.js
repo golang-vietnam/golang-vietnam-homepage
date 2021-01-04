@@ -58,7 +58,6 @@ module.exports = {
         assets: path.join(__dirname, 'src/assets'),
         css: path.join(__dirname, 'src/css'),
         shared: path.join(__dirname, 'src/shared'),
-        cms: path.join(__dirname, 'src/cms'),
         data: path.join(__dirname, 'src/data'),
         images: path.join(__dirname, 'src/images')
       }
@@ -72,12 +71,6 @@ module.exports = {
           require(`autoprefixer`),
           ...(process.env.NODE_ENV === `production` ? [require(`cssnano`)] : [])
         ]
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`
       }
     }
   ]

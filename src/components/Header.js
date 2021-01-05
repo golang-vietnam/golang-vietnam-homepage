@@ -290,7 +290,7 @@ class Header extends Component {
                   {menu.map(({ children, name, href }) => (
                     <li key={href}>
                       {href === '#' ? (
-                        <a>{name}</a>
+                        <span>{name}</span>
                       ) : (
                         <Link to={href} activeClassName="link-active">
                           {name}

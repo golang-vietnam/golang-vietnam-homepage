@@ -19,6 +19,7 @@ class MemberSubscription extends Component {
       >
         <iframe
           className="airtable-embed"
+          title="Member register form"
           src="https://airtable.com/embed/shrivnkBnqJX1oIEf?backgroundColor=teal"
           frameBorder="0"
           width="100%"

@@ -8,7 +8,7 @@ import {
   FaEnvelope
 } from 'react-icons/fa';
 import BackgroundImage from 'gatsby-background-image';
-import { StaticQuery, graphql, Link } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 
 const Overlay = styled.div`
   ${tw`inset-0 absolute`};
@@ -100,9 +100,9 @@ class Hero extends Component {
                       </a>
                     </Button>
                     <Button discord>
-                      <Link to="/chat">
+                      <a href="https://discord.com/invite/sJfvxQW7cd">
                         <FaDiscord /> Join our Discord
-                      </Link>
+                      </a>
                     </Button>
                   </div>
                 </div>

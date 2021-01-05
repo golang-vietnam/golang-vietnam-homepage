@@ -28,7 +28,7 @@ const Paragraph = styled.p`
 const Button = styled.div`
   a {
     ${tw`px-5 py-4 inline-flex items-center rounded-sm text-white no-underline`};
-    ${props => (props.discord ? `background-color: #E13F5E` : tw`bg-primary`)};
+    ${props => (props.discord ? `background-color: #7289DA` : tw`bg-primary`)};
     svg {
       margin-right: 10px;
     }

@@ -27,7 +27,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^3.10.0",
     "smoothscroll-polyfill": "^0.4.3",
-    "styled-components": "^5.1.0",
+    "styled-components": "^5.2.1",
     "tailwindcss-transitions": "^2.2.0",
     "unescape": "^1.0.1",
     "validator": "^13.0.0"
@@ -60,7 +60,7 @@
     "prettier": "^2.0.5",
     "rss-parser": "^3.6.2",
     "tailwindcss": "^2.0.2",
-    "twin.macro": "^1.2.0"
+    "twin.macro": "^2.0.8"
   },
   "repository": {
     "type": "git",

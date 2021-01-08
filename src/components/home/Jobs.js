@@ -70,7 +70,7 @@ const Jobs = ({ data }) => {
             </a>
           </TitleContainer>
           <div className="lg:w-3/4 w-full lg:mx-0 flex lg:justify-end">
-            <JobCardContainer className="-mx-3 flex lg:justify-end md:flex-no-wrap flex-wrap">
+            <JobCardContainer className="-mx-3 flex lg:justify-end md:flex-nowrap flex-wrap">
               {hotJobs.map(
                 (
                   {
@@ -98,7 +98,7 @@ const Jobs = ({ data }) => {
                       </h3>
                       <JobCardInfo>
                         <div className="font-medium mb-3 mt-5">{company}</div>
-                        <div className="flex items-center mb-2 opacity-75 whitespace-no-wrap">
+                        <div className="flex items-center mb-2 opacity-75 whitespace-nowrap">
                           <span>{location}</span>
                           <Dot />
                           <span>{type}</span>

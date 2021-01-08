@@ -21,7 +21,7 @@ const EventsCard = ({ name, date, location, guests, link }) => {
             <span className="capitalize font-medium">{location}</span>
           </div>
         </div>
-        <div className="w-1/4 text-sm text-right whitespace-no-wrap opacity-75 pt-2 pl-2">
+        <div className="w-1/4 text-sm text-right whitespace-nowrap opacity-75 pt-2 pl-2">
           <div>{dayjs(date).format('DD MMM, YYYY')}</div>
           {guests > 0 && <div className="mt-2">{guests} guests</div>}
         </div>

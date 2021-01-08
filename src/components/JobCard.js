@@ -29,7 +29,7 @@ const JobCard = ({
           </div>
           <CardExcerpt>{truncate(desc)}</CardExcerpt>
         </div>
-        <div className="w-1/3 mt-2 text-sm text-right whitespace-no-wrap">
+        <div className="w-1/3 mt-2 text-sm text-right whitespace-nowrap">
           <div className="opacity-75 mb-4">{toTimeAgo(date)}</div>
         </div>
       </div>

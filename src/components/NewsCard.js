@@ -18,7 +18,7 @@ const NewsCard = ({ title, desc, author, postedOn, link }) => {
           </CardHeading>
           <CardExcerpt dangerouslySetInnerHTML={{ __html: decode(desc) }} />
         </div>
-        <div className="w-1/4 text-sm text-right whitespace-no-wrap pt-2 pl-2">
+        <div className="w-1/4 text-sm text-right whitespace-nowrap pt-2 pl-2">
           <div className="break-words whitespace-normal my-1">
             {decode(author)}
           </div>

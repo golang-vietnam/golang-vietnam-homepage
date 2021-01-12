@@ -94,6 +94,9 @@ const MobileMenu = styled.ul`
   top: 0;
   font-size: 20px;
 
+  span {
+    ${tw`font-medium text-white`}
+  }
   a {
     ${tw`font-medium no-underline`}
   }

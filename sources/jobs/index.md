@@ -1,6 +1,23 @@
 ---
 key: jobs
 list:
+  - company: 'CevaLabs'
+    date: '2021-01-20T03:54:40Z'
+    desc: 'Remote'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/77'
+    location: 'Others'
+    title: 'Senior Backend Engineer'
+    type: 'Fulltime'
+    hot: false
+  - company: 'ORIENT SOFTWARE'
+    date: '2021-01-15T10:13:14Z'
+    desc: 'Saigon, Vietnam
+* Fulltime'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/76'
+    location: 'HCM'
+    title: 'Senior Golang Engineer'
+    type: 'Fulltime'
+    hot: false
   - company: 'WATA Corp'
     date: '2020-12-15T07:28:09Z'
     desc: 'Saigon, Vietnam
@@ -68,23 +85,6 @@ list:
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/62'
     location: 'HCM'
     title: 'Senior Golang Developer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'VieON'
-    date: '2020-10-29T15:06:05Z'
-    desc: '222 Pasteur, Ward 6, District 3, Ho Chi Minh City'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/61'
-    location: 'HCM'
-    title: 'Backend Engineer & DevOps (6 vacancies)'
-    type: 'Fulltime'
-    hot: false
-  - company: 'Plus Team Global Company'
-    date: '2020-10-23T05:13:34Z'
-    desc: 'Saigon, Vietnam
-* Remote'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/60'
-    location: 'HCM'
-    title: 'Senior Golang Blockchain Developer'
     type: 'Fulltime'
     hot: false
 ---

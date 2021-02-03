@@ -18,6 +18,14 @@ list:
     title: 'Senior Golang Engineer'
     type: 'Fulltime'
     hot: false
+  - company: 'Money Forward Vietnam'
+    date: '2021-01-11T07:40:01Z'
+    desc: 'Ho Chi Minh City '
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/75'
+    location: 'HCM'
+    title: 'Software Engineer (Golang)'
+    type: 'Fulltime'
+    hot: false
   - company: 'WATA Corp'
     date: '2020-12-15T07:28:09Z'
     desc: 'Saigon, Vietnam
@@ -76,15 +84,6 @@ list:
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/63'
     location: 'HCM'
     title: 'Technical Leader'
-    type: 'Fulltime'
-    hot: false
-  - company: 'Autonomous Inc.'
-    date: '2020-10-30T09:14:08Z'
-    desc: 'Phu Nhuan
-* Saigon, Vietnam'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/62'
-    location: 'HCM'
-    title: 'Senior Golang Developer'
     type: 'Fulltime'
     hot: false
 ---

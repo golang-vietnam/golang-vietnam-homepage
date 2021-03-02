@@ -1,6 +1,15 @@
 ---
 key: jobs
 list:
+  - company: 'Segmed'
+    date: '2021-03-01T04:43:14Z'
+    desc: 'Vietnam
+* Remote'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/80'
+    location: 'Others'
+    title: 'Full Stack Software Engineer'
+    type: 'Fulltime'
+    hot: false
   - company: 'CevaLabs'
     date: '2021-01-20T03:54:40Z'
     desc: 'Remote'
@@ -76,14 +85,6 @@ list:
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/64'
     location: 'HCM'
     title: 'Senior Golang Microservices Engineer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'Dtac'
-    date: '2020-11-02T15:01:28Z'
-    desc: 'Saigon, Vietnam'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/63'
-    location: 'HCM'
-    title: 'Technical Leader'
     type: 'Fulltime'
     hot: false
 ---

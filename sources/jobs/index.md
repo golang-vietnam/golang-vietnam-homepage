@@ -1,6 +1,14 @@
 ---
 key: jobs
 list:
+  - company: 'Manabie Vietnam'
+    date: '2021-07-28T01:00:27Z'
+    desc: '(Copac Square Building) 12 Ton Dan, 13th Ward, District 4, HCMC'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/107'
+    location: 'HCM'
+    title: 'Fullstack Engineer (Golang/ ReactJs)'
+    type: 'Fulltime'
+    hot: false
   - company: 'Bocasay'
     date: '2021-06-01T06:46:22Z'
     desc: 'Saigon, Vietnam
@@ -76,14 +84,6 @@ list:
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/76'
     location: 'HCM'
     title: 'Senior Golang Engineer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'Money Forward Vietnam'
-    date: '2021-01-11T07:40:01Z'
-    desc: 'Ho Chi Minh City '
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/75'
-    location: 'HCM'
-    title: 'Software Engineer (Golang)'
     type: 'Fulltime'
     hot: false
 ---

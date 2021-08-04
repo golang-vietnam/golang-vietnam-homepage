@@ -1,12 +1,29 @@
 ---
 key: jobs
 list:
+  - company: 'Coins.ph'
+    date: '2021-07-29T12:59:32Z'
+    desc: '100% remote'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/108'
+    location: 'Others'
+    title: 'Python/Golang Senior Software Engineer'
+    type: 'FT/C'
+    hot: false
   - company: 'Manabie Vietnam'
     date: '2021-07-28T01:00:27Z'
     desc: '(Copac Square Building) 12 Ton Dan, 13th Ward, District 4, HCMC'
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/107'
     location: 'HCM'
     title: 'Fullstack Engineer (Golang/ ReactJs)'
+    type: 'Fulltime'
+    hot: false
+  - company: 'iKonnect'
+    date: '2021-07-19T04:51:59Z'
+    desc: 'Saigon, Vietnam
+* Remote'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/104'
+    location: 'HCM'
+    title: 'Senior Backend Engineer'
     type: 'Fulltime'
     hot: false
   - company: 'Bocasay'
@@ -67,23 +84,6 @@ list:
     linkURL: 'https://github.com/golang-vietnam/jobs/issues/80'
     location: 'Others'
     title: 'Full Stack Software Engineer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'CevaLabs'
-    date: '2021-01-20T03:54:40Z'
-    desc: 'Remote'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/77'
-    location: 'Others'
-    title: 'Senior Backend Engineer'
-    type: 'Fulltime'
-    hot: false
-  - company: 'ORIENT SOFTWARE'
-    date: '2021-01-15T10:13:14Z'
-    desc: 'Saigon, Vietnam
-* Fulltime'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/76'
-    location: 'HCM'
-    title: 'Senior Golang Engineer'
     type: 'Fulltime'
     hot: false
 ---

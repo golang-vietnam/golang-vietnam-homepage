@@ -8,7 +8,7 @@ const ArticleCard = ({ level, resources }) => (
     <SubHeading className="mb-6">{level}</SubHeading>
     <Card>
       <ul className="list-disc m-0" style={{ padding: '10px 15px' }}>
-        {resources.map(({ title, link }, index) => (
+        {resources.map(({ title, link, author }, index) => (
           <li
             key={index}
             className={classnames('text-sm font-medium leading-normal', {
@@ -16,6 +16,12 @@ const ArticleCard = ({ level, resources }) => (
             })}
           >
             {title}
+            {!author ? null : (
+              <>
+                {' '}
+                (<a href={'https://github.com/' + author}>@{author}</a>)
+              </>
+            )}
             <span className="mr-2">:</span>
             <a
               href={link}

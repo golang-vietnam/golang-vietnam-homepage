@@ -67,4 +67,9 @@ list:
         link: 'https://blog.golang.org/context'
       - title: 'The Go Memory Model'
         link: 'https://golang.org/ref/mem'
+  - level: Gopher Vietnam
+    resources:
+      - title: Escape analysis in the Go compiler
+        link: 'https://talks.cuonglm.xyz/escape-analysis-in-go-compiler.slide'
+        author: cuonglm
 ---

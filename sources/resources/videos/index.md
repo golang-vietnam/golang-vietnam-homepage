@@ -49,4 +49,7 @@ list:
   - date: 2018-11-13
     videoId: 'RIvL2ONhFBI'
     title: Go 2 Draft Specifications - Rob Pike
+  - date: 2020-12-08
+    videoId: '4ZkIPi1oi_0'
+    title: Escape analysis in Go compiler - Cường Lê
 ---

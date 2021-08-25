@@ -22,6 +22,7 @@ const query = graphql`
               resources {
                 title
                 link
+                author
               }
             }
           }

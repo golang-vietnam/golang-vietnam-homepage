@@ -100,7 +100,7 @@ class Hero extends Component {
                       </a>
                     </Button>
                     <Button discord>
-                      <a href="https://discord.com/invite/sJfvxQW7cd">
+                      <a href="https://discord.gg/wdnKbQbP9d">
                         <FaDiscord /> Join our Discord
                       </a>
                     </Button>

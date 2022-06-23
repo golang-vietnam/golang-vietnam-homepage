@@ -55,7 +55,7 @@
     "fs-extra": "^7.0.1",
     "gatsby-plugin-root-import": "^2.0.5",
     "husky": "^4.2.5",
-    "jsdom": "^13.2.0",
+    "jsdom": "^16.5.0",
     "lint-staged": "^10.2.6",
     "prettier": "^2.0.5",
     "rss-parser": "^3.6.2",

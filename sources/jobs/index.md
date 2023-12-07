@@ -1,6 +1,14 @@
 ---
 key: jobs
 list:
+  - company: 'SoBanHang'
+    date: '2022-07-12T10:40:26Z'
+    desc: 'Saigon, Vietnam'
+    linkURL: 'https://github.com/golang-vietnam/jobs/issues/176'
+    location: 'HCM'
+    title: 'Golang Developer'
+    type: 'Fulltime'
+    hot: false
   - company: 'HSVN'
     date: '2021-12-07T02:30:51Z'
     desc: 'Hanoi, Vietnam
@@ -77,13 +85,5 @@ list:
     location: 'Others'
     title: 'Python/Golang Senior Software Engineer'
     type: 'FT/C'
-    hot: false
-  - company: 'Manabie Vietnam'
-    date: '2021-07-28T01:00:27Z'
-    desc: '(Copac Square Building) 12 Ton Dan, 13th Ward, District 4, HCMC'
-    linkURL: 'https://github.com/golang-vietnam/jobs/issues/107'
-    location: 'HCM'
-    title: 'Fullstack Engineer (Golang/ ReactJs)'
-    type: 'Fulltime'
     hot: false
 ---
